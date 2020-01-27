@@ -1,7 +1,7 @@
 $theme-colors: (
 "primary": #D40511
 );
-
+$hover-color: #EB131E;
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -91,6 +91,10 @@ h3 {
     font-size: 31px;
   }
 }
+.btn-outline-primary:hover, .btn-primary:hover {
+  background-color: $hover-color;
+  border-color: $hover-color;
+}
 header {
   text-align: center;
 }
@@ -124,4 +128,8 @@ header {
 .switch .btn {
   padding-top: 11px;
   padding-bottom: 11px;
+}
+.btn-outline-primary:hover {
+  background-color: $hover-color;
+  border-color: $hover-color;
 }

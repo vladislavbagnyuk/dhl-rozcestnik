@@ -10899,6 +10899,11 @@ h3 {
     font-size: 31px;
   }
 }
+.btn-outline-primary:hover, .btn-primary:hover {
+  background-color: #EB131E;
+  border-color: #EB131E;
+}
+
 header {
   text-align: center;
 }
@@ -10937,6 +10942,11 @@ header {
 .switch .btn {
   padding-top: 11px;
   padding-bottom: 11px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #EB131E;
+  border-color: #EB131E;
 }
 
 /*# sourceMappingURL=style.css.map */
