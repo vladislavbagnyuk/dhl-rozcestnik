@@ -1,0 +1,106 @@
+$theme-colors: (
+"primary": #D40511
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1900px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1395px
+);
+
+$font-family-base: 'Delivery';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@font-face {
+    font-family: 'Delivery';
+    src: url('../font/EOT/DeliveryArabic_W_Rg.eot?#iefix') format('embedded-opentype'),
+    url('../font/WOFF/DeliveryArabic_W_Rg.woff') format('woff'),
+    url('../font/WOFF2/DeliveryArabic_W_Rg.woff2') format('woff2'),
+	  url('../font/TTF/DeliveryArabic_Rg.ttf') format('truetype'),
+    url('../font/SVG/DeliveryArabic_W_Rg.svg#svgDelivery-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Delivery';
+    src: url('../font/EOT/DeliveryArabic_W_Bd.eot?#iefix') format('embedded-opentype'),
+    url('../font/WOFF/DeliveryArabic_W_Bd.woff') format('woff'),
+    url('../font/WOFF2/DeliveryArabic_W_Bd.woff2') format('woff2'),
+	  url('../font/TTF/DeliveryArabic_Bd.ttf') format('truetype'),
+    url('../font/SVG/DeliveryArabic_W_Bd.svg#svgDelivery-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Delivery-Condensed';
+    src: url('../font/EOT/DeliveryArabic_W_CdBlk.eot?#iefix') format('embedded-opentype'),
+    url('../font/WOFF/DeliveryArabic_W_CdBlk.woff') format('woff'),
+    url('../font/WOFF2/DeliveryArabic_W_CdBlk.woff2') format('woff2'),
+	  url('../font/TTF/DeliveryArabic_CdBlk.ttf') format('truetype'),
+    url('../font/SVG/DeliveryArabic_W_CdBlk.svg#svgDelivery-Condensed-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+html {
+  font-size: 16px;
+}
+h1, h2 {
+  font-family: 'Delivery-Condensed';
+  font-weight: 900;
+}
+h1 {
+  color: map-get($theme-colors, primary);
+  font-size: 35px;
+}
+h2 {
+  font-size: 29px;
+}
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+@include media-breakpoint-up (md) {
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 31px;
+  }
+}
+@include media-breakpoint-up (lg) {
+  h1 {
+    font-size: 51px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 31px;
+  }
+}
+.content-col {
+  margin: 0 auto;
+}
+.content-col h1 {
+  margin-bottom: 47px;
+}
+.switch {
+  width: 100%;
+}
+.switch .btn {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
