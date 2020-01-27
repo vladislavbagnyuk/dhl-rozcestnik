@@ -91,6 +91,21 @@ h3 {
     font-size: 31px;
   }
 }
+.header-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+@include media-breakpoint-up(md){
+  .header-img {
+    height: 140px;
+  }
+}
+@include media-breakpoint-up(lg){
+  .header-img {
+    height: 240px;
+  }
+}
 .content-col {
   margin: 0 auto;
 }

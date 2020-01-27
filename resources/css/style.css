@@ -10899,6 +10899,22 @@ h3 {
     font-size: 31px;
   }
 }
+.header-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .header-img {
+    height: 140px;
+  }
+}
+@media (min-width: 1024px) {
+  .header-img {
+    height: 240px;
+  }
+}
 .content-col {
   margin: 0 auto;
 }
