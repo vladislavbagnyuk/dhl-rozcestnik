@@ -10832,6 +10832,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/*
+  Header
+  Switch
+*/
 @font-face {
   font-family: "Delivery";
   src: url("../font/EOT/DeliveryArabic_W_Rg.eot?#iefix") format("embedded-opentype"), url("../font/WOFF/DeliveryArabic_W_Rg.woff") format("woff"), url("../font/WOFF2/DeliveryArabic_W_Rg.woff2") format("woff2"), url("../font/TTF/DeliveryArabic_Rg.ttf") format("truetype"), url("../font/SVG/DeliveryArabic_W_Rg.svg#svgDelivery-Regular") format("svg");
@@ -10908,12 +10912,20 @@ header {
   text-align: center;
 }
 
-.header-img {
+.navbar, .header-img {
   width: 100%;
   max-width: 1395px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
+  padding: 18px;
+}
+
+.header-img {
   height: 240px;
   object-fit: cover;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {

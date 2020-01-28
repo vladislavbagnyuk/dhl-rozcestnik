@@ -21,6 +21,12 @@ $container-max-widths: (
 $font-family-base: 'Delivery';
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+/*
+  Header
+  Switch
+*/
+
 @font-face {
     font-family: 'Delivery';
     src: url('../font/EOT/DeliveryArabic_W_Rg.eot?#iefix') format('embedded-opentype'),
@@ -95,15 +101,22 @@ h3 {
   background-color: $hover-color;
   border-color: $hover-color;
 }
+// Header
 header {
   text-align: center;
 }
-.header-img {
+.navbar, .header-img {
   width: 100%;
   max-width: 1395px;
+  margin: 0 auto;
+}
+.navbar {
+  background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
+  padding: 18px;
+}
+.header-img {
   height: 240px;
   object-fit: cover;
-  margin: 0 auto;
 }
 @include media-breakpoint-up(md){
   .header-img {
@@ -122,6 +135,7 @@ header {
   margin-top: 47px;
   margin-bottom: 47px;
 }
+// Switch
 .switch {
   width: 100%;
 }
