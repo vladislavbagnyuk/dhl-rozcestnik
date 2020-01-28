@@ -10858,7 +10858,7 @@ html {
   font-size: 16px;
 }
 
-h1, h2 {
+h1, h2, h4 {
   font-family: "Delivery-Condensed";
   font-weight: 900;
 }
@@ -10977,12 +10977,76 @@ header {
   border-bottom: 2px solid #EB131E !important;
 }
 
+.main-menu-container {
+  position: fixed;
+  top: 54px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  text-align: left;
+  padding: 0 18px;
+  z-index: 10;
+}
+
+.main-menu-container h4 {
+  margin: 25px 1px;
+  font-size: 14px;
+  color: #D40511;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.main-menu li {
+  border-top: 1px solid #CCCCCC;
+  padding: 27px 1px;
+}
+
+.main-menu li a {
+  color: black;
+}
+
+.main-menu li a:hover {
+  color: #EB131E;
+  text-decoration: none;
+}
+
+.main-menu a.active {
+  color: #D40511;
+  position: relative;
+}
+
+.main-menu li a.active:before {
+  content: "";
+  border: 1px solid #D40511;
+  width: 2px;
+  height: 40px;
+  position: absolute;
+  left: -11px;
+  top: -8.5px;
+}
+
+.main-menu a.active:hover {
+  color: #EB131E;
+}
+
+.main-menu li a.active:hover:before {
+  content: "";
+  border: 1px solid #EB131E;
+}
+
 @media (min-width: 768px) {
-  .main-menu {
-    list-style: none;
-    text-align: left;
+  .main-menu-container {
     width: 100%;
+    position: static;
+    background: none;
     padding: 0;
+  }
+
+  .main-menu {
     font-size: 14px;
     font-weight: bold;
     margin-top: 27px;
@@ -10992,10 +11056,11 @@ header {
   .main-menu li {
     float: left;
     margin-right: 33px;
+    padding: 0;
+    border: none;
   }
 
   .main-menu li a {
-    color: black;
     padding-bottom: 1px;
   }
 
@@ -11005,19 +11070,30 @@ header {
   }
 
   .main-menu a.active {
-    color: #D40511;
     border-bottom: 2px solid #D40511;
   }
 
   .main-menu a.active:hover {
-    color: #EB131E;
     border-bottom: 2px solid #EB131E;
+  }
+
+  .main-menu li a.active:before {
+    content: "";
+    border: none;
+    width: 0;
+    height: 0;
+    position: static;
   }
 
   .navbar .login-btn {
     color: #D40511;
     border-color: #D40511;
     background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .navbar .login-btn:hover {
+    color: #EB131E;
+    border-color: #EB131E;
   }
 }
 .navbar button:focus {

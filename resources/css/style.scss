@@ -62,7 +62,7 @@ $font-family-base: 'Delivery';
 html {
   font-size: 16px;
 }
-h1, h2 {
+h1, h2, h4 {
   font-family: 'Delivery-Condensed';
   font-weight: 900;
 }
@@ -161,12 +161,65 @@ header {
 .lang-switcher-desktop.active:hover {
   border-bottom: 2px solid $hover-color !important;
 }
+.main-menu-container {
+  position: fixed;
+  top: 54px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  text-align: left;
+  padding: 0 18px;
+  z-index: 10;
+}
+.main-menu-container h4 {
+  margin: 25px 1px;
+  font-size: 14px;
+  color: map-get($theme-colors, primary);
+}
+.main-menu {
+  list-style: none;
+  padding: 0;
+}
+.main-menu li {
+  border-top: 1px solid #CCCCCC;
+  padding: 27px 1px;
+}
+.main-menu li a {
+  color: black;
+}
+.main-menu li a:hover {
+  color: $hover-color;
+  text-decoration: none;
+}
+.main-menu a.active {
+  color: map-get($theme-colors, primary);
+  position: relative;
+}
+.main-menu li a.active:before {
+  content: "";
+  border: 1px solid map-get($theme-colors, primary);
+  width: 2px;
+  height: 40px;
+  position: absolute;
+  left: -11px;
+  top: -8.5px;
+}
+.main-menu a.active:hover {
+  color: $hover-color;
+}
+.main-menu li a.active:hover:before {
+  content: "";
+  border: 1px solid $hover-color;
+}
 @include media-breakpoint-up(md){
-  .main-menu {
-    list-style: none;
-    text-align: left;
+  .main-menu-container {
     width: 100%;
+    position: static;
+    background: none;
     padding: 0;
+  }
+  .main-menu {
     font-size: 14px;
     font-weight: bold;
     margin-top: 27px;
@@ -175,9 +228,10 @@ header {
   .main-menu li {
     float: left;
     margin-right: 33px;
+    padding: 0;
+    border: none;
   }
   .main-menu li a {
-    color: black;
     padding-bottom: 1px
   }
   .main-menu li a:hover {
@@ -185,17 +239,26 @@ header {
     text-decoration: none;
   }
   .main-menu a.active {
-    color: map-get($theme-colors, primary);
     border-bottom: 2px solid map-get($theme-colors, primary);
   }
   .main-menu a.active:hover {
-    color: $hover-color;
     border-bottom: 2px solid $hover-color  ;
+  }
+  .main-menu li a.active:before {
+    content: "";
+    border: none;
+    width: 0;
+    height: 0;
+    position: static;
   }
   .navbar .login-btn {
     color: map-get($theme-colors, primary);
     border-color: map-get($theme-colors, primary);
     background-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar .login-btn:hover {
+    color: $hover-color;
+    border-color: $hover-color;
   }
 }
 .navbar button:focus {
