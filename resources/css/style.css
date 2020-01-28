@@ -158,7 +158,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #89030b;
+  color: #EB131E;
   text-decoration: underline;
 }
 
@@ -3108,7 +3108,7 @@ fieldset:disabled a.btn {
   text-decoration: none;
 }
 .btn-link:hover {
-  color: #89030b;
+  color: #EB131E;
   text-decoration: underline;
 }
 .btn-link:focus, .btn-link.focus {
@@ -4841,7 +4841,7 @@ input[type=button].btn-block {
 }
 .page-link:hover {
   z-index: 2;
-  color: #89030b;
+  color: #EB131E;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -10961,8 +10961,16 @@ header {
   font-size: 14px;
 }
 
+.lang-switcher-desktop:hover {
+  color: #EB131E;
+}
+
 .lang-switcher-desktop.active {
   border-bottom: 2px solid black !important;
+}
+
+.lang-switcher-desktop.active:hover {
+  border-bottom: 2px solid #EB131E !important;
 }
 
 .main-menu {
@@ -10972,18 +10980,32 @@ header {
   padding: 0;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 46px;
 }
 
 .main-menu li {
   float: left;
+  margin-right: 33px;
 }
 
 .main-menu li a {
   color: black;
+  padding-bottom: 4px;
+}
+
+.main-menu li a:hover {
+  color: #EB131E;
+  text-decoration: none;
 }
 
 .main-menu a.active {
   color: #D40511;
+  border-bottom: 2px solid #D40511;
+}
+
+.main-menu a.active:hover {
+  color: #EB131E;
+  border-bottom: 2px solid #EB131E;
 }
 
 @media (min-width: 768px) {
