@@ -10923,6 +10923,47 @@ header {
   padding: 18px;
 }
 
+.brand-img {
+  height: 18px;
+}
+
+@media (min-width: 768px) {
+  .brand-img {
+    height: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .brand-img {
+    height: 24px;
+  }
+}
+.navbar button {
+  margin-left: 27px;
+}
+
+.navbar .btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 27px;
+}
+
+.navbar .login-btn {
+  font-weight: bold;
+  padding: 3px 11px;
+}
+
+@media (min-width: 768px) {
+  .navbar .login-btn {
+    color: #D40511;
+    border-color: #D40511;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+.navbar button:focus {
+  outline: none;
+}
+
 .header-img {
   height: 240px;
   object-fit: cover;

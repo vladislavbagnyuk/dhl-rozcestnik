@@ -114,6 +114,42 @@ header {
   background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
   padding: 18px;
 }
+.brand-img {
+  height: 18px;
+}
+@include media-breakpoint-up(md){
+  .brand-img {
+    height: 24px;
+  }
+}
+@include media-breakpoint-up(lg){
+  .brand-img {
+    height: 24px;
+  }
+}
+.navbar button {
+  margin-left: 27px;
+}
+.navbar .btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 27px;
+}
+.navbar .login-btn {
+  font-weight: bold;
+  padding: 3px 11px;
+}
+@include media-breakpoint-up(md){
+  .navbar .login-btn {
+    color: map-get($theme-colors, primary);
+    border-color: map-get($theme-colors, primary);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+.navbar button:focus {
+  outline: none;
+}
 .header-img {
   height: 240px;
   object-fit: cover;
