@@ -10953,6 +10953,18 @@ header {
   padding: 3px 11px;
 }
 
+.lang-switcher-desktop {
+  margin-left: 11px !important;
+  background: none;
+  border: none;
+  padding: 3px 0;
+  font-size: 14px;
+}
+
+.lang-switcher-desktop.active {
+  border-bottom: 2px solid black !important;
+}
+
 @media (min-width: 768px) {
   .navbar .login-btn {
     color: #D40511;

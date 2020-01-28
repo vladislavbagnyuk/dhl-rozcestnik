@@ -140,6 +140,16 @@ header {
   font-weight: bold;
   padding: 3px 11px;
 }
+.lang-switcher-desktop {
+  margin-left: 11px !important;
+  background: none;
+  border: none;
+  padding: 3px 0;
+  font-size: 14px;
+}
+.lang-switcher-desktop.active {
+  border-bottom: 2px solid black !important;
+}
 @include media-breakpoint-up(md){
   .navbar .login-btn {
     color: map-get($theme-colors, primary);
