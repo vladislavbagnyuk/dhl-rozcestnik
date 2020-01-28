@@ -121,6 +121,9 @@ header {
   height: 18px;
 }
 @include media-breakpoint-up(md){
+  .navbar {
+    padding: 28px 42px 23px 42px;
+  }
   .brand-img {
     height: 24px;
   }
@@ -159,36 +162,37 @@ header {
 .lang-switcher-desktop.active:hover {
   border-bottom: 2px solid $hover-color !important;
 }
-.main-menu {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  padding: 0;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 46px;
-}
-.main-menu li {
-  float: left;
-  margin-right: 33px;
-}
-.main-menu li a {
-  color: black;
-  padding-bottom: 4px
-}
-.main-menu li a:hover {
-  color: $hover-color;
-  text-decoration: none;
-}
-.main-menu a.active {
-  color: map-get($theme-colors, primary);
-  border-bottom: 2px solid map-get($theme-colors, primary);
-}
-.main-menu a.active:hover {
-  color: $hover-color;
-  border-bottom: 2px solid $hover-color  ;
-}
 @include media-breakpoint-up(md){
+  .main-menu {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 27px;
+    margin-bottom: 0;
+  }
+  .main-menu li {
+    float: left;
+    margin-right: 33px;
+  }
+  .main-menu li a {
+    color: black;
+    padding-bottom: 1px
+  }
+  .main-menu li a:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+  .main-menu a.active {
+    color: map-get($theme-colors, primary);
+    border-bottom: 2px solid map-get($theme-colors, primary);
+  }
+  .main-menu a.active:hover {
+    color: $hover-color;
+    border-bottom: 2px solid $hover-color  ;
+  }
   .navbar .login-btn {
     color: map-get($theme-colors, primary);
     border-color: map-get($theme-colors, primary);

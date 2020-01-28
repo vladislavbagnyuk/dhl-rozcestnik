@@ -10928,6 +10928,10 @@ header {
 }
 
 @media (min-width: 768px) {
+  .navbar {
+    padding: 28px 42px 23px 42px;
+  }
+
   .brand-img {
     height: 24px;
   }
@@ -10973,42 +10977,43 @@ header {
   border-bottom: 2px solid #EB131E !important;
 }
 
-.main-menu {
-  list-style: none;
-  text-align: left;
-  width: 100%;
-  padding: 0;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 46px;
-}
-
-.main-menu li {
-  float: left;
-  margin-right: 33px;
-}
-
-.main-menu li a {
-  color: black;
-  padding-bottom: 4px;
-}
-
-.main-menu li a:hover {
-  color: #EB131E;
-  text-decoration: none;
-}
-
-.main-menu a.active {
-  color: #D40511;
-  border-bottom: 2px solid #D40511;
-}
-
-.main-menu a.active:hover {
-  color: #EB131E;
-  border-bottom: 2px solid #EB131E;
-}
-
 @media (min-width: 768px) {
+  .main-menu {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 27px;
+    margin-bottom: 0;
+  }
+
+  .main-menu li {
+    float: left;
+    margin-right: 33px;
+  }
+
+  .main-menu li a {
+    color: black;
+    padding-bottom: 1px;
+  }
+
+  .main-menu li a:hover {
+    color: #EB131E;
+    text-decoration: none;
+  }
+
+  .main-menu a.active {
+    color: #D40511;
+    border-bottom: 2px solid #D40511;
+  }
+
+  .main-menu a.active:hover {
+    color: #EB131E;
+    border-bottom: 2px solid #EB131E;
+  }
+
   .navbar .login-btn {
     color: #D40511;
     border-color: #D40511;
