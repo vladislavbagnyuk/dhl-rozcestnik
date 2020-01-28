@@ -10965,6 +10965,27 @@ header {
   border-bottom: 2px solid black !important;
 }
 
+.main-menu {
+  list-style: none;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main-menu li {
+  float: left;
+}
+
+.main-menu li a {
+  color: black;
+}
+
+.main-menu a.active {
+  color: #D40511;
+}
+
 @media (min-width: 768px) {
   .navbar .login-btn {
     color: #D40511;
