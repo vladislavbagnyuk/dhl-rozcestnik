@@ -1,7 +1,11 @@
 $(document).ready(function() {
-  /*
-  $('#mobileMenuBtn').click(function(){
-    $('#mobileMenuBtn img').attr('src', 'resources/img/icons/close.svg');
+  // Hamburger menu animation
+  var menuBtn = $('#mobileMenuBtn');
+  menuBtn.click(function(){
+    if (menuBtn.hasClass('is-active')) {
+      menuBtn.removeClass('is-active');
+    } else {
+      menuBtn.addClass('is-active');
+    }
   });
-  */
 });

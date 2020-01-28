@@ -22,7 +22,18 @@ $container-max-widths: (
 
 $font-family-base: 'Delivery';
 
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-border-radius: 0;
+$hamburger-layer-color: map-get($theme-colors, primary);
+$hamburger-hover-opacity: 1;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-width: 23px;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
 
 /*
   Header
@@ -140,6 +151,9 @@ header {
   border: none;
   padding: 0;
   margin-left: 27px;
+}
+.hamburger-box {
+  height: 7px !important;
 }
 .navbar .login-btn {
   font-weight: bold;
