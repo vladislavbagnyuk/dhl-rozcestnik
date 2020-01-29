@@ -114,6 +114,10 @@ h3 {
     font-size: 31px;
   }
 }
+.btn.focus, .btn:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
 .btn-outline-primary:hover, .btn-primary:hover {
   background-color: $hover-color;
   border-color: $hover-color;
