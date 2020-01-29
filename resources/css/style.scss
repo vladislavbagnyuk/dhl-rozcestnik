@@ -125,10 +125,11 @@ header {
 }
 .navbar {
   background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
-  padding: 18px;
+  padding: 12px 18px;
 }
 .brand-img {
   height: 18px;
+  margin: 7px 0;
 }
 @include media-breakpoint-up(md){
   .navbar {
@@ -136,6 +137,7 @@ header {
   }
   .brand-img {
     height: 24px;
+    margin: 0;
   }
 }
 @include media-breakpoint-up(lg){
@@ -175,6 +177,7 @@ header {
 .lang-switcher-desktop.active:hover {
   border-bottom: 2px solid $hover-color !important;
 }
+// Menu mobile
 .main-menu-container {
   position: fixed;
   top: 54px;
@@ -212,11 +215,15 @@ header {
 }
 .main-menu li a.active:before {
   content: "";
-  border: 1px solid map-get($theme-colors, primary);
-  width: 2px;
+  background-color: map-get($theme-colors, primary);
+  border-right: 2px solid map-get($theme-colors, primary);
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  width: 1px;
   height: 40px;
   position: absolute;
-  left: -11px;
+  left: -9px;
   top: -8.5px;
 }
 .main-menu a.active:hover {
@@ -226,6 +233,7 @@ header {
   content: "";
   border: 1px solid $hover-color;
 }
+// Menu tablet and desktop
 @include media-breakpoint-up(md){
   .main-menu-container {
     width: 100%;
@@ -278,6 +286,7 @@ header {
 .navbar button:focus {
   outline: none;
 }
+// Header image
 .header-img {
   height: 240px;
   object-fit: cover;
