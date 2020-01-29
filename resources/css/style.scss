@@ -130,6 +130,9 @@ header {
 .navbar {
   background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
   padding: 12px 18px;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 10;
 }
 .brand-img {
   height: 18px;
@@ -137,6 +140,7 @@ header {
 }
 @include media-breakpoint-up(md){
   .navbar {
+    position: relative;
     padding: 28px 42px 23px 42px;
   }
   .brand-img {
@@ -170,7 +174,7 @@ header {
   padding: 3px 11px;
 }
 .lang-switch-container {
-  position: absolute;
+  position: fixed;
   background-color: white;
   top: 54px;
   left: 100vw;
@@ -180,7 +184,7 @@ header {
 
 .lang-switch-container, .main-menu-container {
   transition: .4s;
-  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);  
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
 }
 
 

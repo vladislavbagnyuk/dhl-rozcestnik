@@ -11017,6 +11017,9 @@ header {
 .navbar {
   background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
   padding: 12px 18px;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 10;
 }
 
 .brand-img {
@@ -11026,6 +11029,7 @@ header {
 
 @media (min-width: 768px) {
   .navbar {
+    position: relative;
     padding: 28px 42px 23px 42px;
   }
 
@@ -11065,7 +11069,7 @@ header {
 }
 
 .lang-switch-container {
-  position: absolute;
+  position: fixed;
   background-color: white;
   top: 54px;
   left: 100vw;

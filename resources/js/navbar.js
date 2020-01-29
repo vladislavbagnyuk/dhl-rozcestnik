@@ -11,7 +11,7 @@ $(document).ready(function() {
     if (langBtn.hasClass('is-active')) {
       langBtn.removeClass('is-active');
       langSwitch.css('left', '100vw');
-    } 
+    }
 
     if (menuBtn.hasClass('is-active')) {
       menuBtn.removeClass('is-active');
