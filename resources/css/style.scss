@@ -349,6 +349,29 @@ header {
 .navbar button:focus {
   outline: none;
 }
+// Login modal
+.modal {
+  background-color: rgba(#ffcc00, 0.95);
+}
+.modal-content {
+  max-width: 400px;
+  border: none;
+  border-radius: 0;
+  margin: 18px;
+}
+.modal-header, .modal-body, .modal-footer {
+  border: none;
+}
+.modal-title {
+  font-family: 'Delivery-Condensed';
+  font-weight: 900;
+  font-size: 22px;
+}
+.modal-content .btn {
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+}
 // Header image
 .header-img {
   height: 240px;
