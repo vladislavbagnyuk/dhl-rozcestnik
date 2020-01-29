@@ -350,7 +350,7 @@ header {
     border-color: $hover-color;
   }
 }
-.navbar button:focus {
+button:focus {
   outline: none;
 }
 // Login modal
@@ -376,12 +376,45 @@ header {
   border-radius: 4px;
   font-weight: bold;
 }
+.modal-content p {
+  font-weight: bold;
+  color: black;
+}
+.modal-footer {
+  text-align: center;
+}
+.modal-footer p {
+  color: black;
+  margin: 0 auto;
+}
+.banner {
+  max-width: 1395px;
+  margin: 0 auto;
+  top: 54px;
+  background-color: #F2F2F2;
+  text-align: left;
+  z-index: 15;
+  padding: 24px 18px;
+}
+.banner p {
+  margin-right: 46px;
+}
+.banner .close {
+  float: right;
+}
+.banner .ok-btn {
+  font-weight: bold;
+  width: 120px;
+}
 // Header image
 .header-img {
   height: 240px;
   object-fit: cover;
 }
 @include media-breakpoint-up(md){
+  .banner {
+    padding: 18px 42px 29px 42px;
+  }
   .header-img {
     height: 140px;
   }

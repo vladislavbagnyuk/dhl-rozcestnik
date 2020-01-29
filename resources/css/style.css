@@ -11269,7 +11269,7 @@ header {
     border-color: #EB131E;
   }
 }
-.navbar button:focus {
+button:focus {
   outline: none;
 }
 
@@ -11300,12 +11300,53 @@ header {
   font-weight: bold;
 }
 
+.modal-content p {
+  font-weight: bold;
+  color: black;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.modal-footer p {
+  color: black;
+  margin: 0 auto;
+}
+
+.banner {
+  max-width: 1395px;
+  margin: 0 auto;
+  top: 54px;
+  background-color: #F2F2F2;
+  text-align: left;
+  z-index: 15;
+  padding: 24px 18px;
+}
+
+.banner p {
+  margin-right: 46px;
+}
+
+.banner .close {
+  float: right;
+}
+
+.banner .ok-btn {
+  font-weight: bold;
+  width: 120px;
+}
+
 .header-img {
   height: 240px;
   object-fit: cover;
 }
 
 @media (min-width: 768px) {
+  .banner {
+    padding: 18px 42px 29px 42px;
+  }
+
   .header-img {
     height: 140px;
   }
