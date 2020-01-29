@@ -31,6 +31,10 @@ $hamburger-layer-height: 3px;
 $hamburger-layer-spacing: 4px;
 $hamburger-layer-width: 23px;
 
+$hamburger-types: (
+  squeeze
+) !default;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
@@ -153,6 +157,10 @@ header {
   border: none;
   padding: 0;
   margin-left: 27px;
+}
+.hamburger {
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
 }
 .hamburger-box {
   height: 7px !important;
