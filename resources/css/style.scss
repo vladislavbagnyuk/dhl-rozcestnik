@@ -169,21 +169,71 @@ header {
   font-weight: bold;
   padding: 3px 11px;
 }
-.lang-switcher-desktop {
-  margin-left: 11px !important;
+.lang-switch-container {
+  position: absolute;
+  background-color: white;
+  top: 54px;
+  left: 100vw;
+  right: 0;
+  padding: 27px;
+}
+
+.lang-switch-container, .main-menu-container {
+  transition: .4s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);  
+}
+
+
+.lang-switch-container button {
+  padding: auto 7px;
+  height: 27px;
+  line-height: 0;
+  font-family: 'Delivery-Condensed';
+  font-weight: 900;
+  margin: 0;
+  float: left;
   background: none;
   border: none;
-  padding: 3px 0;
-  font-size: 14px;
 }
-.lang-switcher-desktop:hover {
-  color: $hover-color;
+.lang-switch-container button.active {
+  color: white;
+  background-color: map-get($theme-colors, primary);
 }
-.lang-switcher-desktop.active {
-  border-bottom: 2px solid black !important;
-}
-.lang-switcher-desktop.active:hover {
-  border-bottom: 2px solid $hover-color !important;
+@include media-breakpoint-up(md) {
+  .navbar .float-right {
+    padding-top: 7px;
+  }
+  .lang-switch-container {
+    float: none;
+    background: none;
+    position: static;
+    display: inline-block;
+    padding: 0;
+  }
+  .lang-switch-container button {
+    float: none;
+    display: inline-block;
+    font-weight: normal;
+    font-family: 'Delivery';
+    font-weight: normal;
+    margin-left: 11px !important;
+    background: none;
+    border: none;
+    padding: 3px 0;
+    line-height: 1em;
+    font-size: 14px;
+  }
+  .lang-switch-container button:hover, .lang-switch-container button.active:hover {
+    color: $hover-color;
+  }
+  .lang-switch-container button.active {
+    background: none;
+    color: black;
+    border-bottom: 2px solid black !important;
+  }
+  .lang-switch-container button.active:hover {
+    border-bottom: 2px solid $hover-color !important;
+  }
 }
 // Menu mobile
 .main-menu-container {
@@ -196,8 +246,6 @@ header {
   text-align: left;
   padding: 0 18px;
   z-index: 10;
-  transition: .4s;
-  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
 }
 .main-menu-container h4 {
   margin: 25px 1px;

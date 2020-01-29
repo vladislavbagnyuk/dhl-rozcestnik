@@ -13,15 +13,17 @@
         <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
       </a>
       <div class="float-right">
-        <button class="d-md-none btn-icon" type="button" name="button">
+        <button id="languageTogglerBtn" class="d-md-none btn-icon" type="button" name="button">
           <img src="resources/img/icons/languages.svg" alt="">
         </button>
-        <button class="d-none d-md-inline-block lang-switcher-desktop active" type="button" name="button">
-          CS
-        </button>
-        <button class="d-none d-md-inline-block lang-switcher-desktop" type="button" name="button">
-          EN
-        </button>
+        <div id="languageSwitch" class="lang-switch-container">
+          <button class="active" type="button" name="button">
+            CS
+          </button>
+          <button type="button" name="button">
+            EN
+          </button>
+        </div>
 
         <button class="btn btn-primary login-btn" type="button" name="button">
           Login
