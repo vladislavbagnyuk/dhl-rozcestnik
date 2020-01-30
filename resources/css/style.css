@@ -11031,7 +11031,7 @@ header {
   text-align: center;
 }
 
-.navbar, .header-img {
+.navbar, .header-img, footer {
   width: 100%;
   max-width: 1395px;
   margin: 0 auto;
@@ -11412,6 +11412,11 @@ button:focus {
 .btn-outline-primary:hover {
   background-color: #EB131E;
   border-color: #EB131E;
+}
+
+footer {
+  padding: 35px 17px;
+  background-color: #F2F2F2;
 }
 
 /*# sourceMappingURL=style.css.map */
