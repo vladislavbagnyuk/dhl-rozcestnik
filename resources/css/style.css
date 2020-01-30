@@ -11282,9 +11282,11 @@ button:focus {
   border: none;
   border-radius: 0;
   margin: 18px;
+  padding: 32px 18px;
 }
 
 .modal-header, .modal-body, .modal-footer {
+  padding: 0;
   border: none;
 }
 
@@ -11298,20 +11300,25 @@ button:focus {
   width: 100%;
   border-radius: 4px;
   font-weight: bold;
+  margin: 32px 0;
 }
 
-.modal-content p {
+.modal-content p, .modal-content a {
   font-weight: bold;
   color: black;
 }
 
-.modal-footer {
-  text-align: center;
+#loginModal .custom-checkbox {
+  margin-top: 67px;
 }
 
-.modal-footer p {
-  color: black;
-  margin: 0 auto;
+.modal-content a:hover {
+  text-decoration: none;
+  color: #666666;
+}
+
+.modal-footer {
+  text-align: center;
 }
 
 .banner {
