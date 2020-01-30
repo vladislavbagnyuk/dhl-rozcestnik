@@ -39,4 +39,16 @@ $(document).ready(function() {
       langSwitch.css('left', '0');
     }
   });
+
+  // Banner
+  var banner = $('#banner');
+  banner.css('height', banner.height() + 'px');
+
+  $('#bannerCloseBtn').click(function(){
+    banner.css('height', 0);
+  });
+  $('#bannerOkBtn').click(function(){
+    banner.css('height', 0);
+  });
+
 });
