@@ -513,6 +513,9 @@ footer .text-links a {
   display: inline-block;
   width: 49%;
 }
+footer .text-links a:hover {
+  color: $hover-color;
+}
 footer .text-links p {
   margin-bottom: 15px;
 }

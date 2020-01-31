@@ -11459,6 +11459,10 @@ footer .text-links a {
   width: 49%;
 }
 
+footer .text-links a:hover {
+  color: #EB131E;
+}
+
 footer .text-links p {
   margin-bottom: 15px;
 }
