@@ -22,6 +22,8 @@ xxl: 1395px
 
 $font-family-base: 'Delivery';
 
+$modal-backdrop-bg: #ffcc00;
+
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
 $hamburger-layer-border-radius: 0;
@@ -512,6 +514,9 @@ footer .text-links a {
   margin: 15px 0;
   display: inline-block;
   width: 49%;
+}
+footer .text-links a:hover {
+  color: $hover-color;
 }
 footer .text-links p {
   margin-bottom: 15px;
