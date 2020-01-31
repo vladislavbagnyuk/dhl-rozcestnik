@@ -74,8 +74,18 @@ $hamburger-types: (
 	font-weight: 900;
 	font-style: normal;
 }
+html, body {
+  height: 100%;
+}
 html {
   font-size: 16px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.site-content {
+  flex: 1 0 auto;
 }
 h1, h2, h4 {
   font-family: 'Delivery-Condensed';
@@ -480,6 +490,8 @@ footer {
   font-size: 14px;
   padding: 35px 17px;
   background-color: #F2F2F2;
+  margin-top: 70px;
+  flex-shrink: 0;
 }
 footer p {
   margin: 0;

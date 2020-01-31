@@ -7,58 +7,59 @@
   <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-  <header>
-    <div id="banner" class="banner">
-      <div class="banner-content">
-        <button id="bannerCloseBtn" class="close" type="button" name="button">
-          <img src="resources/img/icons/close.svg" alt="">
-        </button>
-        <p>Na těchto webových stránkách používáme soubory cookie. Soubory cookie se používají ke zlepšení fungování a používání našich internetových stránek a k analytickým a reklamním účelům. Pokud se chcete dozvědět víc o souborech cookie, o tom, jak je používáme a jak změnit vaše nastavení souborů cookie, další informace najdete zde. Dalším používáním těchto stránek beze změny nastavení souhlasíte s naším používáním souborů cookie.</p>
-        <button id="bannerOkBtn" class="btn btn-primary ok-btn" type="button" name="button">OK</button>
-      </div>
-    </div>
-    <nav class="navbar">
-      <a class="brand-link" href="/">
-        <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
-      </a>
-      <div class="float-right">
-        <button id="languageTogglerBtn" class="d-md-none btn-icon" type="button" name="button">
-          <img src="resources/img/icons/languages.svg" alt="">
-        </button>
-        <div id="languageSwitch" class="lang-switch-container">
-          <button class="active" type="button" name="button">
-            CS
+  <div class="site-content">
+    <header>
+      <div id="banner" class="banner">
+        <div class="banner-content">
+          <button id="bannerCloseBtn" class="close" type="button" name="button">
+            <img src="resources/img/icons/close.svg" alt="">
           </button>
-          <button type="button" name="button">
-            EN
-          </button>
+          <p>Na těchto webových stránkách používáme soubory cookie. Soubory cookie se používají ke zlepšení fungování a používání našich internetových stránek a k analytickým a reklamním účelům. Pokud se chcete dozvědět víc o souborech cookie, o tom, jak je používáme a jak změnit vaše nastavení souborů cookie, další informace najdete zde. Dalším používáním těchto stránek beze změny nastavení souhlasíte s naším používáním souborů cookie.</p>
+          <button id="bannerOkBtn" class="btn btn-primary ok-btn" type="button" name="button">OK</button>
         </div>
+      </div>
+      <nav class="navbar">
+        <a class="brand-link" href="/">
+          <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
+        </a>
+        <div class="float-right">
+          <button id="languageTogglerBtn" class="d-md-none btn-icon" type="button" name="button">
+            <img src="resources/img/icons/languages.svg" alt="">
+          </button>
+          <div id="languageSwitch" class="lang-switch-container">
+            <button class="active" type="button" name="button">
+              CS
+            </button>
+            <button type="button" name="button">
+              EN
+            </button>
+          </div>
 
-        <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
-          Login
+          <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
+            Login
+          </button>
+          <!-- AFTER LOGIN
+          <button class="d-md-none btn-icon" type="button" name="button">
+          <img src="resources/img/icons/account.svg" alt="">
         </button>
-        <!-- AFTER LOGIN
-        <button class="d-md-none btn-icon" type="button" name="button">
-        <img src="resources/img/icons/account.svg" alt="">
+      -->
+      <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
       </button>
-    -->
-    <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-  </div>
-  <div id="mainMenu" class="main-menu-container">
-    <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
-    <ul class="main-menu">
-      <li><a class="active" href="#">Domů</a></li>
-      <li><a href="#">Kontakt</a></li>
-      <li><a href="#">Novinky</a></li>
-      <li><a href="#">Služby</a></li>
-    </ul>
-  </div>
-</nav>
-<img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">
+    </div>
+    <div id="mainMenu" class="main-menu-container">
+      <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
+      <ul class="main-menu">
+        <li><a class="active" href="#">Domů</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Novinky</a></li>
+        <li><a href="#">Služby</a></li>
+      </ul>
+    </div>
+  </nav>
+  <img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">
 </header>
 <div class="container">
   <div class="row">
@@ -70,6 +71,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 <footer>
   <div class="row">
@@ -118,7 +120,7 @@
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
         <p class="text-center">
-        <a href="#" class="register-link">Pro registraci nás kontaktuje.</a>
+          <a href="#" class="register-link">Pro registraci nás kontaktuje.</a>
         </p>
       </div>
     </div>
