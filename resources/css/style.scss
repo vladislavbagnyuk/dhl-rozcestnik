@@ -477,6 +477,54 @@ button:focus {
 }
 // Footer
 footer {
+  font-size: 14px;
   padding: 35px 17px;
   background-color: #F2F2F2;
+}
+footer p {
+  margin: 0;
+}
+footer a, .copyright p {
+  color: #707070;
+}
+footer .text-links a {
+  margin: 15px 0;
+  display: inline-block;
+  width: 49%;
+}
+footer .text-links p {
+  margin-bottom: 15px;
+}
+footer a:hover {
+  text-decoration: none;
+}
+footer .social-links p {
+  margin-bottom: 32px;
+}
+footer .social-links a {
+  margin-right: 34px;
+}
+.copyright {
+  padding-top: 54px;
+  width: 100%;
+}
+.copyright p {
+  margin: 0 auto;
+  max-width: 240px;
+}
+@include media-breakpoint-up(md){
+  footer .text-links p {
+    margin-bottom: 30px;
+  }
+  footer .text-links a {
+    width: auto;
+    margin: 0 38px 25px 0;
+  }
+  .copyright {
+    padding-top: 19px;
+  }
+  .copyright p {
+    margin: 0 auto;
+    max-width: none;
+  }
 }
