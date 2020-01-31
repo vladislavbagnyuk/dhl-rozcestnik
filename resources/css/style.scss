@@ -5,19 +5,19 @@ $hover-color: #EB131E;
 $link-hover-color: $hover-color;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px,
-  xxl: 1900px
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 1024px,
+xl: 1200px,
+xxl: 1900px
 );
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1395px
+sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1140px,
+xxl: 1395px
 );
 
 $font-family-base: 'Delivery';
@@ -32,7 +32,7 @@ $hamburger-layer-spacing: 4px;
 $hamburger-layer-width: 23px;
 
 $hamburger-types: (
-  squeeze
+squeeze
 ) !default;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -40,39 +40,39 @@ $hamburger-types: (
 
 
 /*
-  Header
-  Switch
+Header
+Switch
 */
 
 @font-face {
-    font-family: 'Delivery';
-    src: url('../font/EOT/DeliveryArabic_W_Rg.eot?#iefix') format('embedded-opentype'),
-    url('../font/WOFF/DeliveryArabic_W_Rg.woff') format('woff'),
-    url('../font/WOFF2/DeliveryArabic_W_Rg.woff2') format('woff2'),
-	  url('../font/TTF/DeliveryArabic_Rg.ttf') format('truetype'),
-    url('../font/SVG/DeliveryArabic_W_Rg.svg#svgDelivery-Regular') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'Delivery';
+  src: url('../font/EOT/DeliveryArabic_W_Rg.eot?#iefix') format('embedded-opentype'),
+  url('../font/WOFF/DeliveryArabic_W_Rg.woff') format('woff'),
+  url('../font/WOFF2/DeliveryArabic_W_Rg.woff2') format('woff2'),
+  url('../font/TTF/DeliveryArabic_Rg.ttf') format('truetype'),
+  url('../font/SVG/DeliveryArabic_W_Rg.svg#svgDelivery-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Delivery';
-    src: url('../font/EOT/DeliveryArabic_W_Bd.eot?#iefix') format('embedded-opentype'),
-    url('../font/WOFF/DeliveryArabic_W_Bd.woff') format('woff'),
-    url('../font/WOFF2/DeliveryArabic_W_Bd.woff2') format('woff2'),
-	  url('../font/TTF/DeliveryArabic_Bd.ttf') format('truetype'),
-    url('../font/SVG/DeliveryArabic_W_Bd.svg#svgDelivery-Bold') format('svg');
-	font-weight: bold;
-	font-style: normal;
+  font-family: 'Delivery';
+  src: url('../font/EOT/DeliveryArabic_W_Bd.eot?#iefix') format('embedded-opentype'),
+  url('../font/WOFF/DeliveryArabic_W_Bd.woff') format('woff'),
+  url('../font/WOFF2/DeliveryArabic_W_Bd.woff2') format('woff2'),
+  url('../font/TTF/DeliveryArabic_Bd.ttf') format('truetype'),
+  url('../font/SVG/DeliveryArabic_W_Bd.svg#svgDelivery-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Delivery-Condensed';
-    src: url('../font/EOT/DeliveryArabic_W_CdBlk.eot?#iefix') format('embedded-opentype'),
-    url('../font/WOFF/DeliveryArabic_W_CdBlk.woff') format('woff'),
-    url('../font/WOFF2/DeliveryArabic_W_CdBlk.woff2') format('woff2'),
-	  url('../font/TTF/DeliveryArabic_CdBlk.ttf') format('truetype'),
-    url('../font/SVG/DeliveryArabic_W_CdBlk.svg#svgDelivery-Condensed-Black') format('svg');
-	font-weight: 900;
-	font-style: normal;
+  font-family: 'Delivery-Condensed';
+  src: url('../font/EOT/DeliveryArabic_W_CdBlk.eot?#iefix') format('embedded-opentype'),
+  url('../font/WOFF/DeliveryArabic_W_CdBlk.woff') format('woff'),
+  url('../font/WOFF2/DeliveryArabic_W_CdBlk.woff2') format('woff2'),
+  url('../font/TTF/DeliveryArabic_CdBlk.ttf') format('truetype'),
+  url('../font/SVG/DeliveryArabic_W_CdBlk.svg#svgDelivery-Condensed-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
 }
 html, body {
   height: 100%;
@@ -128,8 +128,8 @@ h3 {
 .custom-control-input:focus,
 .custom-control-input.focus,
 .custom-control-input:focus ~ .custom-control-label::before  {
-    -webkit-box-shadow: none!important;
-    box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
 }
 textarea:focus,
 textarea.form-control:focus,
@@ -153,7 +153,7 @@ input[type=number]:focus,
 header {
   text-align: center;
 }
-.navbar, .header-img, footer {
+.navbar, .header-img-container, footer {
   width: 100%;
   max-width: 1395px;
   margin: 0 auto;
@@ -446,9 +446,18 @@ button:focus {
   width: 120px;
 }
 // Header image
-.header-img {
+.header-img-container {
   height: 240px;
-  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+.header-img {
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 100%;
 }
 @include media-breakpoint-up(md){
   .banner {
@@ -457,12 +466,12 @@ button:focus {
   .banner-content {
     padding: 18px 42px 29px 42px;
   }
-  .header-img {
+  .header-img-container {
     height: 140px;
   }
 }
 @include media-breakpoint-up(lg){
-  .header-img {
+  .header-img-container {
     height: 240px;
   }
 }

@@ -10929,8 +10929,8 @@ h3 {
 }
 
 /*
-  Header
-  Switch
+Header
+Switch
 */
 @font-face {
   font-family: "Delivery";
@@ -11044,7 +11044,7 @@ header {
   text-align: center;
 }
 
-.navbar, .header-img, footer {
+.navbar, .header-img-container, footer {
   width: 100%;
   max-width: 1395px;
   margin: 0 auto;
@@ -11381,9 +11381,19 @@ button:focus {
   width: 120px;
 }
 
-.header-img {
+.header-img-container {
   height: 240px;
-  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-img {
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -11395,12 +11405,12 @@ button:focus {
     padding: 18px 42px 29px 42px;
   }
 
-  .header-img {
+  .header-img-container {
     height: 140px;
   }
 }
 @media (min-width: 1024px) {
-  .header-img {
+  .header-img-container {
     height: 240px;
   }
 }
