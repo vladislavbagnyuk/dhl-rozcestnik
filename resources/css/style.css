@@ -11425,6 +11425,7 @@ button:focus {
 
 .switch {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .switch .btn {
