@@ -11438,6 +11438,17 @@ button:focus {
   border-color: #EB131E;
 }
 
+.input-group-text {
+  background: none;
+  border-right: none;
+}
+
+.search input[type=text] {
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
 footer {
   font-size: 14px;
   padding: 35px 17px;
