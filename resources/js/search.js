@@ -1,25 +1,24 @@
 $(document).ready(function() {
-
   var input = $('.search input[type=text]');
-
+  var dropdown = $('.autocomplete');
   input.click(function(){
-    $('.autocomplete').show();
-    $('.autocomplete').css('height', 'auto');
+    dropdown.show();
+    dropdown.css('height', 'auto');
   });
 
 $('.autocomplete ul li').click(function(){
   var text = $(this).contents().get(0).nodeValue;
   input.val(text);
-  $('.autocomplete').css('height', 0);
-  $('.autocomplete').hide();
+  dropdown.css('height', 0);
+  dropdown.hide();
 });
 
 $(document).on("click", function(event){
   if(!$(event.target).closest(".search input[type=text]").length){
     if(!$(event.target).closest(".autocomplete").length){
       // Showing the hint message
-      $('.autocomplete').css('height', 0);
-      $('.autocomplete').hide();
+      dropdown.css('height', 0);
+      dropdown.hide();
     }
   }
 });
