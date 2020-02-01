@@ -73,24 +73,24 @@
       </div>
 
 
-      <form>
+      <form id="#search-form">
         <div class="input-group mb-3 search">
-          <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Číslo zakázky">
+          <input type="text" id="myInput" class="form-control" placeholder="Číslo zakázky">
         </div>
+        <ul id="autocomplete" class="autocomplete" id="myUL">
+          <li class="category">Kategorie</li>
+          <ul>
+            <li>Automatické doporučení 1</li>
+            <li>Automatické doporučení 2</li>
+            <li>Automatické doporučení 3</li>
+          </ul>
+          <li>Kategorie</li>
+          <ul>
+            <li>Rychlý odkaz<span>Krátký popis</span></li>
+            <li>Rychlý odkaz<span>Krátký popis</span></li>
+          </ul>
+        </ul>
       </form>
-      <ul class="autocomplete" id="myUL">
-        <li>Kategorie</li>
-        <ul>
-          <li>Automatické doporučení 1</li>
-          <li>Automatické doporučení 2</li>
-          <li>Automatické doporučení 3</li>
-        </ul>
-        <li>Kategorie</li>
-        <ul>
-          <li>Rychlý odkaz<span>Krátký popis</span></li>
-          <li>Rychlý odkaz<span>Krátký popis</span></li>
-        </ul>
-      </ul>
 
     </div>
   </div>
