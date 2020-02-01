@@ -11491,19 +11491,39 @@ button:focus {
   border-radius: 0 0 4px 4px;
   margin-top: -2px;
   z-index: 10;
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  display: none;
+}
+
+.autocomplete ul {
+  padding: 0;
 }
 
 .autocomplete li {
-  color: black;
   padding: 17px 20px;
   background-color: white;
   display: block;
-  cursor: pointer;
+  font-size: 12px;
+  color: #8b8b8b;
 }
 
-.autocomplete li:hover {
+.autocomplete ul li {
+  cursor: pointer;
+  color: black;
+  font-size: 16px;
+}
+
+.autocomplete ul li:hover {
   background-color: rgba(0, 0, 0, 0.1);
   text-decoration: none;
+}
+
+.autocomplete ul li span {
+  display: block;
+  font-size: 12px;
+  color: #666666;
 }
 
 footer {
