@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Přeprava balíkových zásilek | DHL | Česká republika</title>
+  <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+  <div class="site-content">
+    <header>
+      <div id="banner" class="banner">
+        <div class="banner-content">
+          <button id="bannerCloseBtn" class="close" type="button" name="button">
+            <img src="resources/img/icons/close.svg" alt="">
+          </button>
+          <p>Na těchto webových stránkách používáme soubory cookie. Soubory cookie se používají ke zlepšení fungování a používání našich internetových stránek a k analytickým a reklamním účelům. Pokud se chcete dozvědět víc o souborech cookie, o tom, jak je používáme a jak změnit vaše nastavení souborů cookie, další informace najdete zde. Dalším používáním těchto stránek beze změny nastavení souhlasíte s naším používáním souborů cookie.</p>
+          <button id="bannerOkBtn" class="btn btn-primary ok-btn" type="button" name="button">OK</button>
+        </div>
+      </div>
+      <nav class="navbar">
+        <a class="brand-link" href="/">
+          <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
+        </a>
+        <div class="float-right">
+          <button id="languageTogglerBtn" class="d-md-none btn-icon" type="button" name="button">
+            <img src="resources/img/icons/languages.svg" alt="">
+          </button>
+          <div id="languageSwitch" class="lang-switch-container">
+            <button class="active" type="button" name="button">
+              CS
+            </button>
+            <button type="button" name="button">
+              EN
+            </button>
+          </div>
+
+          <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
+            Login
+          </button>
+          <!-- AFTER LOGIN
+          <button class="d-md-none btn-icon" type="button" name="button">
+          <img src="resources/img/icons/account.svg" alt="">
+        </button>
+      -->
+      <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+    <div id="mainMenu" class="main-menu-container">
+      <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
+      <ul class="main-menu">
+        <li><a class="active" href="#">Domů</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Novinky</a></li>
+        <li><a href="#">Služby</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="header-img-container">
+    <img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 content-col">
+      <h1 class="text-center">PŘEPRAVA BALÍKOVÝCH ZÁSILEK</h1>
+      <div class="btn-group switch" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-primary">Sledování zásilky</button>
+        <button type="button" class="btn btn-primary">Kalkulátor ceny</button>
+      </div>
+
+      <div class="calculator-container">
+        <h2>VAŠE CENA</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <form>
+              <div class="form-group">
+                <label for="productSelect">Vyberte produkt</label>
+                <select id="productSelect" class="form-control">
+                  <option>Produkt 1</option>
+                  <option>Produkt 2</option>
+                  <option>Produkt 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="pscNakladkyInput">PSČ nákladky*</label>
+                <input type="text" class="form-control" id="pscNakladkyInput">
+              </div>
+              <div class="form-group">
+                <label for="pscVykladkyInput">PSČ výkladky*</label>
+                <input type="text" class="form-control" id="pscVykladkyInput">
+              </div>
+
+              <div class="form-row">
+
+                <div class="input-group col-6">
+                  <label for="massInput">Hmotnost*</label>
+                  <input type="text" class="form-control" id="massInput">
+                  <div class="input-group-append">
+                    <select>
+                      <option value="kg" selected>kg</option>
+                      <option value="g">g</option>
+                      <option value="t">t</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="input-group col-6">
+                  <label for="volumeInput">Objem*</label>
+                  <input type="text" class="form-control" id="volumeInput">
+                  <div class="input-group-append">
+                    <select>
+                      <option value="m3" selected>m<sup>3</sup></option>
+                      <option value="l">l</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="input-group">
+                <label for="priceInput">Hodnota dobírky*</label>
+                <input type="text" class="form-control" id="priceInput">
+                <div class="input-group-append">
+                  <select>
+                    <option value="czk" selected>CZK</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Spočítat</button>
+
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="result">
+              <h2>...</h2>
+              <p>CZK bez DPH a příplatků</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="row">
+    <div class="col-md-8 col-lg-9 text-links">
+      <p><b>Deutsche Post DHL Group</b></p>
+      <a href="#">Informace o podvodech</a>
+      <a href="#">Právní oznámení</a>
+      <a href="#">Smluvní podmínky</a>
+      <a href="#">Oznámení o ochraně soukromí</a>
+      <a href="#">Řešení sporů</a>
+      <a href="#">Přístupnost</a>
+    </div>
+    <div class="col-md-4 col-lg-3 social-links">
+      <p><b>Sledujte nás na</b></p>
+      <a href="#" title="YouTube"><img src="resources/img/icons/youtube.svg" alt="YouTube"></a>
+      <a href="#" title="Facebook"><img src="resources/img/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#" title="LinkedIn"><img src="resources/img/icons/linkedin.svg" alt="LinkedIn"></a>
+      <a href="#" title="Instagram"><img src="resources/img/icons/instagram.svg" alt="Instagram"></a>
+    </div>
+  </div>
+  <div class="copyright text-center">
+    <p>2020 © DHL International GmbH. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Zákaznická zóna</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="loginInput">Přihlašovací jméno*</label>
+            <input type="text" class="form-control" id="loginInput">
+          </div>
+          <div class="form-group">
+            <label for="passwordInput">Heslo*</label>
+            <input type="password" class="form-control" id="passwordInput">
+          </div>
+          <a href="#">Zapoměli jste své heslo?</a>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="stayLoggeddCheckbox">
+            <label class="custom-control-label" for="stayLoggeddCheckbox">Zůstat přihlášený</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Přihlásit se</button>
+        </form>
+        <p class="text-center">
+          <a href="#" class="register-link">Pro registraci nás kontaktuje.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="resources/node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="resources/node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="resources/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="resources/js/navbar.js"></script>
+<script src="resources/js/search.js"></script>
+</body>
+</html>

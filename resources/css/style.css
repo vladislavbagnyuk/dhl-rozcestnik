@@ -11822,6 +11822,29 @@ button:focus {
     width: auto;
   }
 }
+.calculator-container h2 {
+  text-align: center;
+}
+
+.calculator-container .result {
+  text-align: center;
+  background-color: #F2F2F2;
+}
+
+.calculator-container .btn {
+  font-weight: bold;
+  width: 100%;
+  height: 48px;
+}
+
+@media (min-width: 768px) {
+  .calculator-container .btn {
+    width: 178px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
 footer {
   font-size: 14px;
   padding: 35px 17px;
