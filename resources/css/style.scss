@@ -1,5 +1,6 @@
 $theme-colors: (
-"primary": #D40511
+"primary": #D40511,
+"gray": #F2F2F2
 );
 $hover-color: #EB131E;
 $link-hover-color: $hover-color;
@@ -151,6 +152,9 @@ input[type=number]:focus,
 .btn-outline-primary:hover, .btn-primary:hover {
   background-color: $hover-color;
   border-color: $hover-color;
+}
+b, strong {
+    font-weight: bold;
 }
 // Header
 header {
@@ -430,7 +434,7 @@ button:focus {
   max-width: 1395px;
   margin: 0 auto;
   top: 54px;
-  background-color: #F2F2F2;
+  background-color: map-get($theme-colors, 'gray');
   text-align: left;
   z-index: 15;
   overflow: hidden;
@@ -572,11 +576,105 @@ button:focus {
   font-size: 12px;
   color: #666666;
 }
+
+// Tracking
+.tracking-container h2 {
+  margin-bottom: 54px;
+}
+.tracking-container hr {
+  border: 2px solid black;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+.tracking-container .info {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  padding-top: 22px;
+}
+.tracking-container .titles {
+  font-weight: bold;
+}
+.tracking-container .col-6 {
+  margin-bottom: 4px;
+}
+.tracking-container .actual {
+  margin: 0;
+  padding: 0;
+
+  background-color: map-get($theme-colors, 'gray');
+}
+.tracking-container .actual h3 {
+  background-color: white;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+}
+.tracking-container .actual p {
+  text-align: center;
+}
+.tracking-container .actual .place {
+  padding-top: 45px;
+  margin-bottom: 44px;
+}
+.tracking-container .actual .accepted {
+  margin: 0;
+}
+.progress-col {
+  margin-top: 57px;
+}
+.tracking-progress {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+.tracking-progress table {
+  width: 100%;
+}
+.tracking-progress th {
+  border-bottom: 1px solid black;
+  padding: 26px 0;
+  font-weight: normal;
+}
+.tracking-progress td {
+  padding: 15px 0;
+  color: #707070;
+}
+.tracking-progress .place {
+  font-weight: bold;
+}
+.tracking-progress .latest-row td {
+  color: black;
+}
+.tracking-progress .progress-img {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  width: 57px;
+}
+.tracking-progress .progress-img img {
+    bottom: 16px;
+    position: absolute;
+}
+.tracking-progress .btn {
+  float: right;
+  margin-top: 40px;
+  font-weight: bold;
+  padding: 14px;
+}
+@include media-breakpoint-up(md) {
+  .tracking-container .actual {
+    height: 100%;
+  }
+  .tracking-container .info-col {
+    height: 100%;
+  }
+  .tracking-container .downline {
+    margin-bottom: 0;
+  }
+}
 // Footer
 footer {
   font-size: 14px;
   padding: 35px 17px;
-  background-color: #F2F2F2;
+  background-color: map-get($theme-colors, 'gray');
   margin-top: 70px;
   flex-shrink: 0;
 }
