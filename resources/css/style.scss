@@ -625,12 +625,6 @@ button:focus {
   border-top: 4px solid black;
   border-bottom: 4px solid black;
 }
-.tracking-progress .btn {
-  float: right;
-  margin-top: 40px;
-  font-weight: bold;
-  padding: 14px;
-}
 @include media-breakpoint-up(md) {
   .tracking-container .actual {
     height: 100%;
@@ -670,9 +664,19 @@ button:focus {
     bottom: 12px;
     position: absolute;
 }
+.tracking-progress .btn {
+  width: 100%;
+  margin-top: 40px;
+  font-weight: bold;
+  padding: 14px;
+  float: right;
+}
 @include media-breakpoint-up(md) {
   .progress-table .block {
     border: none;
+  }
+  .progress-table .place p {
+    margin: 15px 0;
   }
   .progress-table p {
     margin: 15px 0;
@@ -680,15 +684,11 @@ button:focus {
   .progress-table .table-header p {
     margin: 24px 0 17px 0;
   }
-  .tracking-progress .table-img {
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative;
-    width: 57px;
-  }
   .tracking-progress .table-img img {
-      bottom: 13px;
-      position: absolute;
+      bottom: 10px;
+  }
+  .tracking-progress .btn {
+    width: auto;
   }
 }
 // Footer

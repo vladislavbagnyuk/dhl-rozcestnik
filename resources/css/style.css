@@ -11725,13 +11725,6 @@ button:focus {
   border-bottom: 4px solid black;
 }
 
-.tracking-progress .btn {
-  float: right;
-  margin-top: 40px;
-  font-weight: bold;
-  padding: 14px;
-}
-
 @media (min-width: 768px) {
   .tracking-container .actual {
     height: 100%;
@@ -11779,9 +11772,21 @@ button:focus {
   position: absolute;
 }
 
+.tracking-progress .btn {
+  width: 100%;
+  margin-top: 40px;
+  font-weight: bold;
+  padding: 14px;
+  float: right;
+}
+
 @media (min-width: 768px) {
   .progress-table .block {
     border: none;
+  }
+
+  .progress-table .place p {
+    margin: 15px 0;
   }
 
   .progress-table p {
@@ -11792,16 +11797,12 @@ button:focus {
     margin: 24px 0 17px 0;
   }
 
-  .tracking-progress .table-img {
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative;
-    width: 57px;
+  .tracking-progress .table-img img {
+    bottom: 10px;
   }
 
-  .tracking-progress .table-img img {
-    bottom: 13px;
-    position: absolute;
+  .tracking-progress .btn {
+    width: auto;
   }
 }
 footer {
