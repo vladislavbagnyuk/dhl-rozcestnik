@@ -11882,7 +11882,7 @@ button:focus {
 .form-group label,
 .input-group label {
   position: absolute;
-  top: 10px;
+  top: 1px;
   left: 12px;
   color: #8b8b8b;
   z-index: 10;
