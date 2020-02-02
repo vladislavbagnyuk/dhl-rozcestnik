@@ -11725,41 +11725,6 @@ button:focus {
   border-bottom: 4px solid black;
 }
 
-.tracking-progress table {
-  width: 100%;
-}
-
-.tracking-progress th {
-  border-bottom: 1px solid black;
-  padding: 26px 0;
-  font-weight: normal;
-}
-
-.tracking-progress td {
-  padding: 15px 0;
-  color: #707070;
-}
-
-.tracking-progress .place {
-  font-weight: bold;
-}
-
-.tracking-progress .latest-row td {
-  color: black;
-}
-
-.tracking-progress .progress-img {
-  padding-top: 0;
-  padding-bottom: 0;
-  position: relative;
-  width: 57px;
-}
-
-.tracking-progress .progress-img img {
-  bottom: 16px;
-  position: absolute;
-}
-
 .tracking-progress .btn {
   float: right;
   margin-top: 40px;
@@ -11775,9 +11740,68 @@ button:focus {
   .tracking-container .info-col {
     height: 100%;
   }
+}
+.progress-table .table-header,
+.progress-table .block {
+  border-bottom: 1px solid black;
+}
 
-  .tracking-container .downline {
-    margin-bottom: 0;
+.progress-table {
+  color: #707070;
+}
+
+.progress-table .table-header,
+.progress-table .latest {
+  color: black;
+}
+
+.progress-table p {
+  margin: 11.95px 0;
+}
+
+.progress-table .place {
+  font-weight: bold;
+}
+
+.progress-table .place p {
+  margin-top: 8px;
+}
+
+.tracking-progress .table-img {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  width: 57px;
+}
+
+.tracking-progress .table-img img {
+  bottom: 12px;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .progress-table .block {
+    border: none;
+  }
+
+  .progress-table p {
+    margin: 15px 0;
+  }
+
+  .progress-table .table-header p {
+    margin: 24px 0 17px 0;
+  }
+
+  .tracking-progress .table-img {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    width: 57px;
+  }
+
+  .tracking-progress .table-img img {
+    bottom: 13px;
+    position: absolute;
   }
 }
 footer {
