@@ -11697,6 +11697,10 @@ button:focus {
   background-color: #F2F2F2;
 }
 
+.tracking-container .actual {
+  margin-top: 49px;
+}
+
 .tracking-container .actual h3 {
   background-color: white;
   margin-bottom: 0;
@@ -11714,10 +11718,11 @@ button:focus {
 
 .tracking-container .actual .accepted {
   margin: 0;
+  padding-bottom: 45px;
 }
 
 .progress-col {
-  margin-top: 57px;
+  margin-top: 49px;
 }
 
 .tracking-progress {
@@ -11726,6 +11731,18 @@ button:focus {
 }
 
 @media (min-width: 768px) {
+  .tracking-container .actual {
+    margin-top: 0;
+  }
+
+  .progress-col {
+    margin-top: 57px;
+  }
+
+  .tracking-container .actual .accepted {
+    padding: 0;
+  }
+
   .tracking-container .actual {
     height: 100%;
   }
