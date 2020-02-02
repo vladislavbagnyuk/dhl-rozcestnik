@@ -63,9 +63,9 @@
     <img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">
   </div>
 </header>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-10 col-lg-8 content-col">
+    <div class="col-md-10 col-xl-8 content-col">
       <h1 class="text-center">PŘEPRAVA BALÍKOVÝCH ZÁSILEK</h1>
       <div class="btn-group switch" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-outline-primary">Sledování zásilky</button>
@@ -80,6 +80,7 @@
               <div class="form-group">
                 <label for="productSelect">Vyberte produkt</label>
                 <select id="productSelect" class="form-control">
+                  <option></option>
                   <option>Produkt 1</option>
                   <option>Produkt 2</option>
                   <option>Produkt 3</option>
@@ -96,7 +97,7 @@
 
               <div class="form-row">
 
-                <div class="input-group col-6">
+                <div class="input-group col-lg-6">
                   <label for="massInput">Hmotnost*</label>
                   <input type="text" class="form-control" id="massInput">
                   <div class="input-group-append">
@@ -108,7 +109,7 @@
                   </div>
                 </div>
 
-                <div class="input-group col-6">
+                <div class="input-group col-lg-6">
                   <label for="volumeInput">Objem*</label>
                   <input type="text" class="form-control" id="volumeInput">
                   <div class="input-group-append">
@@ -140,6 +141,9 @@
             <div class="result">
               <h2>...</h2>
               <p>CZK bez DPH a příplatků</p>
+              <div class="btn-container">
+                <button type="button" class="btn btn-secondary">Objednat přepravu</button>
+              </div>
             </div>
           </div>
         </div>

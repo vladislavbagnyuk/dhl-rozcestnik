@@ -32,7 +32,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1365px;
   --breakpoint-xxl: 1900px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -557,7 +557,7 @@ pre code {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .container {
     max-width: 1140px;
   }
@@ -591,7 +591,7 @@ pre code {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
   }
@@ -1470,7 +1470,7 @@ pre code {
     margin-left: 91.6666666667%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .col-xl {
     flex-basis: 0;
     flex-grow: 1;
@@ -2202,7 +2202,7 @@ pre code {
     border: 0;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1364.98px) {
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -3339,7 +3339,7 @@ input[type=button].btn-block {
     left: auto;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .dropdown-menu-xl-left {
     right: auto;
     left: 0;
@@ -4459,7 +4459,7 @@ input[type=button].btn-block {
     display: none;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1364.98px) {
   .navbar-expand-xl > .container,
 .navbar-expand-xl > .container-fluid,
 .navbar-expand-xl > .container-sm,
@@ -4471,7 +4471,7 @@ input[type=button].btn-block {
     padding-left: 0;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .navbar-expand-xl {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -5494,7 +5494,7 @@ a.badge-gray:focus, a.badge-gray.focus {
     border-left-width: 1px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .list-group-horizontal-xl {
     flex-direction: row;
   }
@@ -5934,7 +5934,7 @@ a.close.disabled {
     max-width: 800px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .modal-xl {
     max-width: 1140px;
   }
@@ -6807,7 +6807,7 @@ button.bg-gray:focus {
     display: inline-flex !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .d-xl-none {
     display: none !important;
   }
@@ -7506,7 +7506,7 @@ button.bg-gray:focus {
     align-self: stretch !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .flex-xl-row {
     flex-direction: row !important;
   }
@@ -7831,7 +7831,7 @@ button.bg-gray:focus {
     float: none !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .float-xl-left {
     float: left !important;
   }
@@ -9753,7 +9753,7 @@ button.bg-gray:focus {
     margin-left: auto !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .m-xl-0 {
     margin: 0 !important;
   }
@@ -10692,7 +10692,7 @@ button.bg-gray:focus {
     text-align: center !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1365px) {
   .text-xl-left {
     text-align: left !important;
   }
@@ -11168,9 +11168,35 @@ input[type=number]:focus,
 [type=password].form-control:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
-[contenteditable].form-control:focus {
-  box-shadow: inset 0 -1px 0 #ddd;
+[contenteditable].form-control:focus,
+select:focus {
   box-shadow: none;
+}
+
+input {
+  height: 48px !important;
+}
+
+select {
+  background: url(../img/icons/arrow-down.svg) no-repeat;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background-position: right 15px center;
+  padding-left: 12px;
+  height: 48px !important;
+  padding-right: 30px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select, input {
+  border: 1px solid #a0a0a0 !important;
+  border-radius: 4px !important;
 }
 
 .btn-outline-primary:hover, .btn-primary:hover {
@@ -11184,6 +11210,10 @@ b, strong {
 
 header {
   text-align: center;
+}
+
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  max-width: 1395px;
 }
 
 .navbar, .header-img-container, footer {
@@ -11567,9 +11597,14 @@ button:focus {
 
 .switch {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 31px;
 }
 
+@media (min-width: 768px) {
+  .switch {
+    margin-bottom: 50px;
+  }
+}
 .switch .btn {
   padding-top: 11px;
   padding-bottom: 11px;
@@ -11594,7 +11629,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: 12px center;
   padding-left: 40px;
-  height: 46px;
+  height: 46px !important;
   border-radius: 4px;
 }
 
@@ -11667,7 +11702,7 @@ button:focus {
   color: #666666;
 }
 
-.tracking-container h2 {
+.tracking-container h2, .calculator-container h2 {
   margin-bottom: 54px;
 }
 
@@ -11834,15 +11869,68 @@ button:focus {
 .calculator-container .btn {
   font-weight: bold;
   width: 100%;
+  margin-top: 24px;
   height: 48px;
 }
 
+.calculator-container .form-group,
+.calculator-container .input-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.calculator-container .form-group label,
+.calculator-container .input-group label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #8b8b8b;
+  z-index: 10;
+}
+
+.calculator-container .input-group label {
+  left: 17px;
+}
+
+.calculator-container .input-group input {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.calculator-container .input-group select {
+  width: 101px;
+  color: #8b8b8b;
+}
+
+.calculator-container .result .btn-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
 @media (min-width: 768px) {
+  .calculator-container .result {
+    height: 100%;
+    position: relative;
+  }
+
   .calculator-container .btn {
     width: 178px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .calculator-container .input-group select {
+    width: 78px;
+  }
+}
+@media (min-width: 1024px) {
+  .calculator-container .input-group select {
+    width: 83px;
   }
 }
 footer {
