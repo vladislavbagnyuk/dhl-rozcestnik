@@ -11195,6 +11195,7 @@ select::-ms-expand {
 }
 
 select, input {
+  border: 1px solid #a0a0a0 !important;
   border-radius: 4px !important;
 }
 
