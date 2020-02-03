@@ -11195,7 +11195,6 @@ select::-ms-expand {
 }
 
 select, input {
-  border: 1px solid #a0a0a0 !important;
   border-radius: 4px !important;
 }
 
@@ -11677,14 +11676,14 @@ button:focus {
   background-position: 12px center;
   padding-left: 40px;
   height: 46px !important;
-  border-radius: 4px;
+  border-radius: 4px !important;
 }
 
 .search input[type=text]:focus,
 .search input[type=text]:focus-within,
 .search input[type=text]:active {
-  border: 2px solid black;
-  border-bottom: none;
+  border: 2px solid black !important;
+  border-bottom: none !important;
   border-radius: 4px 4px 0 0 !important;
 }
 
