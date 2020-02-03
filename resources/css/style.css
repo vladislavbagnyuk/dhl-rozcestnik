@@ -11928,6 +11928,8 @@ button:focus {
   left: 12px;
   color: #8b8b8b;
   z-index: 10;
+  transition: 0.15s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
 }
 
 .input-group label {
