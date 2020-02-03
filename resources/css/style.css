@@ -11526,8 +11526,11 @@ button:focus {
   background-color: rgba(255, 204, 0, 0.95);
 }
 
-.modal-content {
+.modal-dialog {
   max-width: 400px;
+}
+
+.modal-content {
   border: none;
   border-radius: 0;
   margin: 18px;
