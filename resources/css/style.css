@@ -11199,6 +11199,48 @@ select, input {
   border-radius: 4px !important;
 }
 
+.custom-control-label::before,
+.custom-control-label::after {
+  top: -2px;
+  left: -48px;
+  width: 30px;
+  height: 30px;
+}
+
+.custom-control-label::before {
+  border: 2px solid #8C8C8C;
+  border-radius: 4px !important;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url("../img/icons/check.svg");
+  border-color: #8C8C8C;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #8C8C8C;
+  background-color: white;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  color: #fff;
+  background-color: white;
+  border-color: #8C8C8C;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #8C8C8C;
+}
+
+.custom-checkbox {
+  padding-left: 48px;
+}
+
+.custom-checkbox label {
+  font-size: 16px !important;
+}
+
 .btn-outline-primary:hover, .btn-primary:hover {
   background-color: #EB131E;
   border-color: #EB131E;
