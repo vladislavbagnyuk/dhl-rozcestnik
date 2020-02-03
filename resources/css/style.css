@@ -12044,6 +12044,15 @@ footer .social-links a {
   margin-right: 34px;
 }
 
+footer .social-links a path {
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
+}
+
+footer .social-links a:hover path {
+  fill: #EB131E;
+}
+
 .copyright {
   padding-top: 54px;
   width: 100%;
