@@ -11464,6 +11464,7 @@ header {
 @media (min-width: 768px) {
   .main-menu-container {
     width: 100%;
+    height: auto;
     position: static;
     background: none;
     padding: 0;
