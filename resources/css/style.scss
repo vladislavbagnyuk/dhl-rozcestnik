@@ -343,7 +343,6 @@ header {
 .main-menu-container {
   position: fixed;
   top: 54px;
-  height: 100vh;
   left: 100vw;
   bottom: 0;
   right: 0;
@@ -400,7 +399,6 @@ header {
 @include media-breakpoint-up(md){
   .main-menu-container {
     width: 100%;
-    height: auto;
     position: static;
     background: none;
     padding: 0;
