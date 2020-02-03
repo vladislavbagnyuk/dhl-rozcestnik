@@ -797,6 +797,9 @@ button:focus {
   transition: .15s;
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
 }
+.product-select-group label {
+  top: 11px;
+}
 .input-group label {
   left: 17px;
 }
