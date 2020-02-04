@@ -152,6 +152,12 @@ select:focus {
 input {
   height: 48px !important;
 }
+input.is-invalid {
+  border-color: #FE0000 !important;
+}
+label.is-invalid {
+  color: #FE0000 !important;
+}
 select{
   background: url(../img/icons/arrow-down.svg) no-repeat;
   -moz-appearance:none; /* Firefox */
