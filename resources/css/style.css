@@ -11170,7 +11170,8 @@ input[type=number]:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus,
 select:focus {
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 input {
