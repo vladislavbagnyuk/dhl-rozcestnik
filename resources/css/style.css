@@ -11548,6 +11548,7 @@ button:focus {
   font-family: "Delivery-Condensed";
   font-weight: 900;
   font-size: 22px;
+  margin-bottom: 29px;
 }
 
 .modal-content .btn {
