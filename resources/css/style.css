@@ -11864,14 +11864,14 @@ button:focus {
 }
 
 .progress-table .block-row {
-  padding-left: 57px;
+  padding-left: 47px;
 }
 
 .tracking-progress .table-img {
   padding-top: 0;
   padding-bottom: 0;
   position: relative;
-  width: 57px;
+  width: 47px;
   float: left;
 }
 

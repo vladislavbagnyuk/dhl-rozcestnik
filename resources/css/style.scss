@@ -669,7 +669,6 @@ button:focus {
 .tracking-container .actual {
   margin: 0;
   padding: 0;
-
   background-color: map-get($theme-colors, 'gray');
 }
 .tracking-container .actual {
@@ -737,13 +736,13 @@ button:focus {
   margin-top: 8px;
 }
 .progress-table .block-row {
-  padding-left: 57px;
+  padding-left: 47px;
 }
 .tracking-progress .table-img {
   padding-top: 0;
   padding-bottom: 0;
   position: relative;
-  width: 57px;
+  width: 47px;
   float: left;
   //height: 140px;
 }
