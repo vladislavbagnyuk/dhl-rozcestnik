@@ -18,7 +18,7 @@
           <button id="bannerOkBtn" class="btn btn-primary ok-btn" type="button" name="button">OK</button>
         </div>
       </div>
-      <nav class="navbar">
+      <nav class="navbar" id="mainNavbar">
         <a class="brand-link" href="/">
           <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
         </a>
@@ -43,13 +43,63 @@
           <img src="resources/img/icons/account.svg" alt="">
         </button>
       -->
-      <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </div>
-    <div id="mainMenu" class="main-menu-container">
+
+      <div class="navbar-scroll">
+        <nav class="navbar">
+          <a class="brand-link" href="/">
+            <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
+          </a>
+          <div class="main-menu-container">
+            <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
+            <ul class="main-menu">
+              <li><a class="active" href="#">Domů</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Novinky</a></li>
+              <li><a href="#">Služby</a></li>
+            </ul>
+          </div>
+          <div class="float-right">
+
+            <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
+              Login
+            </button>
+            <!-- AFTER LOGIN
+            <button class="d-md-none btn-icon" type="button" name="button">
+            <img src="resources/img/icons/account.svg" alt="">
+          </button>
+        -->
+        <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+</div>
+<div id="mainMenu" class="main-menu-container">
+  <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
+  <ul class="main-menu">
+    <li><a class="active" href="#">Domů</a></li>
+    <li><a href="#">Kontakt</a></li>
+    <li><a href="#">Novinky</a></li>
+    <li><a href="#">Služby</a></li>
+  </ul>
+</div>
+</nav>
+
+<div class="navbar-scroll">
+  <nav class="navbar">
+    <a class="brand-link" href="/">
+      <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
+    </a>
+    <div class="main-menu-container">
       <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
       <ul class="main-menu">
         <li><a class="active" href="#">Domů</a></li>
@@ -58,11 +108,29 @@
         <li><a href="#">Služby</a></li>
       </ul>
     </div>
-  </nav>
-  <div class="header-margin d-md-none"></div>
-  <div class="header-img-container">
-    <img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">
-  </div>
+    <div class="float-right">
+
+      <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
+        Login
+      </button>
+      <!-- AFTER LOGIN
+      <button class="d-md-none btn-icon" type="button" name="button">
+      <img src="resources/img/icons/account.svg" alt="">
+    </button>
+  -->
+  <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+</div>
+</nav>
+</div>
+
+<div class="header-margin d-md-none"></div>
+<div class="header-img-container">
+  <img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">
+</div>
 </header>
 <div class="container-fluid">
   <div class="row">
@@ -95,174 +163,174 @@
       </form>
 
 
-    <!-- Tracking -->
-    <!--
+      <!-- Tracking -->
+      <!--
       <div class="tracking-container">
-        <h2 class="text-center">VAŠE ZÁSILKA</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Informace o zásilce</h3>
+      <h2 class="text-center">VAŠE ZÁSILKA</h2>
+      <div class="row">
+      <div class="col-md-6">
+      <h3>Informace o zásilce</h3>
 
-            <div class="info">
-              <div class="row">
-                <div class="col-6 titles">
-                  <p>Číslo zásilky</p>
-                  <p>Odesílatel</p>
-                  <p>Zákaznická reference</p>
-                  <p>Váha [kg]</p>
-                  <p>Dobírka CZK</p>
-                </div>
-                <div class="col-6">
-                  <p>40197990772</p>
-                  <p>ABC</p>
-                  <p>110590</p>
-                  <p>21,3</p>
-                  <p>5 390</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="actual">
-              <h3>Aktuální stav zásilky</h3>
-              <p class="place"><b>Místo:</b></br>Depo Hostivář, Praha 8</p>
-              <p class="accepted"><b>Přijato</b></br>dnes, 12:38</p>
-            </div>
-          </div>
-          <div class="col-12 progress-col">
-            <h3>Detail přepravy</h3>
-            <div class="tracking-progress">
-              <div class="container">
-                <div class="row progress-table">
-
-                  <div class="col-2 col-md-1 table-header">
-
-                  </div>
-                  <div class="col-10 col-md-11 table-header">
-                    <div class="row">
-                      <div class="col-12 col-md-5 place">
-                        <p>Místo</p>
-                      </div>
-                      <div class="d-none d-md-block col-md-7">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Přijato</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expedováno</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-md-1 table-img">
-                    <img class="d-none d-md-block" src="resources/img/icons/progress/desktop-black-top.svg" alt="">
-                    <img class="d-md-none" src="resources/img/icons/progress/mobile-black-top.svg" alt="">
-                  </div>
-                  <div class="col-10 col-md-11">
-                    <div class="row block latest">
-                      <div class="col-12 col-md-5 place">
-                        <p>Depo Hostivař, Praha 8</p>
-                      </div>
-                      <div class="col-5 d-md-none">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Přijato</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expedováno</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-7 col-md-7">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>dnes, 12:38</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>...</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-2 col-md-1 table-img">
-                    <img class="d-none d-md-block" src="resources/img/icons/progress/desktop-green.svg" alt="">
-                    <img class="d-md-none" src="resources/img/icons/progress/mobile-green.svg" alt="">
-                  </div>
-                  <div class="col-10 col-md-11">
-                    <div class="row block">
-                      <div class="col-12 col-md-5 place">
-                        <p>Bratislava, Areál Doubravka</p>
-                      </div>
-                      <div class="col-5 d-md-none">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Přijato</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expedováno</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-7 col-md-7">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>dnes, 12:38</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>včera, 13:46</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-2 col-md-1 table-img">
-                    <img class="d-none d-md-block" src="resources/img/icons/progress/desktop-green.svg" alt="">
-                    <img class="d-md-none" src="resources/img/icons/progress/mobile-green.svg" alt="">
-                  </div>
-                  <div class="col-10 col-md-11">
-                    <div class="row">
-                      <div class="col-12 col-md-5 place">
-                        <p>Vienna, pickup spot 17</p>
-                      </div>
-                      <div class="col-5 d-md-none">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Přijato</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expedováno</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-7 col-md-7">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>14.4.2020, 17:32</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>13.4.2020, 6:44</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <button type="button" class="btn btn-outline-primary">Hledat novou zásilku</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    -->
+      <div class="info">
+      <div class="row">
+      <div class="col-6 titles">
+      <p>Číslo zásilky</p>
+      <p>Odesílatel</p>
+      <p>Zákaznická reference</p>
+      <p>Váha [kg]</p>
+      <p>Dobírka CZK</p>
     </div>
+    <div class="col-6">
+    <p>40197990772</p>
+    <p>ABC</p>
+    <p>110590</p>
+    <p>21,3</p>
+    <p>5 390</p>
   </div>
+</div>
+
+</div>
+</div>
+<div class="col-md-6">
+<div class="actual">
+<h3>Aktuální stav zásilky</h3>
+<p class="place"><b>Místo:</b></br>Depo Hostivář, Praha 8</p>
+<p class="accepted"><b>Přijato</b></br>dnes, 12:38</p>
+</div>
+</div>
+<div class="col-12 progress-col">
+<h3>Detail přepravy</h3>
+<div class="tracking-progress">
+<div class="container">
+<div class="row progress-table">
+
+<div class="col-2 col-md-1 table-header">
+
+</div>
+<div class="col-10 col-md-11 table-header">
+<div class="row">
+<div class="col-12 col-md-5 place">
+<p>Místo</p>
+</div>
+<div class="d-none d-md-block col-md-7">
+<div class="row">
+<div class="col-md-6">
+<p>Přijato</p>
+</div>
+<div class="col-md-6">
+<p>Expedováno</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2 col-md-1 table-img">
+<img class="d-none d-md-block" src="resources/img/icons/progress/desktop-black-top.svg" alt="">
+<img class="d-md-none" src="resources/img/icons/progress/mobile-black-top.svg" alt="">
+</div>
+<div class="col-10 col-md-11">
+<div class="row block latest">
+<div class="col-12 col-md-5 place">
+<p>Depo Hostivař, Praha 8</p>
+</div>
+<div class="col-5 d-md-none">
+<div class="row">
+<div class="col-md-6">
+<p>Přijato</p>
+</div>
+<div class="col-md-6">
+<p>Expedováno</p>
+</div>
+</div>
+</div>
+<div class="col-7 col-md-7">
+<div class="row">
+<div class="col-md-6">
+<p>dnes, 12:38</p>
+</div>
+<div class="col-md-6">
+<p>...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-2 col-md-1 table-img">
+<img class="d-none d-md-block" src="resources/img/icons/progress/desktop-green.svg" alt="">
+<img class="d-md-none" src="resources/img/icons/progress/mobile-green.svg" alt="">
+</div>
+<div class="col-10 col-md-11">
+<div class="row block">
+<div class="col-12 col-md-5 place">
+<p>Bratislava, Areál Doubravka</p>
+</div>
+<div class="col-5 d-md-none">
+<div class="row">
+<div class="col-md-6">
+<p>Přijato</p>
+</div>
+<div class="col-md-6">
+<p>Expedováno</p>
+</div>
+</div>
+</div>
+<div class="col-7 col-md-7">
+<div class="row">
+<div class="col-md-6">
+<p>dnes, 12:38</p>
+</div>
+<div class="col-md-6">
+<p>včera, 13:46</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-2 col-md-1 table-img">
+<img class="d-none d-md-block" src="resources/img/icons/progress/desktop-green.svg" alt="">
+<img class="d-md-none" src="resources/img/icons/progress/mobile-green.svg" alt="">
+</div>
+<div class="col-10 col-md-11">
+<div class="row">
+<div class="col-12 col-md-5 place">
+<p>Vienna, pickup spot 17</p>
+</div>
+<div class="col-5 d-md-none">
+<div class="row">
+<div class="col-md-6">
+<p>Přijato</p>
+</div>
+<div class="col-md-6">
+<p>Expedováno</p>
+</div>
+</div>
+</div>
+<div class="col-7 col-md-7">
+<div class="row">
+<div class="col-md-6">
+<p>14.4.2020, 17:32</p>
+</div>
+<div class="col-md-6">
+<p>13.4.2020, 6:44</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<button type="button" class="btn btn-outline-primary">Hledat novou zásilku</button>
+</div>
+</div>
+</div>
+</div>
+-->
+</div>
+</div>
 </div>
 </div>
 

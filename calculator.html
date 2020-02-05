@@ -18,7 +18,7 @@
           <button id="bannerOkBtn" class="btn btn-primary ok-btn" type="button" name="button">OK</button>
         </div>
       </div>
-      <nav class="navbar">
+      <nav class="navbar" id="mainNavbar">
         <a class="brand-link" href="/">
           <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
         </a>
@@ -59,6 +59,40 @@
       </ul>
     </div>
   </nav>
+
+  <div class="navbar-scroll">
+    <nav class="navbar">
+      <a class="brand-link" href="/">
+        <img class="brand-img" src="resources/img/brand.svg" alt="DHL">
+      </a>
+      <div class="main-menu-container">
+        <h4 class="d-md-none">Přeprava balíkových zásilek</h4>
+        <ul class="main-menu">
+          <li><a class="active" href="#">Domů</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Novinky</a></li>
+          <li><a href="#">Služby</a></li>
+        </ul>
+      </div>
+      <div class="float-right">
+
+        <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
+          Login
+        </button>
+        <!-- AFTER LOGIN
+        <button class="d-md-none btn-icon" type="button" name="button">
+        <img src="resources/img/icons/account.svg" alt="">
+      </button>
+    -->
+    <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+</nav>
+</div>
+
   <div class="header-margin d-md-none"></div>
   <div class="header-img-container">
     <img src="resources/img/header-img-placeholder.jpeg" alt="" class="header-img">

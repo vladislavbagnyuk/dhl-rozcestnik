@@ -453,6 +453,49 @@ header {
     border-color: $hover-color;
   }
 }
+.navbar-scroll {
+  display: none;
+}
+@include media-breakpoint-up(md) {
+  .navbar-scroll {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
+  }
+  .navbar-scroll .navbar {
+    //height: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .navbar-scroll .brand-link {
+    padding-bottom: 5px;
+  }
+  .navbar-scroll .brand-img {
+    height: 17px;
+    //margin-bottom: 7.5px;
+  }
+  .navbar-scroll .float-right {
+    padding-top: 0;
+}
+  .navbar-scroll .login-btn {
+    margin: 0;
+    padding-top: 2;
+    padding-bottom: 2;
+  }
+  .navbar-scroll .main-menu-container {
+    width: auto;
+  }
+  .navbar-scroll .main-menu-container .main-menu {
+    margin-top: 0;
+  }
+}
 button:focus {
   outline: none;
 }

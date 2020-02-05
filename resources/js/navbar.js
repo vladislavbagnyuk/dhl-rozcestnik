@@ -5,7 +5,6 @@ $(document).ready(function() {
   var langSwitch = $('#languageSwitch');
   var langBtn = $('#languageTogglerBtn');
 
-
   menuBtn.click(function(){
 
     if (langBtn.hasClass('is-active')) {
@@ -49,6 +48,19 @@ $(document).ready(function() {
   });
   $('#bannerOkBtn').click(function(){
     banner.css('height', 0);
+  });
+
+  // Desktop menu after scroll
+  $(document).scroll(function(){
+    if( $(window).width() >= 768 ) {
+      scrolled = $(document).scrollTop();
+      offset = $('#mainNavbar').offset().top + $('#mainNavbar').outerHeight();
+      if (scrolled >= offset) {
+        $('.navbar-scroll').css('height', '54px');
+      } else {
+        $('.navbar-scroll').css('height', '0');
+      }
+    }
   });
 
 });
