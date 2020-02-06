@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   // Hamburger menu animation
   var menuBtn = $('#mobileMenuBtn');
   var menu = $('#mainMenu');
@@ -9,6 +10,10 @@ $(document).ready(function() {
 
     if (langBtn.hasClass('is-active')) {
       langBtn.removeClass('is-active');
+
+      // Toggle language switcher animation
+      var t = window.t;
+      t.status.animating || (t.status.animating = !0, window.requestAnimationFrame(t.triggerAnimation.bind(t)))
       langSwitch.css('left', '100vw');
     }
 
