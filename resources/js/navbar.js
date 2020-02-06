@@ -61,9 +61,9 @@ $(document).ready(function() {
       scrolled = $(document).scrollTop();
       offset = $('#mainNavbar').offset().top + $('#mainNavbar').outerHeight();
       if (scrolled >= offset) {
-        $('.navbar-scroll').css('height', '54px');
+        $('.navbar-scroll').css('top', '0');
       } else {
-        $('.navbar-scroll').css('height', '0');
+        $('.navbar-scroll').css('top', '-54px');
       }
     }
   });

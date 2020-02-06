@@ -460,11 +460,11 @@ header {
   .navbar-scroll {
     display: block;
     position: fixed;
-    top: 0;
+    top: -54px;
     left: 0;
     right: 0;
     z-index: 20;
-    height: 0;
+    //height: 0;
     overflow: hidden;
     transition: .3s;
     transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
