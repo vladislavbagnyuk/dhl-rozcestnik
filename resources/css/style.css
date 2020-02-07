@@ -11730,6 +11730,11 @@ header {
   border-right: none;
 }
 
+@media (min-width: 768px) {
+  #search-form {
+    margin-bottom: 70px;
+  }
+}
 .search {
   margin-bottom: 0 !important;
 }

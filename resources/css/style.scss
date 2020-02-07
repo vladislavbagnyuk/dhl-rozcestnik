@@ -645,6 +645,11 @@ header {
   background: none;
   border-right: none;
 }
+@include media-breakpoint-up(md) {
+  #search-form {
+    margin-bottom: 70px;
+  }
+}
 .search {
   margin-bottom: 0 !important;
 }
