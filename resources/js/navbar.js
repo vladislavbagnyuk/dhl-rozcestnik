@@ -27,7 +27,6 @@ $(document).ready(function() {
   });
 
   // Mobile language switch
-
   langBtn.click(function(){
 
     if (menuBtn.hasClass('is-active')) {
