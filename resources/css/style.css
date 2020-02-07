@@ -11065,10 +11065,6 @@ h3 {
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-/*
-Header
-Switch
-*/
 @font-face {
   font-family: "Delivery";
   src: url("../font/EOT/DeliveryArabic_W_Rg.eot?#iefix") format("embedded-opentype"), url("../font/WOFF/DeliveryArabic_W_Rg.woff") format("woff"), url("../font/WOFF2/DeliveryArabic_W_Rg.woff2") format("woff2"), url("../font/TTF/DeliveryArabic_Rg.ttf") format("truetype"), url("../font/SVG/DeliveryArabic_W_Rg.svg#svgDelivery-Regular") format("svg");
@@ -11169,9 +11165,20 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus,
-select:focus {
+select:focus,
+button:focus {
   box-shadow: none !important;
   outline: none !important;
+}
+
+.btn-outline-primary:hover, .btn-primary:hover {
+  background-color: #EB131E;
+  border-color: #EB131E;
+}
+
+.disabled {
+  background-color: #CCCCCC !important;
+  border: 1px solid #CCCCCC !important;
 }
 
 input {
@@ -11248,16 +11255,6 @@ select, input {
 
 .custom-checkbox label {
   font-size: 16px !important;
-}
-
-.btn-outline-primary:hover, .btn-primary:hover {
-  background-color: #EB131E;
-  border-color: #EB131E;
-}
-
-.disabled {
-  background-color: #CCCCCC !important;
-  border: 1px solid #CCCCCC !important;
 }
 
 b, strong {
@@ -11368,6 +11365,10 @@ header {
 @media (min-width: 768px) {
   .navbar .float-right {
     padding-top: 7px;
+  }
+
+  .navbar .account-btn {
+    float: right;
   }
 
   .lang-switch-container {
@@ -11576,10 +11577,6 @@ header {
     margin-top: 0;
   }
 }
-button:focus {
-  outline: none;
-}
-
 .modal {
   background-color: rgba(255, 204, 0, 0.95);
 }
@@ -11614,7 +11611,7 @@ button:focus {
   margin: 32px 0;
 }
 
-.modal-content p, .modal-content a {
+.modal-contentLogin modal p, .modal-content a {
   font-weight: bold;
   color: black;
 }
@@ -11755,19 +11752,15 @@ button:focus {
 }
 
 .search input[type=text]::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #bababa;
   opacity: 1;
-  /* Firefox */
 }
 
 .search input[type=text]:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
   color: #bababa;
 }
 
 .search input[type=text]::-ms-input-placeholder {
-  /* Microsoft Edge */
   color: #bababa;
 }
 

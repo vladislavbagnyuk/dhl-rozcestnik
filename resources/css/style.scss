@@ -42,10 +42,24 @@ squeeze
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
 
-/*
-Header
-Switch
-*/
+// Buttons and inputs
+// Selects
+// Checkbox
+// Header
+  // Menu mobile
+  // Buttons
+  // Menu tablet and desktop
+  // Navbar after scrolling
+  // Login modal
+// Banner
+// Header image
+//Switch
+// Search
+// Tracking
+  // Progress table
+// Calculator
+// Footer
+
 
 @font-face {
   font-family: 'Delivery';
@@ -127,6 +141,7 @@ h3 {
     font-size: 31px;
   }
 }
+// Buttons and inputs
 .btn.focus, .btn:focus,
 .custom-control-input:focus,
 .custom-control-input.focus,
@@ -146,9 +161,18 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus,
-select:focus {
+select:focus,
+button:focus {
   box-shadow: none !important;
   outline: none !important;
+}
+.btn-outline-primary:hover, .btn-primary:hover {
+  background-color: $hover-color;
+  border-color: $hover-color;
+}
+.disabled {
+  background-color: #CCCCCC !important;
+  border: 1px solid #CCCCCC !important;
 }
 input {
   height: 48px !important;
@@ -159,6 +183,7 @@ input.is-invalid {
 label.is-invalid {
   color: #FE0000 !important;
 }
+// Selects
 select{
   background: url(../img/icons/arrow-down.svg) no-repeat;
   -moz-appearance:none; /* Firefox */
@@ -176,6 +201,7 @@ select, input {
   border: 1px solid #a0a0a0 !important;
   border-radius: 4px !important;
 }
+// Checkbox
 .custom-control-label::before,
 .custom-control-label::after {
 top: -2px;
@@ -209,14 +235,6 @@ height: 30px;
 }
 .custom-checkbox label {
   font-size: 16px !important;
-}
-.btn-outline-primary:hover, .btn-primary:hover {
-  background-color: $hover-color;
-  border-color: $hover-color;
-}
-.disabled {
-  background-color: #CCCCCC !important;
-  border: 1px solid #CCCCCC !important;
 }
 b, strong {
     font-weight: bold;
@@ -269,6 +287,7 @@ header {
   padding: 0;
   margin-left: 27px;
 }
+// Buttons
 .hamburger {
   transition-duration: .3s;
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
@@ -289,13 +308,10 @@ header {
   right: 0;
   padding: 27px;
 }
-
 .lang-switch-container, .main-menu-container, .banner {
   transition: .4s;
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
 }
-
-
 .lang-switch-container button {
   padding: auto 7px;
   height: 27px;
@@ -314,6 +330,9 @@ header {
 @include media-breakpoint-up(md) {
   .navbar .float-right {
     padding-top: 7px;
+  }
+  .navbar .account-btn {
+    float: right;
   }
   .lang-switch-container {
     float: none;
@@ -362,7 +381,6 @@ header {
 .main-menu-container h4 {
   margin: 25px 1px;
   font-size: 14px;
-  //color: map-get($theme-colors, primary);
 }
 .main-menu {
   list-style: none;
@@ -453,6 +471,7 @@ header {
     border-color: $hover-color;
   }
 }
+// Navbar after scrolling
 .navbar-scroll {
   display: none;
 }
@@ -464,13 +483,11 @@ header {
     left: 0;
     right: 0;
     z-index: 20;
-    //height: 0;
     overflow: hidden;
     transition: .3s;
     transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
   }
   .navbar-scroll .navbar {
-    //height: 0;
     padding-top: 11px;
     padding-bottom: 11px;
   }
@@ -495,9 +512,6 @@ header {
   .navbar-scroll .main-menu-container .main-menu {
     margin-top: 0;
   }
-}
-button:focus {
-  outline: none;
 }
 // Login modal
 .modal {
@@ -528,7 +542,7 @@ button:focus {
   font-weight: bold;
   margin: 32px 0;
 }
-.modal-content p, .modal-content a {
+.modal-contentLogin modal p, .modal-content a {
   font-weight: bold;
   color: black;
 }
@@ -650,16 +664,16 @@ button:focus {
   border-bottom: none !important;
   border-radius: 4px 4px 0 0 !important;
 }
-.search input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.search input[type=text]::placeholder {
   color: #bababa;
-  opacity: 1; /* Firefox */
+  opacity: 1;
 }
 
-.search input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.search input[type=text]:-ms-input-placeholder {
   color: #bababa;
 }
 
-.search input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+.search input[type=text]::-ms-input-placeholder {
   color: #bababa;
 }
 .autocomplete {
@@ -769,7 +783,7 @@ button:focus {
     height: 100%;
   }
 }
-
+// Progress table
 .progress-table .table-header,
 .progress-table .block {
   border-bottom: 1px solid black;
