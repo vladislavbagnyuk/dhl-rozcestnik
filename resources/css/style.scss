@@ -655,15 +655,12 @@ header {
   background-position: 12px center;
   padding-left: 40px;
   height: 46px !important;
-  border-radius: 4px !important;
+  border-radius: 4px;
 }
-.search input[type=text]:focus,
-.search input[type=text]:focus-within,
-.search input[type=text]:active {
+.search-focused {
   border: 2px solid black !important;
   border-bottom: none !important;
   border-radius: 4px 4px 0 0 !important;
-  //background-color: red;
 }
 .search input[type=text]::placeholder {
   color: #bababa;
