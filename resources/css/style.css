@@ -11670,7 +11670,7 @@ header {
 }
 
 .header-img {
-  top: 50%;
+  top: 40%;
   left: 50%;
   position: relative;
   transform: translate(-50%, -50%);
@@ -11690,10 +11690,18 @@ header {
   .header-img-container {
     height: 140px;
   }
+
+  .header-img {
+    top: 9%;
+  }
 }
 @media (min-width: 1024px) {
   .header-img-container {
     height: 240px;
+  }
+
+  .header-img {
+    top: 17%;
   }
 }
 .content-col {
