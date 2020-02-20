@@ -12173,5 +12173,61 @@ footer .social-links a:hover path {
     max-width: none;
   }
 }
+.side-menu, .side-menu ul {
+  list-style: none;
+}
+
+.side-menu {
+  padding: 0;
+}
+
+.side-menu ul {
+  margin-top: 36px;
+  background-color: #F2F2F2;
+  margin-bottom: -27px;
+}
+
+.side-menu li {
+  padding: 27px 1px;
+  color: black;
+  font-weight: bold;
+}
+
+.side-menu li a {
+  color: black;
+}
+
+.side-menu li a:hover {
+  color: #EB131E;
+  text-decoration: none;
+}
+
+.side-menu a.active {
+  color: #D40511;
+  position: relative;
+}
+
+.side-menu li a.active:before {
+  content: "";
+  background-color: #D40511;
+  border-right: 2px solid #D40511;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  left: -9px;
+  top: -8.5px;
+}
+
+.side-menu a.active:hover {
+  color: #EB131E;
+}
+
+.side-menu li a.active:hover:before {
+  content: "";
+  border: 1px solid #EB131E;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1017,3 +1017,51 @@ footer .social-links a:hover path {
     max-width: none;
   }
 }
+// Side menu
+.side-menu, .side-menu ul {
+  list-style: none;
+}
+.side-menu {
+  padding: 0;
+}
+.side-menu ul {
+  margin-top: 36px;
+  background-color: map-get($theme-colors, 'gray');
+  margin-bottom: -27px;
+}
+.side-menu li {
+  padding: 27px 1px;
+  color: black;
+  font-weight: bold;
+}
+.side-menu li a {
+  color: black;
+}
+.side-menu li a:hover {
+  color: $hover-color;
+  text-decoration: none;
+}
+.side-menu a.active {
+  color: map-get($theme-colors, primary);
+  position: relative;
+}
+.side-menu li a.active:before {
+  content: "";
+  background-color: map-get($theme-colors, primary);
+  border-right: 2px solid map-get($theme-colors, primary);
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  left: -9px;
+  top: -8.5px;
+}
+.side-menu a.active:hover {
+  color: $hover-color;
+}
+.side-menu li a.active:hover:before {
+  content: "";
+  border: 1px solid $hover-color;
+}
