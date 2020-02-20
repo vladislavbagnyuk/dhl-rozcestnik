@@ -1018,11 +1018,20 @@ footer .social-links a:hover path {
   }
 }
 // Side menu
+.menu-col {
+  padding: 0;
+}
 .side-menu, .side-menu ul {
   list-style: none;
 }
 .side-menu {
   padding: 0;
+}
+.side-menu li .active, .side-menu li a:hover {
+  color: map-get($theme-colors, primary);
+}
+.side-menu li .active path, .side-menu li a:hover path {
+  fill: map-get($theme-colors, primary);
 }
 .side-menu ul {
   margin-top: 36px;
@@ -1033,6 +1042,12 @@ footer .social-links a:hover path {
   padding: 27px 1px;
   color: black;
   font-weight: bold;
+}
+.side-menu li span {
+  cursor: pointer;
+}
+.side-menu li svg {
+  margin-right: 10px;
 }
 .side-menu li a {
   color: black;
