@@ -110,9 +110,9 @@
       </div>
 
       <!-- Search form -->
-      <form id="search-form">
+      <form id="search-form" method="GET" action="tracking.html">
         <div class="input-group mb-3 search">
-          <input type="text" class="form-control" placeholder="Číslo zakázky">
+          <input type="text" id="consignment" name="consignment" class="form-control" placeholder="Číslo zakázky">
         </div>
         <ul class="autocomplete">
           <li class="category">Kategorie</li>
@@ -180,7 +180,7 @@
         <h5 class="modal-title" id="loginModalLabel">Zákaznická zóna</h5>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="login-form">
           <div class="form-group">
             <label for="loginInput">Přihlašovací jméno*</label>
             <input type="text" class="form-control" id="loginInput">
@@ -189,10 +189,10 @@
             <label for="passwordInput" class="is-invalid">Heslo*</label>
             <input type="password" class="form-control is-invalid" id="passwordInput">
           </div>
-          <a href="#">Zapoměli jste své heslo?</a>
+          <a href="#">Zapomněli jste své heslo?</a>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="stayLoggeddCheckbox">
-            <label class="custom-control-label" for="stayLoggeddCheckbox">Zůstat přihlášený</label>
+            <input type="checkbox" class="custom-control-input" id="stayLoggedCheckbox">
+            <label class="custom-control-label" for="stayLoggedCheckbox">Zůstat přihlášený</label>
           </div>
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
@@ -211,5 +211,8 @@
 <script src="resources/js/search.js"></script>
 <script src="resources/js/inputs.js"></script>
 <script src="resources/js/calculator.js"></script>
+
+<script src="resources/node_modules/axios/dist/axios.min.js"></script>
+<script src="resources/js/backend.js"></script>
 </body>
 </html>

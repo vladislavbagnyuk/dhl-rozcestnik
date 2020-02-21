@@ -121,29 +121,27 @@
                 <label for="productSelect">Vyberte produkt</label>
                 <select id="productSelect" class="form-control">
                   <option></option>
-                  <option>Produkt 1</option>
-                  <option>Produkt 2</option>
-                  <option>Produkt 3</option>
+                  <option value="1">Firemní paleta</option>
+                  <option value="2">Soukromá paleta</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="pscNakladkyInput">PSČ nákladky*</label>
-                <input type="text" class="form-control" id="pscNakladkyInput">
+                <label for="zipPickupInput">PSČ nakládky*</label>
+                <input type="text" class="form-control" id="zipPickupInput">
               </div>
               <div class="form-group">
-                <label for="pscVykladkyInput">PSČ výkladky*</label>
-                <input type="text" class="form-control" id="pscVykladkyInput">
+                <label for="zipDeliveryInput">PSČ vykládky*</label>
+                <input type="text" class="form-control" id="zipDeliveryInput">
               </div>
 
               <div class="form-row">
 
                 <div class="input-group col-lg-6">
                   <label for="massInput">Hmotnost*</label>
-                  <input type="text" class="form-control" id="massInput">
+                  <input type="number" min="1" max="9999" class="form-control" id="massInput">
                   <div class="input-group-append">
                     <select>
                       <option value="kg" selected>kg</option>
-                      <option value="g">g</option>
                       <option value="t">t</option>
                     </select>
                   </div>
@@ -151,7 +149,7 @@
 
                 <div class="input-group col-lg-6">
                   <label for="volumeInput">Objem*</label>
-                  <input type="text" class="form-control" id="volumeInput">
+                  <input type="number" min="0.01" max="9999" step="0.01" class="form-control" id="volumeInput">
                   <div class="input-group-append">
                     <select>
                       <option value="m3" selected>m<sup>3</sup></option>
@@ -164,12 +162,10 @@
 
               <div class="input-group">
                 <label for="priceInput">Hodnota dobírky*</label>
-                <input type="text" class="form-control" id="priceInput">
+                <input type="number" min="1" max="999999" class="form-control" id="priceInput">
                 <div class="input-group-append">
-                  <select>
+                  <select id="priceCurrency" name="priceCurrency">
                     <option value="czk" selected>CZK</option>
-                    <option value="usd">USD</option>
-                    <option value="eur">EUR</option>
                   </select>
                 </div>
               </div>
@@ -243,7 +239,7 @@
         <h5 class="modal-title" id="loginModalLabel">Zákaznická zóna</h5>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="login-form">
           <div class="form-group">
             <label for="loginInput">Přihlašovací jméno*</label>
             <input type="text" class="form-control" id="loginInput">
@@ -252,10 +248,10 @@
             <label for="passwordInput" class="is-invalid">Heslo*</label>
             <input type="password" class="form-control is-invalid" id="passwordInput">
           </div>
-          <a href="#">Zapoměli jste své heslo?</a>
+          <a href="#">Zapomněli jste své heslo?</a>
           <div class="custom-control form-control-lg custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="stayLoggeddCheckbox">
-            <label class="custom-control-label" for="stayLoggeddCheckbox">Zůstat přihlášený</label>
+            <input type="checkbox" class="custom-control-input" id="stayLoggedCheckbox">
+            <label class="custom-control-label" for="stayLoggedCheckbox">Zůstat přihlášený</label>
           </div>
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
@@ -275,5 +271,8 @@
 <script src="resources/js/search.js"></script>
 <script src="resources/js/inputs.js"></script>
 <script src="resources/js/calculator.js"></script>
+
+<script src="resources/node_modules/axios/dist/axios.min.js"></script>
+<script src="resources/js/backend.js"></script>
 </body>
 </html>

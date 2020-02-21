@@ -118,18 +118,18 @@
             <div class="info">
               <div class="row">
                 <div class="col-6 titles">
-                  <p>Číslo zásilky</p>
-                  <p>Odesílatel</p>
+                  <p>Kód zásilky</p>
+                  <p>Kód objednávky</p>
                   <p>Zákaznická reference</p>
-                  <p>Váha [kg]</p>
-                  <p>Dobírka CZK</p>
+                  <p>Váha</p>
+                  <p>Dobírka</p>
                 </div>
-                <div class="col-6">
-                  <p>40197990772</p>
-                  <p>ABC</p>
-                  <p>110590</p>
-                  <p>21,3</p>
-                  <p>5 390</p>
+                <div class="col-6" id="consignment-info">
+                  <p>--</p>
+                  <p>--</p>
+                  <p>--</p>
+                  <p>--</p>
+                  <p>--</p>
                 </div>
               </div>
             </div>
@@ -137,8 +137,8 @@
           <div class="col-md-6">
             <div class="actual">
               <h3>Aktuální stav zásilky</h3>
-              <p class="place"><b>Místo:</b></br>Depo Hostivář, Praha 8</p>
-              <p class="accepted"><b>Přijato</b></br>dnes, 12:38</p>
+              <p class="place"><b>Místo:</b></br><span id="last-place">--</span></p>
+              <p class="accepted"><b>Kdy:</b></br><span id="last-date">--</span></p>
             </div>
           </div>
           <!-- Progress table -->
@@ -325,7 +325,7 @@
         <h5 class="modal-title" id="loginModalLabel">Zákaznická zóna</h5>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="login-form">
           <div class="form-group">
             <label for="loginInput">Přihlašovací jméno*</label>
             <input type="text" class="form-control" id="loginInput">
@@ -334,10 +334,10 @@
             <label for="passwordInput" class="is-invalid">Heslo*</label>
             <input type="password" class="form-control is-invalid" id="passwordInput">
           </div>
-          <a href="#">Zapoměli jste své heslo?</a>
+          <a href="#">Zapomněli jste své heslo?</a>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="stayLoggeddCheckbox">
-            <label class="custom-control-label" for="stayLoggeddCheckbox">Zůstat přihlášený</label>
+            <input type="checkbox" class="custom-control-input" id="stayLoggedCheckbox">
+            <label class="custom-control-label" for="stayLoggedCheckbox">Zůstat přihlášený</label>
           </div>
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
@@ -356,5 +356,8 @@
 <script src="resources/js/search.js"></script>
 <script src="resources/js/inputs.js"></script>
 <script src="resources/js/calculator.js"></script>
+
+<script src="resources/node_modules/axios/dist/axios.min.js"></script>
+<script src="resources/js/backend.js"></script>
 </body>
 </html>
