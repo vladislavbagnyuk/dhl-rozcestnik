@@ -1020,12 +1020,24 @@ footer .social-links a:hover path {
 // Side menu
 .menu-col {
   padding: 0;
+  box-shadow: 0px 0px 10px #ccc;
+
 }
 .side-menu, .side-menu ul {
   list-style: none;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .side-menu {
   padding: 0;
+}
+.menu-col h4 {
+  font-size: 18px;
+  padding: 27px;
+  margin: 0;
+}
+.side-menu .border {
+  border-top: 1px solid #CCCCCC;
 }
 .side-menu li .active, .side-menu li a:hover {
   color: map-get($theme-colors, primary);
@@ -1039,7 +1051,7 @@ footer .social-links a:hover path {
   margin-bottom: -27px;
 }
 .side-menu li {
-  padding: 27px 1px;
+  padding: 27px 0;
   color: black;
   font-weight: bold;
 }
@@ -1049,8 +1061,9 @@ footer .social-links a:hover path {
 .side-menu li svg {
   margin-right: 10px;
 }
-.side-menu li a {
+.side-menu li a, .side-menu li span {
   color: black;
+  margin: 0 18px;
 }
 .side-menu li a:hover {
   color: $hover-color;
@@ -1060,7 +1073,7 @@ footer .social-links a:hover path {
   color: map-get($theme-colors, primary);
   position: relative;
 }
-.side-menu li a.active:before {
+.side-menu li ul li a.active:before {
   content: "";
   background-color: map-get($theme-colors, primary);
   border-right: 2px solid map-get($theme-colors, primary);
@@ -1070,13 +1083,13 @@ footer .social-links a:hover path {
   width: 1px;
   height: 40px;
   position: absolute;
-  left: -9px;
+  left: -40px;
   top: -8.5px;
 }
 .side-menu a.active:hover {
   color: $hover-color;
 }
-.side-menu li a.active:hover:before {
+.side-menu li ul li a.active:hover:before {
   content: "";
   border: 1px solid $hover-color;
 }
