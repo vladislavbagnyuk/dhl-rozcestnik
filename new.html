@@ -162,31 +162,40 @@
           </ul>
         </div>
         <div class="col-md-9 content-col">
-          <h1 class="text-center">NOVÁ ZÁSILKA</h1>
-          <div class="btn-group switch" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Sledování zásilky</button>
-            <button type="button" class="btn btn-outline-primary">Kalkulátor ceny</button>
+          <div class="small-container">
+            <h1 class="text-center">NOVÁ ZÁSILKA</h1>
+            <form id="form-new-1">
+              <div class="form-group">
+                <label for="lokalizaceSelect">Lokalizace přepravy*</label>
+                <select id="lokalizaceSelect" class="form-control">
+                  <option></option>
+                  <option>Varianta 1</option>
+                  <option>Varianta 2</option>
+                  <option>Varianta 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="subjektSelect">Typ subjektu*</label>
+                <select id="subjektSelect" class="form-control">
+                  <option></option>
+                  <option>Subjekt 1</option>
+                  <option>Subjekt 2</option>
+                  <option>Subjekt 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="zakazkaSelect">Konkrétní typ zakázky*</label>
+                <select id="zakazkaSelect" class="form-control">
+                  <option></option>
+                  <option>Typ 1</option>
+                  <option>Typ 2</option>
+                  <option>Typ 3</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Další</button>
+            </form>
           </div>
 
-          <!-- Search form -->
-          <form id="search-form">
-            <div class="input-group mb-3 search">
-              <input type="text" class="form-control" placeholder="Číslo zakázky">
-            </div>
-            <ul class="autocomplete">
-              <li class="category">Kategorie</li>
-              <ul>
-                <li>Automatické doporučení 1</li>
-                <li>Automatické doporučení 2</li>
-                <li>Automatické doporučení 3</li>
-              </ul>
-              <li>Kategorie</li>
-              <ul>
-                <li>Rychlý odkaz<span>Krátký popis</span></li>
-                <li>Rychlý odkaz<span>Krátký popis</span></li>
-              </ul>
-            </ul>
-          </form>
         </div>
       </div>
     </div>

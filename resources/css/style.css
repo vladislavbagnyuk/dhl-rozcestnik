@@ -12223,8 +12223,14 @@ footer .social-links a:hover path {
   fill: #EB131E;
 }
 
+/*
+.side-menu path {
+  transition: .15s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
+}
+*/
 .side-menu ul {
-  margin-top: 36px;
+  margin-top: 27px;
   background-color: #F2F2F2;
   margin-bottom: -27px;
 }
@@ -12293,6 +12299,18 @@ footer .social-links a:hover path {
 
 .side-menu .btn {
   width: 100%;
+  font-weight: bold;
+}
+
+.small-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .small-container {
+    max-width: 398px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1058,8 +1058,14 @@ footer .social-links a:hover path {
 .side-menu li span:hover path {
   fill: $hover-color;
 }
+/*
+.side-menu path {
+  transition: .15s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
+}
+*/
 .side-menu ul {
-  margin-top: 36px;
+  margin-top: 27px;
   background-color: map-get($theme-colors, 'gray');
   margin-bottom: -27px;
 }
@@ -1116,4 +1122,14 @@ footer .social-links a:hover path {
 }
 .side-menu .btn {
   width: 100%;
+  font-weight: bold;
+}
+.small-container {
+  margin: 0 auto;
+  width: 100%;
+}
+@include media-breakpoint-up(md) {
+  .small-container {
+    max-width: 398px;
+  }
 }
