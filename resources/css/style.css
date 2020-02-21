@@ -12098,6 +12098,11 @@ footer {
   background-color: #F2F2F2;
   margin-top: 70px;
   flex-shrink: 0;
+  z-index: 10;
+}
+
+.footer-2 {
+  margin-top: 0;
 }
 
 footer p {
@@ -12198,12 +12203,24 @@ footer .social-links a:hover path {
   border-top: 1px solid #CCCCCC;
 }
 
-.side-menu li .active, .side-menu li a:hover {
+.side-menu hr {
+  margin: 0 17px;
+}
+
+.side-menu li .active {
   color: #D40511;
 }
 
 .side-menu li .active path, .side-menu li a:hover path {
   fill: #D40511;
+}
+
+.side-menu li a:hover, .side-menu li span:hover {
+  color: #EB131E;
+}
+
+.side-menu li span:hover path {
+  fill: #EB131E;
 }
 
 .side-menu ul {
@@ -12226,12 +12243,18 @@ footer .social-links a:hover path {
   margin-right: 10px;
 }
 
+.side-menu li img {
+  float: right;
+  margin-right: 18px;
+  margin-top: 11px;
+}
+
 .side-menu li a, .side-menu li span {
   color: black;
   margin: 0 18px;
 }
 
-.side-menu li a:hover {
+.side-menu li a:hover, .side-menu li span:hover {
   color: #EB131E;
   text-decoration: none;
 }
@@ -12259,9 +12282,17 @@ footer .social-links a:hover path {
   color: #EB131E;
 }
 
+.side-menu li ul li a {
+  font-weight: normal;
+}
+
 .side-menu li ul li a.active:hover:before {
   content: "";
   border: 1px solid #EB131E;
+}
+
+.side-menu .btn {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

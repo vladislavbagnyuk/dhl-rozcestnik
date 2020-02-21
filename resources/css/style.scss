@@ -958,6 +958,10 @@ footer {
   background-color: map-get($theme-colors, 'gray');
   margin-top: 70px;
   flex-shrink: 0;
+  z-index: 10;
+}
+.footer-2 {
+  margin-top: 0;
 }
 footer p {
   margin: 0;
@@ -1039,11 +1043,20 @@ footer .social-links a:hover path {
 .side-menu .border {
   border-top: 1px solid #CCCCCC;
 }
-.side-menu li .active, .side-menu li a:hover {
+.side-menu hr {
+  margin: 0 17px;
+}
+.side-menu li .active {
   color: map-get($theme-colors, primary);
 }
 .side-menu li .active path, .side-menu li a:hover path {
   fill: map-get($theme-colors, primary);
+}
+.side-menu li a:hover, .side-menu li span:hover {
+  color: $hover-color;
+}
+.side-menu li span:hover path {
+  fill: $hover-color;
 }
 .side-menu ul {
   margin-top: 36px;
@@ -1061,11 +1074,16 @@ footer .social-links a:hover path {
 .side-menu li svg {
   margin-right: 10px;
 }
+.side-menu li img {
+  float: right;
+  margin-right: 18px;
+  margin-top: 11px;
+}
 .side-menu li a, .side-menu li span {
   color: black;
   margin: 0 18px;
 }
-.side-menu li a:hover {
+.side-menu li a:hover, .side-menu li span:hover {
   color: $hover-color;
   text-decoration: none;
 }
@@ -1089,7 +1107,13 @@ footer .social-links a:hover path {
 .side-menu a.active:hover {
   color: $hover-color;
 }
+.side-menu li ul li a {
+  font-weight: normal;
+}
 .side-menu li ul li a.active:hover:before {
   content: "";
   border: 1px solid $hover-color;
+}
+.side-menu .btn {
+  width: 100%;
 }
