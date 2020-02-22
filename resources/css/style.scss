@@ -1124,12 +1124,36 @@ footer .social-links a:hover path {
   width: 100%;
   font-weight: bold;
 }
+// Form nova zasilka
 .small-container {
   margin: 0 auto;
   width: 100%;
 }
+.zasilka-form button {
+  font-weight: bold;
+  width: 100%;
+  height: 48px;
+}
+select:disabled {
+  background-color: white !important;
+  border-color: #d0d0d0 !important;
+  background: url(../img/icons/arrow-down-disabled.svg) no-repeat;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+  background-position: right 15px center;
+  padding-left: 12px;
+  height: 48px !important;
+  padding-right: 30px;
+}
 @include media-breakpoint-up(md) {
   .small-container {
     max-width: 398px;
+  }
+  .zasilka-form button {
+    float: right;
+    width: auto;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
