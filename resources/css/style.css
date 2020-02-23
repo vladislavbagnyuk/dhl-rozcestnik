@@ -12233,6 +12233,9 @@ footer .social-links a:hover path {
   margin-top: 27px;
   background-color: #F2F2F2;
   margin-bottom: -27px;
+  overflow: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .side-menu li {
@@ -12243,6 +12246,8 @@ footer .social-links a:hover path {
 
 .side-menu li span {
   cursor: pointer;
+  background-color: white;
+  width: 100%;
 }
 
 .side-menu li svg {
