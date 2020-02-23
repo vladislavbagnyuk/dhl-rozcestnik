@@ -12328,6 +12328,10 @@ select:disabled {
   padding-right: 30px;
 }
 
+.disabledLabel {
+  color: #d0d0d0 !important;
+}
+
 @media (min-width: 768px) {
   .small-container {
     max-width: 398px;

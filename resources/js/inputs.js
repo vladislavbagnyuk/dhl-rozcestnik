@@ -21,5 +21,13 @@ $(document).ready(function() {
       $label.css('font-size', '11px');
     }
   });
+  // Change colors of labels for disabled inputs
+  $('select:disabled').each(function() {
+    $this = $(this);
+    $label = $('label[for="'+ $this.attr('id') +'"]');
+    if ($label.length > 0 ) {
+      $label.addClass('disabledLabel');
+    }
+  });
 
 });

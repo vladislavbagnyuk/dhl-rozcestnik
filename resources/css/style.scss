@@ -1146,6 +1146,9 @@ select:disabled {
   height: 48px !important;
   padding-right: 30px;
 }
+.disabledLabel {
+  color: #d0d0d0 !important;
+}
 @include media-breakpoint-up(md) {
   .small-container {
     max-width: 398px;
