@@ -1037,7 +1037,7 @@ footer .social-links a:hover path {
 }
 .menu-col h4 {
   font-size: 18px;
-  padding: 27px;
+  padding: 25px;
   margin: 0;
 }
 .side-menu .border {
@@ -1065,17 +1065,29 @@ footer .social-links a:hover path {
 }
 */
 .side-menu ul {
-  margin-top: 27px;
+  margin-top: 25px;
   background-color: map-get($theme-colors, 'gray');
-  margin-bottom: -27px;
+  margin-bottom: -25px;
   overflow: hidden;
   height: 0;
 	overflow: hidden;
 }
 .side-menu li {
-  padding: 27px 0;
+  padding: 25px 0;
   color: black;
   font-weight: bold;
+}
+@include media-breakpoint-up(md) {
+  .menu-col h4 {
+    padding: 19px;
+  }
+  .side-menu ul {
+    margin-top: 19px;
+    margin-bottom: -19px;
+  }
+  .side-menu li {
+    padding: 19px 0;
+  }
 }
 .side-menu li span {
   cursor: pointer;
