@@ -12257,6 +12257,10 @@ footer .social-links a:hover path {
   .side-menu li {
     padding: 19px 0;
   }
+
+  .side-menu ul li {
+    padding: 22px 0;
+  }
 }
 .side-menu li span {
   cursor: pointer;
@@ -12326,6 +12330,15 @@ footer .social-links a:hover path {
   width: 100%;
 }
 
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+.zasilka-form {
+  margin-bottom: 72px;
+}
+
 .zasilka-form button {
   font-weight: bold;
   width: 100%;
@@ -12356,9 +12369,14 @@ select:disabled {
     max-width: 398px;
   }
 
+  .zasilka-form {
+    margin-bottom: 140px;
+  }
+
   .zasilka-form button {
     float: right;
     width: auto;
+    margin-top: 26px;
     padding-left: 70px;
     padding-right: 70px;
   }

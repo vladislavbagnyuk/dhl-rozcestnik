@@ -29,5 +29,14 @@ $(document).ready(function() {
       $label.addClass('disabledLabel');
     }
   });
-
+  $('#form-new-1 select').change(function(){
+    if( $(this).val() ) {
+      $next = $(this).parent().next().children('select');
+      $next.removeAttr("disabled");
+      $label = $('label[for="'+ $next.attr('id') +'"]');
+      if ($label.length > 0 ) {
+        $label.removeClass('disabledLabel');
+      }
+    }
+  });
 });
