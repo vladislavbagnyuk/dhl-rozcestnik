@@ -38,12 +38,11 @@
           <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
             Login
           </button>
-          <!-- AFTER LOGIN
-          <button class="account-btn btn-icon" type="button" name="button">
+          <button class="d-none account-btn btn-icon" type="button" name="button">
             <img class="d-md-none" src="resources/img/icons/account.svg" alt="">
             <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
           </button>
-      -->
+
       <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -81,11 +80,11 @@
         <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
           Login
         </button>
-        <!-- AFTER LOGIN
-        <button class="d-md-none btn-icon" type="button" name="button">
-          <img src="resources/img/icons/account.svg" alt="">
+        <button class="d-none account-btn btn-icon" type="button" name="button">
+          <img class="d-md-none" src="resources/img/icons/account.svg" alt="">
+          <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
         </button>
-        -->
+
         <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -104,8 +103,8 @@
     <div class="col-md-10 col-xl-8 content-col">
       <h1 class="text-center">PŘEPRAVA BALÍKOVÝCH ZÁSILEK</h1>
       <div class="btn-group switch" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary">Sledování zásilky</button>
-        <button type="button" class="btn btn-outline-primary">Kalkulátor ceny</button>
+        <button type="button" onclick="window.location.href='index'" class="btn btn-primary">Sledování zásilky</button>
+        <button type="button" onclick="window.location.href='calculator'" class="btn btn-outline-primary">Kalkulátor ceny</button>
       </div>
       <!-- Tracking -->
 
@@ -138,7 +137,7 @@
             <div class="actual">
               <h3>Aktuální stav zásilky</h3>
               <p class="place"><b>Místo:</b></br><span id="last-place">--</span></p>
-              <p class="accepted"><b>Kdy:</b></br><span id="last-date">--</span></p>
+              <p class="accepted"><b>Čas:</b></br><span id="last-date">--</span></p>
             </div>
           </div>
           <!-- Progress table -->
@@ -150,48 +149,48 @@
 
                   <div class="col-12">
                     <div class="row block-row table-header">
-                      <div class="col-12 col-md-5 place">
+                      <div class="col-12 col-md-3 place">
                         <div class="table-img"></div>
                         <p>Místo</p>
                       </div>
-                      <div class="col-7 col-md-7">
+                      <div class="col-7 col-md-9">
                         <div class="row">
-                          <div class="d-none d-md-block col-md-6">
-                            <p>Přijato</p>
+                          <div class="d-none d-md-block col-md-4">
+                            <p>Čas</p>
                           </div>
-                          <div class="d-none d-md-block col-md-6">
-                            <p>Expedováno</p>
+                          <div class="d-none d-md-block col-md-8">
+                            <p>Zpráva</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-12" id="track-latest">
                     <div class="row block-row block latest">
-                      <div class="col-12 col-md-5 place">
+                      <div class="col-12 col-md-3 place">
                         <div class="table-img">
                           <img class="d-none d-md-block" src="resources/img/icons/progress/desktop-black-top.svg" alt="">
                           <img class="d-md-none" src="resources/img/icons/progress/mobile-black-top.svg" alt="">
                         </div>
-                        <p>Depo Hostivař, Praha 8</p>
+                        <p>...</p>
                       </div>
                       <div class="col-5 d-md-none">
                         <div class="row">
                           <div class="col-md-6">
-                            <p>Přijato</p>
+                            <p>Čas</p>
                           </div>
                           <div class="col-md-6">
-                            <p>Expedováno</p>
+                            <p>Zpráva</p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-7 col-md-7">
+                      <div class="col-7 col-md-9">
                         <div class="row">
-                          <div class="col-md-6">
-                            <p>dnes, 12:38</p>
+                          <div class="col-md-4">
+                            <p>...</p>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-8">
                             <p>...</p>
                           </div>
                         </div>
@@ -199,65 +198,32 @@
                     </div>
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-12 d-none" id="track">
                     <div class="row block-row block">
-                      <div class="col-12 col-md-5 place">
+                      <div class="col-12 col-md-3 place">
                         <div class="table-img">
                           <img class="d-none d-md-block" src="resources/img/icons/progress/desktop-green.svg" alt="">
                           <img class="d-md-none" src="resources/img/icons/progress/mobile-green.svg" alt="">
                         </div>
-                        <p>Bratislava, Areál Doubravka</p>
+                        <p>...</p>
                       </div>
                       <div class="col-5 d-md-none">
                         <div class="row">
                           <div class="col-md-6">
-                            <p>Přijato</p>
+                            <p>Čas</p>
                           </div>
                           <div class="col-md-6">
-                            <p>Expedováno</p>
+                            <p>Zpráva</p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-7 col-md-7">
+                      <div class="col-7 col-md-9">
                         <div class="row">
-                          <div class="col-md-6">
-                            <p>dnes, 12:38</p>
+                          <div class="col-md-4">
+                            <p>...</p>
                           </div>
-                          <div class="col-md-6">
-                            <p>včera, 13:46</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col-12">
-                    <div class="row block-row">
-                      <div class="col-12 col-md-5 place">
-                        <div class="table-img">
-                          <img class="d-none d-md-block" src="resources/img/icons/progress/desktop-green.svg" alt="">
-                          <img class="d-md-none" src="resources/img/icons/progress/mobile-green.svg" alt="">
-                        </div>
-                        <p>Vienna, pickup spot 17</p>
-                      </div>
-                      <div class="col-5 d-md-none">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>Přijato</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>Expedováno</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-7 col-md-7">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p>14.4.2020, 17:32</p>
-                          </div>
-                          <div class="col-md-6">
-                            <p>13.4.2020, 6:44</p>
+                          <div class="col-md-8">
+                            <p>...</p>
                           </div>
                         </div>
                       </div>
@@ -267,7 +233,7 @@
                 </div>
               </div>
 
-              <button type="button" class="btn btn-outline-primary">Hledat novou zásilku</button>
+              <button type="button" onclick="window.location.href='index'" class="btn btn-outline-primary">Hledat novou zásilku</button>
             </div>
           </div>
         </div>
@@ -331,14 +297,14 @@
             <input type="text" class="form-control" id="loginInput">
           </div>
           <div class="form-group">
-            <label for="passwordInput" class="is-invalid">Heslo*</label>
-            <input type="password" class="form-control is-invalid" id="passwordInput">
+            <label for="passwordInput">Heslo*</label>
+            <input type="password" class="form-control" id="passwordInput">
           </div>
           <a href="#">Zapomněli jste své heslo?</a>
-          <div class="custom-control custom-checkbox">
+          <!-- <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="stayLoggedCheckbox">
             <label class="custom-control-label" for="stayLoggedCheckbox">Zůstat přihlášený</label>
-          </div>
+          </div> -->
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
         <p class="text-center">

@@ -39,12 +39,11 @@
           <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
             Login
           </button>
-          <!-- AFTER LOGIN
-          <button class="account-btn btn-icon" type="button" name="button">
+          <button class="d-none account-btn btn-icon" type="button" name="button">
             <img class="d-md-none" src="resources/img/icons/account.svg" alt="">
             <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
           </button>
-        -->
+
       <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -81,11 +80,11 @@
         <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
           Login
         </button>
-        <!-- AFTER LOGIN
-        <button class="d-md-none btn-icon" type="button" name="button">
-          <img src="resources/img/icons/account.svg" alt="">
+        <button class="d-none account-btn btn-icon" type="button" name="button">
+          <img class="d-md-none" src="resources/img/icons/account.svg" alt="">
+          <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
         </button>
-      -->
+        
       <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -105,12 +104,12 @@
     <div class="col-md-10 col-xl-8 content-col">
       <h1 class="text-center">PŘEPRAVA BALÍKOVÝCH ZÁSILEK</h1>
       <div class="btn-group switch" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary">Sledování zásilky</button>
-        <button type="button" class="btn btn-outline-primary">Kalkulátor ceny</button>
+        <button type="button" onclick="window.location.href='index'" class="btn btn-primary">Sledování zásilky</button>
+        <button type="button" onclick="window.location.href='calculator'" class="btn btn-outline-primary">Kalkulátor ceny</button>
       </div>
 
       <!-- Search form -->
-      <form id="search-form" method="GET" action="tracking.html">
+      <form id="search-form" method="GET" action="tracking">
         <div class="input-group mb-3 search">
           <input type="text" id="consignment" name="consignment" class="form-control" placeholder="Číslo zakázky">
         </div>
@@ -186,14 +185,14 @@
             <input type="text" class="form-control" id="loginInput">
           </div>
           <div class="form-group">
-            <label for="passwordInput" class="is-invalid">Heslo*</label>
-            <input type="password" class="form-control is-invalid" id="passwordInput">
+            <label for="passwordInput">Heslo*</label>
+            <input type="password" class="form-control" id="passwordInput">
           </div>
           <a href="#">Zapomněli jste své heslo?</a>
-          <div class="custom-control custom-checkbox">
+          <!-- <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="stayLoggedCheckbox">
             <label class="custom-control-label" for="stayLoggedCheckbox">Zůstat přihlášený</label>
-          </div>
+          </div> -->
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
         <p class="text-center">

@@ -35,13 +35,10 @@
             </button>
           </div>
 
-          <!-- BEFORE LOGIN
           <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
             Login
           </button>
-          -->
-          <!-- AFTER LOGIN -->
-          <button class="account-btn btn-icon" type="button" name="button">
+          <button class="d-none account-btn btn-icon" type="button" name="button">
             <img class="d-md-none" src="resources/img/icons/account.svg" alt="">
             <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
           </button>
@@ -79,13 +76,10 @@
         </div>
         <div class="float-right">
 
-          <!-- BEFORE LOGIN
           <button class="btn btn-primary login-btn" type="button" name="button" data-toggle="modal" data-target="#loginModal">
             Login
           </button>
-          -->
-          <!-- AFTER LOGIN -->
-          <button class="account-btn btn-icon" type="button" name="button">
+          <button class="d-none account-btn btn-icon" type="button" name="button">
             <img class="d-md-none" src="resources/img/icons/account.svg" alt="">
             <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
           </button>
@@ -108,8 +102,8 @@
     <div class="col-md-10 col-xl-8 content-col">
       <h1 class="text-center">PŘEPRAVA BALÍKOVÝCH ZÁSILEK</h1>
       <div class="btn-group switch" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-outline-primary">Sledování zásilky</button>
-        <button type="button" class="btn btn-primary">Kalkulátor ceny</button>
+        <button type="button" onclick="window.location.href='index'" class="btn btn-outline-primary">Sledování zásilky</button>
+        <button type="button" onclick="window.location.href='calculator'" class="btn btn-primary">Kalkulátor ceny</button>
       </div>
 
       <div class="calculator-container">
@@ -138,9 +132,9 @@
 
                 <div class="input-group col-lg-6">
                   <label for="massInput">Hmotnost*</label>
-                  <input type="number" min="1" max="9999" class="form-control" id="massInput">
+                  <input type="number" min="0.01" max="9999" step="0.01" class="form-control" id="massInput">
                   <div class="input-group-append">
-                    <select>
+                    <select id="massUnitType">
                       <option value="kg" selected>kg</option>
                       <option value="t">t</option>
                     </select>
@@ -151,7 +145,7 @@
                   <label for="volumeInput">Objem*</label>
                   <input type="number" min="0.01" max="9999" step="0.01" class="form-control" id="volumeInput">
                   <div class="input-group-append">
-                    <select>
+                    <select id="volumeUnitType">
                       <option value="m3" selected>m<sup>3</sup></option>
                       <option value="l">l</option>
                     </select>
@@ -245,14 +239,14 @@
             <input type="text" class="form-control" id="loginInput">
           </div>
           <div class="form-group">
-            <label for="passwordInput" class="is-invalid">Heslo*</label>
-            <input type="password" class="form-control is-invalid" id="passwordInput">
+            <label for="passwordInput">Heslo*</label>
+            <input type="password" class="form-control" id="passwordInput">
           </div>
           <a href="#">Zapomněli jste své heslo?</a>
-          <div class="custom-control form-control-lg custom-checkbox">
+          <!-- <div class="custom-control form-control-lg custom-checkbox">
             <input type="checkbox" class="custom-control-input" id="stayLoggedCheckbox">
             <label class="custom-control-label" for="stayLoggedCheckbox">Zůstat přihlášený</label>
-          </div>
+          </div> -->
           <button type="submit" class="btn btn-primary">Přihlásit se</button>
         </form>
         <p class="text-center">

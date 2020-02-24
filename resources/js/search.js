@@ -1,11 +1,11 @@
 $(document).ready(function() {
   var input = $(".search input[type=text]");
   var dropdown = $(".autocomplete");
-  input.click(function() {
+  /*input.click(function() {
     dropdown.show();
     input.addClass("search-focused");
     dropdown.css("height", "auto");
-  });
+  });*/
 
   $(".autocomplete ul li").click(function() {
     var text = $(this)
