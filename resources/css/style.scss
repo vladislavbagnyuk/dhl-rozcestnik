@@ -1064,15 +1064,14 @@ footer .social-links a:hover path {
 }
 */
 .side-menu ul {
-  margin-top: 25px;
+  //margin-top: 25px;
   background-color: map-get($theme-colors, 'gray');
-  margin-bottom: -25px;
+  //margin-bottom: -25px;
   overflow: hidden;
   height: 0;
 	overflow: hidden;
 }
 .side-menu li {
-  padding: 25px 0;
   color: black;
   font-weight: bold;
 }
@@ -1084,14 +1083,8 @@ footer .social-links a:hover path {
     margin-top: 41px;
   }
   .side-menu ul {
-    margin-top: 19px;
-    margin-bottom: -19px;
-  }
-  .side-menu li {
-    padding: 19px 0;
-  }
-  .side-menu ul li {
-    padding: 22px 0;
+    //margin-top: 19px;
+    //margin-bottom: -19px;
   }
 }
 .side-menu li span {
@@ -1104,12 +1097,21 @@ footer .social-links a:hover path {
 }
 .side-menu li img {
   float: right;
-  margin-right: 18px;
   margin-top: 11px;
 }
 .side-menu li a, .side-menu li span {
   color: black;
-  margin: 0 18px;
+  margin: 0;
+  padding: 25px 18px;
+  display: block;
+}
+@include media-breakpoint-up(md) {
+  .side-menu li a, .side-menu li span {
+    padding: 19px 18px;
+  }
+  .side-menu ul li a, .side-menu ul li span {
+    padding: 22px 0;
+  }
 }
 .side-menu li a:hover, .side-menu li span:hover {
   color: $hover-color;
@@ -1153,7 +1155,7 @@ footer .social-links a:hover path {
 }
 .fill {
   min-height: 100%;
-  height: 100%;
+  height: 90%;
 }
 .zasilka-form {
   margin-bottom: 72px;
@@ -1192,4 +1194,7 @@ select:disabled {
     padding-left: 70px;
     padding-right: 70px;
   }
+}
+.zasilka-form-2 h1 {
+
 }
