@@ -1064,9 +1064,7 @@ footer .social-links a:hover path {
 }
 */
 .side-menu ul {
-  //margin-top: 25px;
   background-color: map-get($theme-colors, 'gray');
-  //margin-bottom: -25px;
   overflow: hidden;
   height: 0;
 	overflow: hidden;
@@ -1081,10 +1079,6 @@ footer .social-links a:hover path {
   }
   .side-menu {
     margin-top: 41px;
-  }
-  .side-menu ul {
-    //margin-top: 19px;
-    //margin-bottom: -19px;
   }
 }
 .side-menu li span {
