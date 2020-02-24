@@ -1151,6 +1151,14 @@ footer .social-links a:hover path {
 .side-menu .btn {
   width: 100%;
   font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+@include media-breakpoint-up(md) {
+  .side-menu .btn {
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
 }
 // Form nova zasilka
 .small-container {
