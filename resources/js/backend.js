@@ -236,9 +236,9 @@ function login() {
         .then(r => {
           const { data, message } = r.data;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
-            localStorage.setItem("user", data.user);
+            localStorage.setItem("user", JSON.stringify(data.user));
             localStorage.setItem("token", data.token);
-            localStorage.setItem("user-response", data);
+            localStorage.setItem("user-response", JSON.stringify(data));
             updateAfterLogin();
           } else {
             console.log(message || "login error");
@@ -255,7 +255,7 @@ function login() {
 function getId(data) {
   let id;
 
-  if (data && data.id && ~data.id.indexOf(prefix)) {
+  if (data && data.id && ~data.id.indexOf("sessionAccessId-")) {
     id = data.id;
   }
 
@@ -283,7 +283,7 @@ function remove(event, data) {
 function connect(event) {
   event.source.postMessage(
     {
-      id: connectId
+      id: "sessionAccessId-connected"
     },
     event.origin
   );
