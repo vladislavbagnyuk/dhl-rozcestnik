@@ -258,12 +258,17 @@ header {
 .container-fluid {
   max-width: 1395px;
 }
-.navbar, .header-img-container, footer {
+.navbar-2 {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+}
+.navbar, .navbar-2, .header-img-container, footer {
   width: 100%;
   max-width: 1395px;
   margin: 0 auto;
 }
-.navbar {
+.navbar, .navbar-2 {
   background: linear-gradient(to right, #fc0 0%, #fc0 30%, #ffe57f 79%, #fff0b2 100%);
   padding: 12px 18px;
   overflow-x: hidden;
@@ -280,20 +285,25 @@ header {
     position: relative;
     padding: 28px 42px 23px 42px;
   }
-  .brand-img {
+  .navbar .brand-img {
     height: 24px;
     margin: 0;
   }
 }
 @include media-breakpoint-up(lg){
-  .brand-img {
+  .navbar-2 {
+    position: relative;
+    padding: 28px 42px 23px 42px;
+  }
+  .navbar-2 .brand-img {
     height: 24px;
+    margin: 0;
   }
 }
-.navbar button {
+.navbar button, .navbar-2 button {
   margin-left: 27px;
 }
-.navbar .btn-icon {
+.navbar .btn-icon, .navbar-2 .btn-icon {
   background: none;
   border: none;
   padding: 0;
@@ -307,7 +317,7 @@ header {
 .hamburger-box {
   height: 7px !important;
 }
-.navbar .login-btn {
+.navbar .login-btn, .navbar-2 .login-btn {
   font-weight: bold;
   padding: 3px 11px;
 }
@@ -346,14 +356,14 @@ header {
   .navbar .account-btn {
     float: right;
   }
-  .lang-switch-container {
+  .navbar .lang-switch-container {
     float: none;
     background: none;
     position: static;
     display: inline-block;
     padding: 0;
   }
-  .lang-switch-container button {
+  .navbar .lang-switch-container button {
     float: none;
     display: inline-block;
     font-weight: normal;
@@ -366,15 +376,54 @@ header {
     line-height: 1em;
     font-size: 14px;
   }
-  .lang-switch-container button:hover, .lang-switch-container button.active:hover {
+  .navbar .lang-switch-container button:hover, .lang-switch-container button.active:hover {
     color: $hover-color;
   }
-  .lang-switch-container button.active {
+  .navbar .lang-switch-container button.active {
     background: none;
     color: black;
     border-bottom: 2px solid black !important;
   }
-  .lang-switch-container button.active:hover {
+  .navbar .lang-switch-container button.active:hover {
+    border-bottom: 2px solid $hover-color !important;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .navbar-2 .float-right {
+    padding-top: 7px;
+  }
+  .navbar-2 .account-btn {
+    float: right;
+  }
+  .navbar-2 .lang-switch-container {
+    float: none;
+    background: none;
+    position: static;
+    display: inline-block;
+    padding: 0;
+  }
+  .navbar-2 .lang-switch-container button {
+    float: none;
+    display: inline-block;
+    font-weight: normal;
+    font-family: 'Delivery';
+    font-weight: normal;
+    margin-left: 11px !important;
+    background: none;
+    border: none;
+    padding: 3px 0;
+    line-height: 1em;
+    font-size: 14px;
+  }
+  .navbar-2 .lang-switch-container button:hover, .navbar-2 .lang-switch-container button.active:hover {
+    color: $hover-color;
+  }
+  .navbar-2 .lang-switch-container button.active {
+    background: none;
+    color: black;
+    border-bottom: 2px solid black !important;
+  }
+  .navbar-2 .lang-switch-container button.active:hover {
     border-bottom: 2px solid $hover-color !important;
   }
 }
@@ -435,38 +484,38 @@ header {
 }
 // Menu tablet and desktop
 @include media-breakpoint-up(md){
-  .main-menu-container {
+  .navbar .main-menu-container {
     width: 100%;
     position: static;
     background: none;
     padding: 0;
   }
-  .main-menu {
+  .navbar .main-menu {
     font-size: 14px;
     font-weight: bold;
     margin-top: 27px;
     margin-bottom: 0;
   }
-  .main-menu li {
+  .navbar .main-menu li {
     float: left;
     margin-right: 33px;
     padding: 0;
     border: none;
   }
-  .main-menu li a {
+  .navbar .main-menu li a {
     padding-bottom: 1px
   }
-  .main-menu li a:hover {
+  .navbar .main-menu li a:hover {
     color: $hover-color;
     text-decoration: none;
   }
-  .main-menu a.active {
+  .navbar .main-menu a.active {
     border-bottom: 2px solid map-get($theme-colors, primary);
   }
-  .main-menu a.active:hover {
+  .navbar .main-menu a.active:hover {
     border-bottom: 2px solid $hover-color  ;
   }
-  .main-menu li a.active:before {
+  .navbar .main-menu li a.active:before {
     content: "";
     border: none;
     width: 0;
@@ -483,11 +532,60 @@ header {
     border-color: $hover-color;
   }
 }
+@include media-breakpoint-up(lg){
+  .navbar-2 .main-menu-container {
+    width: 100%;
+    position: static;
+    background: none;
+    padding: 0;
+  }
+  .navbar-2 .main-menu {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 27px;
+    margin-bottom: 0;
+  }
+  .navbar-2 .main-menu li {
+    float: left;
+    margin-right: 33px;
+    padding: 0;
+    border: none;
+  }
+  .navbar-2 .main-menu li a {
+    padding-bottom: 1px
+  }
+  .navbar-2 .main-menu li a:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+  .navbar-2 .main-menu a.active {
+    border-bottom: 2px solid map-get($theme-colors, primary);
+  }
+  .navbar-2 .main-menu a.active:hover {
+    border-bottom: 2px solid $hover-color  ;
+  }
+  .navbar-2 .main-menu li a.active:before {
+    content: "";
+    border: none;
+    width: 0;
+    height: 0;
+    position: static;
+  }
+  .navbar-2 .login-btn {
+    color: map-get($theme-colors, primary);
+    border-color: map-get($theme-colors, primary);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .navbar-2 .login-btn:hover {
+    color: $hover-color;
+    border-color: $hover-color;
+  }
+}
 // Navbar after scrolling
 .navbar-scroll {
   display: none;
 }
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .navbar-scroll {
     display: block;
     position: fixed;
@@ -1091,7 +1189,7 @@ footer .social-links a:hover path {
   color: black;
   font-weight: bold;
 }
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .menu-col {
     position: static;
     z-index: 9;
