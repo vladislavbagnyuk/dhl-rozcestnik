@@ -96,15 +96,15 @@ function tracking() {
           const { data, message } = r.data;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
             const parent = document.getElementById("consignment-info");
-            parent.children[0].innerText = data.consignment.consignment;
+            parent.children[0].innerText = data.consignment.code;
             parent.children[1].innerText = data.consignment.orderCode || "--";
             parent.children[2].innerText =
               data.consignment.customerReference || "--";
             parent.children[3].innerText =
               (data.consignment.weight && `${data.consignment.weight} kg`) ||
               "--";
-            parent.children[4].innerText = data.consignment.cashOnDelivery
-              ? `${data.consignment.cashOnDelivery} ${data.consignment.cashOnDeliveryCurrency}`
+            parent.children[4].innerText = data.consignment.cashOnDeliveryAmount
+              ? `${data.consignment.cashOnDeliveryAmount} ${data.consignment.cashOnDeliveryCurrency}`
               : "--";
 
             const track = document.getElementById("track"),
