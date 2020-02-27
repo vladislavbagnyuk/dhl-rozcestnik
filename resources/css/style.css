@@ -12567,4 +12567,45 @@ select:disabled {
   margin-bottom: 72px;
 }
 
+.notfound .btn:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .notfound h1 {
+    margin-bottom: 9px;
+  }
+
+  .notfound h3 {
+    margin-bottom: 12px;
+  }
+
+  .notfound p {
+    text-align: left;
+    margin-bottom: 56px;
+  }
+
+  .notfound .btn {
+    width: 178px;
+  }
+}
+@media (min-width: 1024px) {
+  .notfound h1 {
+    margin-bottom: 0;
+  }
+
+  .notfound h3 {
+    margin-bottom: 12px;
+  }
+
+  .notfound p {
+    text-align: left;
+    margin-bottom: 56px;
+  }
+
+  .notfound .btn {
+    width: 178px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

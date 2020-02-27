@@ -1353,3 +1353,36 @@ select:disabled {
   width: 100%;
   margin-bottom: 72px;
 }
+.notfound .btn:hover {
+  color: white;
+}
+@include media-breakpoint-up(md) {
+  .notfound h1 {
+    margin-bottom: 9px;
+  }
+  .notfound h3 {
+    margin-bottom: 12px;
+  }
+  .notfound p {
+    text-align: left;
+    margin-bottom: 56px;
+  }
+  .notfound .btn {
+    width: 178px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .notfound h1 {
+    margin-bottom: 0;
+  }
+  .notfound h3 {
+    margin-bottom: 12px;
+  }
+  .notfound p {
+    text-align: left;
+    margin-bottom: 56px;
+  }
+  .notfound .btn {
+    width: 178px;
+  }
+}
