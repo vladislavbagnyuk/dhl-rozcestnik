@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+  $('input').each(function(){
+    var $label = $("label[for='"+this.id+"']");
+    if( $(this).val() ) {
+      $label.css('top', '1px');
+      $label.css('font-size', '11px');
+    }
+  });
+
   $('input').focus(function(){
     var $label = $("label[for='"+this.id+"']");
     $label.css('font-size', '11px');

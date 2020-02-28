@@ -11190,7 +11190,12 @@ button:focus {
 }
 
 input {
+  color: black;
   height: 48px !important;
+}
+
+.form-control {
+  color: black;
 }
 
 input.is-invalid {
@@ -11221,6 +11226,11 @@ select::-ms-expand {
 select, input {
   border: 1px solid #a0a0a0 !important;
   border-radius: 4px !important;
+}
+
+input:focus, select:focus {
+  border-color: black !important;
+  border-width: 2px !important;
 }
 
 .custom-control-label::before,
