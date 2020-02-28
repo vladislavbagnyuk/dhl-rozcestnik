@@ -11200,6 +11200,7 @@ input {
 
 input.is-invalid {
   border-color: #FE0000 !important;
+  background-image: none !important;
 }
 
 label.is-invalid {
