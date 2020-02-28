@@ -236,9 +236,7 @@ function login() {
         .then(r => {
           const { data, message } = r.data;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
-            localStorage.setItem("user", JSON.stringify(data.user));
-            localStorage.setItem("token", data.token);
-            localStorage.setItem("user-response", JSON.stringify(data));
+            localStorage.setItem("user", JSON.stringify(data));
             updateAfterLogin();
           } else {
             console.log(message || "login error");
@@ -266,6 +264,16 @@ function get(event, data) {
     {
       id: data.id,
       data: window.localStorage.getItem(data.key)
+    },
+    event.origin
+  );
+}
+function set(event, data) {
+  window.localStorage.setItem(data.key, data.value);
+
+  event.source.postMessage(
+    {
+      id: data.id
     },
     event.origin
   );
@@ -324,12 +332,15 @@ function storageHost(allowedDomains) {
       );
       return;
     }
-
-    method === "get"
-      ? get(event, data)
-      : method === "remove"
-      ? remove(event, data)
-      : connect(event, data);
+    if (method === "get") {
+      get(event, data);
+    } else if (method === "set") {
+      set(event, data);
+    } else if (method === "remove") {
+      remove(event, data);
+    } else {
+      connect(event, data);
+    }
   }
 
   window.addEventListener("message", handleMessage);
@@ -351,7 +362,7 @@ function updateAfterLogin() {
 
   const logins = document.getElementsByClassName("login-btn"),
     accounts = document.getElementsByClassName("account-btn");
-  if (localStorage.getItem("token")) {
+  if (localStorage.getItem("user")) {
     update(logins, true);
     update(accounts);
   } else {
@@ -387,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function() {
   storageHost([
     {
       origin: "http://localhost:3000",
-      allowedMethods: ["get"]
+      allowedMethods: ["get", "set", "remove"]
     }
   ]);
 });
