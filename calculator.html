@@ -129,21 +129,24 @@
                 <label for="pscVykladkyInput">PSČ výkladky*</label>
                 <input type="text" class="form-control" id="pscVykladkyInput">
               </div>
+              <div class="input-group">
+                <label for="massInput">Hmotnost*</label>
+                <input type="text" class="form-control" id="massInput">
+                <div class="input-group-append">
+                  <select>
+                    <option value="kg" selected>kg</option>
+                    <option value="g">g</option>
+                    <option value="t">t</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calc-alert">
+                <div class="green-circle"></div>
+                <p>1 ks max 800 kg. Zásilka max 3000 kg.</p>
+              </div>
 
               <div class="form-row">
-
-                <div class="input-group col-lg-6">
-                  <label for="massInput">Hmotnost*</label>
-                  <input type="text" class="form-control" id="massInput">
-                  <div class="input-group-append">
-                    <select>
-                      <option value="kg" selected>kg</option>
-                      <option value="g">g</option>
-                      <option value="t">t</option>
-                    </select>
-                  </div>
-                </div>
-
                 <div class="input-group col-lg-6">
                   <label for="volumeInput">Objem*</label>
                   <input type="text" class="form-control" id="volumeInput">
@@ -158,13 +161,12 @@
               </div>
 
               <div class="input-group">
-                <label for="priceInput">Hodnota dobírky*</label>
-                <input type="text" class="form-control" id="priceInput">
+                <label for="volumeInput">Objem*</label>
+                <input type="text" class="form-control" id="volumeInput" disabled>
                 <div class="input-group-append">
-                  <select>
-                    <option value="czk" selected>CZK</option>
-                    <option value="usd">USD</option>
-                    <option value="eur">EUR</option>
+                  <select disabled>
+                    <option value="m3" selected>m<sup>3</sup></option>
+                    <option value="l">l</option>
                   </select>
                 </div>
               </div>

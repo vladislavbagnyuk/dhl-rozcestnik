@@ -1073,6 +1073,30 @@ header {
     width: 83px;
   }
 }
+.calculator-container input:disabled {
+  border: none !important;
+}
+.calc-alert {
+  margin-top: -14px;
+  margin-bottom: 6px;
+}
+.calc-alert div, .calc-alert p {
+  display: inline-block;
+}
+.calc-alert .green-circle {
+  background-color: #76BD22;
+  border: none;
+  border-radius: 100%;
+  width: 16px;
+  height: 16px;
+  margin-bottom: -4px;
+}
+.calc-alert p {
+  font-size: 11px;
+  color: black;
+  padding-left: 16px;
+  margin-bottom: 0;
+}
 // Footer
 footer {
   font-size: 14px;
