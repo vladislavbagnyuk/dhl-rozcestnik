@@ -990,8 +990,10 @@ header {
 .calculator-container .btn {
   font-weight: bold;
   width: 100%;
-  margin-top: 16px;
   height: 48px;
+}
+.calculator-container .btn-group {
+  margin-top: 16px;
 }
 .form-group,
 .input-group {
@@ -1044,7 +1046,7 @@ header {
 }
 .calculator-container .result .result-text {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   right: 0;
   left: 0;
@@ -1052,6 +1054,30 @@ header {
 }
 .calculator-container .result h2 {
   margin-bottom: 0;
+}
+.calculator-container .btn-group .btn-primary {
+  border: none;
+  margin-left: 0 !important;
+}
+.calculator-container .btn-group {
+  position: relative;
+}
+.calculator-container .delimeter-container {
+  background-color: map-get($theme-colors, primary);
+  padding-top: 9px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.calculator-container .delimeter-container.disabled {
+  background-color: #CCCCCC;
+}
+.calculator-container .delimeter {
+  width: 1px;
+  height: 30px;
+  background-color: white;
+}
+.calculator-container .btn.disabled {
+  background-color: #CCCCCC;
+  opacity: 1;
 }
 @include media-breakpoint-up(md) {
   .calculator-container .result {
@@ -1066,7 +1092,9 @@ header {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 40px;
+  }
+  .calculator-container .btn-group {
+    //margin-top: 40px;
   }
 }
 @include media-breakpoint-up(lg) {

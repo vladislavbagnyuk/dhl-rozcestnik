@@ -165,21 +165,6 @@
                 </div>
               </div>
 
-
-              <!--
-              <div class="form-row">
-                <div class="input-group col-lg-6">
-                  <label for="volumeInput">Objem*</label>
-                  <input type="text" class="form-control" id="volumeInput">
-                  <div class="input-group-append">
-                    <select>
-                      <option value="m3" selected>m<sup>3</sup></option>
-                      <option value="l">l</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            -->
               <div class="input-group">
                 <label for="volumeInput">Objem*</label>
                 <input type="text" class="form-control" id="volumeInput" disabled>
@@ -200,8 +185,11 @@
               <div class="btn-container">
                 <!--<button id="orderBtn" type="button" class="btn btn-primary disabled">Objednat přepravu</button>-->
                 <div class="btn-group" role="group">
-                  <button type="button" href="#" class="btn btn-primary" disabled>+420 239 018 222</button>
-                  <button type="button" href="#" class="btn btn-primary" disabled>DHLFreight.CZ@dhl.com</button>
+                  <a id="phoneLink" href="tel:+420-239-018-222" class="btn btn-primary disabled">+420 239 018 222</a>
+                  <div class="delimeter-container disabled">
+                    <div class="delimeter"></div>
+                  </div>
+                  <a id="emailLink" href="mailto:dhlfreight.cz@dhl.com" class="btn btn-primary disabled" disabled>DHLFreight.CZ@dhl.com</a>
                 </div>
               </div>
             </div>

@@ -6,6 +6,9 @@ $(document).ready(function() {
     $("#calcSubmitBtn").css("background-color", "white");
     $("#calcSubmitBtn").css("color", "#D40511");
     $("#orderBtn").removeClass("disabled");
+    $("#phoneLink").removeClass("disabled");
+    $("#emailLink").removeClass("disabled");
+    $(".delimeter-container").removeClass("disabled");
     if ($(window).width() < 768) {
       $('html, body').animate({
         scrollTop: $("#result").offset().top - 70
