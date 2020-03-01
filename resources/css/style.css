@@ -12242,9 +12242,11 @@ header {
   background-color: white;
 }
 
-.calculator-container .btn.disabled {
+.calculator-container .btn.disabled,
+.calculator-container .btn:disabled {
   background-color: #CCCCCC;
   opacity: 1;
+  border-color: #CCCCCC;
 }
 
 @media (min-width: 768px) {

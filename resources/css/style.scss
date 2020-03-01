@@ -1080,9 +1080,11 @@ header {
   height: 30px;
   background-color: white;
 }
-.calculator-container .btn.disabled {
+.calculator-container .btn.disabled,
+.calculator-container .btn:disabled {
   background-color: #CCCCCC;
   opacity: 1;
+  border-color: #CCCCCC;
 }
 @include media-breakpoint-up(md) {
   .calculator-container .result {
