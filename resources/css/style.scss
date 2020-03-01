@@ -678,6 +678,11 @@ header {
 .modal-footer {
   text-align: center;
 }
+.green-dot {
+  background-image: url('../img/icons/green-dot.svg') !important;
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
 // Banner
 .banner {
   position: absolute;
@@ -844,7 +849,33 @@ header {
   font-size: 12px;
   color: #666666;
 }
-
+.loading {
+  width: 100%;
+  text-align: center;
+}
+.loading h3 {
+  margin-bottom: 42px;
+  font-family: 'Delivery-Condensed';
+  font-weight: 900;
+}
+.loading img {
+  margin: 0 auto;
+  animation: loading 2s infinite;
+  animation-timing-function: linear;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@include media-breakpoint-up(md) {
+  .loading-img {
+    margin: 0 auto 70px auto;
+  }
+}
 // Tracking
 .tracking-container h2, .calculator-container h2 {
   margin-bottom: 54px;

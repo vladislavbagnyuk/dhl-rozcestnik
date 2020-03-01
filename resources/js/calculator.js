@@ -14,15 +14,14 @@ $(document).ready(function() {
         scrollTop: $("#result").offset().top - 70
       }, 550, $.bez([0.22, 0.61, 0.35, 1]));
     }
-
-    function validationSuccess() {
-      $("#calcSubmitBtn").removeAttr("disabled");
-      $("#calcSubmitBtn").html("Přepočítat");
-      $("#calcSubmitBtn").css("background-color", "white");
-      $("#calcSubmitBtn").css("color", "#D40511");
-      $("#serverCircle").addClass("green");
-    }
-
-
-
   });
+
+  function validationSuccess() {
+    $("#calcSubmitBtn").removeAttr("disabled");
+    $("#calcSubmitBtn").html("Přepočítat");
+    $("#calcSubmitBtn").css("background-color", "white");
+    $("#calcSubmitBtn").css("color", "#D40511");
+    $("#serverCircle").addClass("green");
+  }
+
+});
