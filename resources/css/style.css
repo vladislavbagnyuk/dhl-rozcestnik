@@ -12298,16 +12298,37 @@ header {
   width: 16px;
   height: 16px;
   margin-bottom: -4px;
+  transition-duration: 2s !important;
 }
 
 .calc-alert .circle.green {
   background-color: #76BD22;
+  animation: none !important;
 }
 
 .calc-alert .circle.red {
   background-color: #D40511;
 }
 
+.calc-alert .circle.light {
+  background-color: #FE0000;
+}
+
+.calc-alert .circle.animated {
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #D40511;
+  }
+  50% {
+    background-color: #FE0000;
+  }
+  100% {
+    background-color: #D40511;
+  }
+}
 .calc-alert p {
   font-size: 11px;
   color: black;
@@ -12361,6 +12382,26 @@ header {
   z-index: 10;
 }
 
+.server-wait {
+  display: none;
+}
+
+.server-wait .calc-alert {
+  margin-top: 2px;
+}
+
+@media (min-width: 768px) {
+  .server-wait {
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .server-wait .calc-alert {
+    width: 178px;
+    margin: 2px auto 0 auto;
+  }
+}
 @media (min-width: 1024px) {
   .calculator-size .form-row {
     padding-right: 82px;

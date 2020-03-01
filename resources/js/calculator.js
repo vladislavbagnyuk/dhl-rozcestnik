@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
   $('#calculator-form').submit(function(e){
     e.preventDefault();
     $("#calcSubmitBtn").html("Přepočítat");
@@ -9,10 +10,17 @@ $(document).ready(function() {
     $("#phoneLink").removeClass("disabled");
     $("#emailLink").removeClass("disabled");
     $(".delimeter-container").removeClass("disabled");
-    if ($(window).width() < 768) {
-      $('html, body').animate({
-        scrollTop: $("#result").offset().top - 70
-      }, 550, $.bez([0.22, 0.61, 0.35, 1]));
-    }
-  });
+    $(".server-wait").show();
+
+
+
+  if ($(window).width() < 768) {
+    $('html, body').animate({
+      scrollTop: $("#result").offset().top - 70
+    }, 550, $.bez([0.22, 0.61, 0.35, 1]));
+  }
+});
+
+
+
 });
