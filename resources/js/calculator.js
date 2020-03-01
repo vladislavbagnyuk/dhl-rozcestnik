@@ -4,6 +4,9 @@ $(document).ready(function() {
   $('#calculator-form').submit(function(e){
     e.preventDefault();
     $(".server-wait").show();
+    setTimeout(function(){
+      validationSuccess();
+    }, 5000)
   });
 
   function validationSuccess() {
