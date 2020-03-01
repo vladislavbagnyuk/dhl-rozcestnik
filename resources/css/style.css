@@ -12303,6 +12303,10 @@ header {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 955px) {
+  .calculator-container .btn {
+    margin-top: 104px;
+  }
+
   .calculator-container .btn-group {
     flex-direction: column;
   }
