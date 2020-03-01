@@ -138,12 +138,11 @@
               </div>
 
               <div class="calc-alert">
-                <div class="green-circle"></div>
+                <div class="circle green"></div>
                 <p>1 ks max 800 kg. Zásilka max 3000 kg.</p>
               </div>
 
               <div class="input-group calculator-size">
-
                 <div class="form-row">
                   <div class="col-4">
                     <label for="lengthInput">Délka*</label>
@@ -164,6 +163,10 @@
                   <span class="input-group-text">cm</span>
                 </div>
               </div>
+              <div class="calc-alert">
+                <div class="circle red"></div>
+                <p>Max Délka 300 cm | Šířka 200 cm | Výška 200 cm.</p>
+              </div>
 
               <div class="input-group">
                 <label for="volumeInput">Objem*</label>
@@ -172,7 +175,7 @@
                   <span class="input-group-text disabled">kg</span>
                 </div>
               </div>
-              <button id="calcSubmitBtn" type="submit" class="btn btn-primary">Spočítat</button>
+              <button id="calcSubmitBtn" type="submit" class="btn btn-primary calc-submit">Spočítat</button>
 
             </form>
           </div>
@@ -183,6 +186,7 @@
                 <p>CZK bez DPH a příplatků</p>
               </div>
               <div class="btn-container">
+                <p class="order-text">Objednat přepravu</p>
                 <!--<button id="orderBtn" type="button" class="btn btn-primary disabled">Objednat přepravu</button>-->
                 <div class="btn-group" role="group">
                   <a id="phoneLink" href="tel:+420-239-018-222" class="btn btn-primary disabled">+420 239 018 222</a>

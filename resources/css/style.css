@@ -12201,7 +12201,7 @@ header {
 
 .calculator-container .result .result-text {
   position: absolute;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
   right: 0;
   left: 0;
@@ -12212,6 +12212,11 @@ header {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .calc-submit {
+    margin-top: 56px;
+  }
+}
 .calculator-container .btn-group .btn-primary {
   border: none;
   margin-left: 0 !important;
@@ -12249,7 +12254,7 @@ header {
   }
 
   .calculator-container .result .result-text {
-    padding-bottom: 88px;
+    padding-bottom: 104px;
   }
 
   .calculator-container .btn {
@@ -12287,8 +12292,7 @@ header {
   display: inline-block;
 }
 
-.calc-alert .green-circle {
-  background-color: #76BD22;
+.calc-alert .circle {
   border: none;
   border-radius: 100%;
   width: 16px;
@@ -12296,11 +12300,26 @@ header {
   margin-bottom: -4px;
 }
 
+.calc-alert .circle.green {
+  background-color: #76BD22;
+}
+
+.calc-alert .circle.red {
+  background-color: #D40511;
+}
+
 .calc-alert p {
   font-size: 11px;
   color: black;
   padding-left: 16px;
   margin-bottom: 0;
+}
+
+.calculator-container .order-text {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0;
+  margin-top: 1em;
 }
 
 .calculator-container .btn-group {

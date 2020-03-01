@@ -1046,7 +1046,7 @@ header {
 }
 .calculator-container .result .result-text {
   position: absolute;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
   right: 0;
   left: 0;
@@ -1054,6 +1054,11 @@ header {
 }
 .calculator-container .result h2 {
   margin-bottom: 0;
+}
+@include media-breakpoint-up(md) {
+  .calc-submit {
+    margin-top: 56px;
+  }
 }
 .calculator-container .btn-group .btn-primary {
   border: none;
@@ -1085,7 +1090,7 @@ header {
     height: 100%;
   }
   .calculator-container .result .result-text {
-    padding-bottom: 88px;
+    padding-bottom: 104px;
   }
   .calculator-container .btn {
     width: 178px;
@@ -1121,19 +1126,30 @@ header {
 .calc-alert div, .calc-alert p {
   display: inline-block;
 }
-.calc-alert .green-circle {
-  background-color: #76BD22;
+.calc-alert .circle {
   border: none;
   border-radius: 100%;
   width: 16px;
   height: 16px;
   margin-bottom: -4px;
 }
+.calc-alert .circle.green {
+  background-color: #76BD22;
+}
+.calc-alert .circle.red {
+  background-color: map-get($theme-colors, primary);
+}
 .calc-alert p {
   font-size: 11px;
   color: black;
   padding-left: 16px;
   margin-bottom: 0;
+}
+.calculator-container .order-text {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0;
+  margin-top: 1em;
 }
 .calculator-container .btn-group {
   width: 100%;
