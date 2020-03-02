@@ -371,7 +371,25 @@ function updateAfterLogin() {
   }
 }
 
+function cookiesAlert() {
+  if (localStorage.getItem("confirmCookieBanner")) {
+    const banner = document.getElementById("banner");
+    if (banner) {
+      banner.style.display = "none";
+    }
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("login-form").onsubmit = function(e) {
+    e.preventDefault();
+    login();
+  };
+
+  updateAfterLogin();
+
+  cookiesAlert();
+
   const searchForm = document.getElementById("search-form");
   searchForm &&
     (searchForm.onsubmit = function(e) {
@@ -388,12 +406,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   tracking();
 
-  document.getElementById("login-form").onsubmit = function(e) {
-    e.preventDefault();
-    login();
-  };
-
-  updateAfterLogin();
+  const bannerButton = document.getElementById("bannerOkBtn");
+  bannerButton &&
+    (bannerButton.onclick = () => {
+      localStorage.setItem("confirmCookieBanner", "true");
+    });
 
   storageHost([
     {
