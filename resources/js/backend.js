@@ -9,24 +9,28 @@ const instance = axios.create({
 /**
  * vytvoří základní hlavičky
  */
-const getHeaders = () => ({
-  Accept: "application/json",
-  "Content-Type": "application/json"
-});
+function getHeaders() {
+  return {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+  };
+}
 
 /**
  * zkontroluje HTTP status, jestli je 200 až 304
  * @param {number} response HTTP status
  */
-const checkHttpStatus = response =>
-  response ? response.status >= 200 && response.status <= 304 : false;
+function checkHttpStatus(response) {
+  return response ? response.status >= 200 && response.status <= 304 : false;
+}
 
 /**
  * zkontroluje odpověď API při GET požadavku
  * @param response odpověď API
  */
-const checkResponseGet = response =>
-  response.data && response.data.success && response.data.data;
+function checkResponseGet(response) {
+  return response.data && response.data.success && response.data.data;
+}
 
 /**
  * zašle HTTP požadavek
@@ -34,9 +38,9 @@ const checkResponseGet = response =>
  * @param {string} endpoint endpoint cílového serveru
  * @param {any} data data k odeslaní
  */
-async function sendRequest(method, endpoint, data) {
-  return await instance.request({
-    method,
+function sendRequest(method, endpoint, data) {
+  return instance.request({
+    method: method,
     url: endpoint,
     data: JSON.stringify(data),
     headers: getHeaders()
@@ -48,16 +52,16 @@ async function sendRequest(method, endpoint, data) {
  * @param {string} endpoint endpoint cílového serveru
  * @param {any} data data k odeslaní
  */
-async function post(endpoint, data) {
-  return await sendRequest("post", endpoint, data);
+function httpPost(endpoint, data) {
+  return sendRequest("post", endpoint, data);
 }
 
 /**
  * zašle HTTP GET požadavek
  * @param {string} endpoint endpoint cílového serveru
  */
-async function get(endpoint) {
-  return await sendRequest("get", endpoint, undefined);
+function httpGet(endpoint) {
+  return sendRequest("get", endpoint, undefined);
 }
 
 /**
@@ -66,12 +70,15 @@ async function get(endpoint) {
  */
 function createQueryString(parameters) {
   return parameters
-    ? `?${Object.keys(parameters)
-        .filter(
-          key => parameters[key] !== undefined && parameters[key] !== null
-        )
-        .map(key => `${key}=${parameters[key]}`)
-        .join("&")}`
+    ? "?" +
+        Object.keys(parameters)
+          .filter(function(key) {
+            return parameters[key] !== undefined && parameters[key] !== null;
+          })
+          .map(function(key) {
+            return key + "=" + parameters[key];
+          })
+          .join("&")
     : "";
 }
 
@@ -88,12 +95,15 @@ function setHistoryItem(item, history) {
 }
 
 function tracking() {
-  if (document.getElementsByClassName("tracking-container").length > 0) {
+  const trackings = document.getElementsByClassName("tracking-container"),
+    loading = document.getElementsByClassName("loading");
+  if (trackings.length > 0) {
     const consignment = getParameterByName("consignment");
     if (consignment) {
-      get(`tracking?consignment=${consignment}`)
-        .then(r => {
-          const { data, message } = r.data;
+      httpGet("tracking?consignment=" + consignment)
+        .then(function(r) {
+          const data = r.data.data,
+            message = r.data.message;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
             const parent = document.getElementById("consignment-info");
             parent.children[0].innerText = data.consignment.code;
@@ -101,10 +111,12 @@ function tracking() {
             parent.children[2].innerText =
               data.consignment.customerReference || "--";
             parent.children[3].innerText =
-              (data.consignment.weight && `${data.consignment.weight} kg`) ||
+              (data.consignment.weight && data.consignment.weight + " kg") ||
               "--";
             parent.children[4].innerText = data.consignment.cashOnDeliveryAmount
-              ? `${data.consignment.cashOnDeliveryAmount} ${data.consignment.cashOnDeliveryCurrency}`
+              ? data.consignment.cashOnDeliveryAmount +
+                " " +
+                data.consignment.cashOnDeliveryCurrency
               : "--";
 
             const track = document.getElementById("track"),
@@ -132,94 +144,109 @@ function tracking() {
           } else {
             console.log(message || "tracking error");
           }
+
+          trackings[0].style.display = "";
+          loading[0].style.display = "none";
         })
-        .catch(e => {
-          console.log(`tracking error (${e.message})`);
+        .catch(function(e) {
+          console.log("tracking error => " + e.message);
         });
     } else {
+      trackings[0].style.display = "";
+      loading[0].style.display = "none";
       console.log("zadejte číslo zásilky");
     }
   }
 }
 
-const getInputValues = inputName => {
+function getInputValues(inputName) {
   const input = document.getElementById(inputName);
-  return { input, label: input.labels[0], value: input.value };
-};
+  return {
+    input: input,
+    label: input.labels && input.labels[0],
+    value: input.value
+  };
+}
 
-const setValidity = (item, valid = true) => {
+function validateNumber(inputValues) {
+  return inputValues.value && !isNaN(inputValues.value);
+}
+
+function setValidity(item, valid) {
+  if (valid === undefined) {
+    valid = true;
+  }
+
   if (valid && item.value) {
     item.input.classList.remove("is-invalid");
-    item.label.classList.remove("is-invalid");
+    item.label && item.label.classList.remove("is-invalid");
   } else {
     item.input.classList.add("is-invalid");
-    item.label.classList.add("is-invalid");
+    item.label && item.label.classList.add("is-invalid");
   }
-};
+}
 
-function calculation(afterSuccess) {
+function calculation(after, afterSuccess) {
   const product = getInputValues("productSelect"),
     pickup = getInputValues("zipPickupInput"),
     delivery = getInputValues("zipDeliveryInput"),
-    weight = getInputValues("massInput");
-  const hasWeight = weight.value && !isNaN(weight.value);
+    weight = getInputValues("massInput"),
+    length = getInputValues("lengthInput"),
+    width = getInputValues("widthInput"),
+    height = getInputValues("heightInput");
+  const hasWeight = validateNumber(weight),
+    hasLength = validateNumber(length),
+    hasWidth = validateNumber(width),
+    hasHeight = validateNumber(height);
 
   setValidity(product);
   setValidity(pickup);
   setValidity(delivery);
   setValidity(weight, hasWeight);
+  setValidity(length, hasLength);
+  setValidity(width, hasWidth);
+  setValidity(height, hasHeight);
 
   const parent = document.getElementsByClassName("result-text")[0];
   parent.children[0].innerText = "...";
 
-  if (product.value) {
-    if (pickup.value) {
-      if (delivery.value) {
-        if (hasWeight) {
-          const weightUnit = document.getElementById("massUnitType").value;
-          if (weightUnit === "t") {
-            weight.value = weight.value * 1000;
-          }
-          let volume = document.getElementById("volumeInput").value;
-          const hasVolume = volume && !isNaN(volume);
-          if (!volume || hasVolume) {
-            const volumeUnit = document.getElementById("volumeUnitType").value;
-            if (hasVolume && volumeUnit === "l") {
-              volume = volume / 1000;
-            }
-            const cashOnDeliveryAmount = document.getElementById("priceInput")
-              .value;
-            if (
-              !cashOnDeliveryAmount ||
-              (cashOnDeliveryAmount && !isNaN(cashOnDeliveryAmount))
-            ) {
-              get(
-                `calculation${createQueryString({
-                  productId: product.value,
-                  pickupZipCode: pickup.value,
-                  deliveryZipCode: delivery.value,
-                  weight: weight.value,
-                  volume,
-                  cashOnDeliveryAmount
-                })}`
-              )
-                .then(r => {
-                  const { data, message } = r.data;
-                  if (checkHttpStatus(r) && checkResponseGet(r)) {
-                    parent.children[0].innerText = data.price;
-                    afterSuccess && afterSuccess();
-                  } else {
-                    console.log(message || "calculation error");
-                  }
-                })
-                .catch(e => {
-                  console.log(`calculation error (${e.message})`);
-                });
-            }
-          }
+  if (
+    product.value &&
+    pickup.value &&
+    delivery.value &&
+    hasWeight &&
+    hasLength &&
+    hasWidth &&
+    hasHeight
+  ) {
+    httpGet(
+      "calculation" +
+        createQueryString({
+          productId: product.value,
+          pickupZipCode: pickup.value,
+          deliveryZipCode: delivery.value,
+          weight: weight.value,
+          length: length.value,
+          width: width.value,
+          height: height.value
+        })
+    )
+      .then(function(r) {
+        const data = r.data.data,
+          message = r.data.message;
+        if (checkHttpStatus(r) && checkResponseGet(r)) {
+          parent.children[0].innerText = data.price;
+          afterSuccess && afterSuccess();
+        } else {
+          console.log(message || "calculation error");
         }
-      }
-    }
+        after && after();
+      })
+      .catch(function(e) {
+        console.log("calculation error => " + e.message);
+      });
+  } else {
+    after && after();
   }
 }
 
@@ -232,18 +259,20 @@ function login() {
 
   if (username.value) {
     if (password.value) {
-      post("auth", { username: username.value, password: password.value })
-        .then(r => {
-          const { data, message } = r.data;
+      httpPost("auth", { username: username.value, password: password.value })
+        .then(function(r) {
+          const data = r.data.data,
+            message = r.data.message;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
             localStorage.setItem("user", JSON.stringify(data));
+            $("#loginModal").modal("hide");
             updateAfterLogin();
           } else {
             console.log(message || "login error");
           }
         })
-        .catch(e => {
-          console.log(`login error (${e.message})`);
+        .catch(function(e) {
+          console.log("login error => " + e.message);
         });
     }
   }
@@ -299,10 +328,10 @@ function connect(event) {
 
 function storageHost(allowedDomains) {
   function handleMessage(event) {
-    const { data } = event;
-    const domain = allowedDomains.find(
-      allowedDomain => event.origin === allowedDomain.origin
-    );
+    const data = event.data;
+    const domain = allowedDomains.find(function(allowedDomain) {
+      return event.origin === allowedDomain.origin;
+    });
 
     const id = getId(data);
     if (!id) {
@@ -312,21 +341,21 @@ function storageHost(allowedDomains) {
     if (!domain) {
       event.source.postMessage(
         {
-          id,
+          id: id,
           connectError: true,
-          error: `${event.origin} is not an allowed domain`
+          error: event.origin + " is not an allowed domain"
         },
         event.origin
       );
       return;
     }
 
-    const { method } = data;
+    const method = data.method;
     if (!~domain.allowedMethods.indexOf(method) && method !== "connect") {
       event.source.postMessage(
         {
-          id,
-          error: `${method} is not an allowed method from ${event.origin}`
+          id: id,
+          error: method + " is not an allowed method from " + event.origin
         },
         event.origin
       );
@@ -352,7 +381,7 @@ function close() {
 /* end of cross-domain-storage */
 
 function updateAfterLogin() {
-  update = (fields, add) => {
+  update = function(fields, add) {
     for (let i = 0; i < fields.length; i++) {
       add
         ? fields[i].classList.add("d-none")
@@ -380,16 +409,85 @@ function cookiesAlert() {
   }
 }
 
+function setDimensions() {
+  const lengthInput = document.getElementById("lengthInput"),
+    widthInput = document.getElementById("widthInput"),
+    heightInput = document.getElementById("heightInput");
+  if (lengthInput && widthInput && heightInput) {
+    const onValueChange = function() {
+      const lengthValue = document.getElementById("lengthInput").value,
+        widthValue = document.getElementById("widthInput").value,
+        heightValue = document.getElementById("heightInput").value;
+      const volume = getInputValues("volumeInput");
+      if (lengthValue && widthValue && heightValue) {
+        volume.input.value = (
+          (lengthValue * widthValue * heightValue) /
+          1000000
+        ).toFixed(3);
+        volume.label && (volume.label.style.fontSize = "11px");
+      } else {
+        volume.input.value = "";
+        volume.label && (volume.label.style.fontSize = undefined);
+      }
+
+      const alert = document.getElementsByClassName("circle")[1];
+      if (
+        lengthValue > 0 &&
+        lengthValue <= 300 &&
+        widthValue > 0 &&
+        widthValue <= 200 &&
+        heightValue > 0 &&
+        heightValue <= 200
+      ) {
+        alert.classList.remove("red");
+        alert.classList.add("green");
+      } else {
+        alert.classList.add("red");
+        alert.classList.remove("green");
+      }
+    };
+    lengthInput.onchange = onValueChange;
+    widthInput.onchange = onValueChange;
+    heightInput.onchange = onValueChange;
+  }
+}
+
+function setWeight() {
+  const weightInput = document.getElementById("massInput");
+  if (weightInput) {
+    weightInput.onchange = function() {
+      const weightValue = document.getElementById("massInput").value;
+      const alert = document.getElementsByClassName("circle")[0];
+      if (weightValue > 0 && weightValue <= 3000) {
+        alert.classList.remove("red");
+        alert.classList.add("green");
+      } else {
+        alert.classList.add("red");
+        alert.classList.remove("green");
+      }
+    };
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+  /* login */
   document.getElementById("login-form").onsubmit = function(e) {
     e.preventDefault();
     login();
   };
-
   updateAfterLogin();
+  /* end of login */
 
+  /* cookies */
   cookiesAlert();
+  const bannerButton = document.getElementById("bannerOkBtn");
+  bannerButton &&
+    (bannerButton.onclick = function() {
+      localStorage.setItem("confirmCookieBanner", "true");
+    });
+  /* end of cookies */
 
+  /* tracking */
   const searchForm = document.getElementById("search-form");
   searchForm &&
     (searchForm.onsubmit = function(e) {
@@ -405,12 +503,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
   tracking();
+  /* end of tracking */
 
-  const bannerButton = document.getElementById("bannerOkBtn");
-  bannerButton &&
-    (bannerButton.onclick = () => {
-      localStorage.setItem("confirmCookieBanner", "true");
-    });
+  /* calculation */
+  setDimensions();
+  setWeight();
+  /* end of calculation */
 
   storageHost([
     {

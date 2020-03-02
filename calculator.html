@@ -124,14 +124,14 @@
               </div>
               <div class="input-group">
                 <label for="massInput">Hmotnost*</label>
-                <input type="text" class="form-control" id="massInput">
+                <input class="form-control" id="massInput" type="number" min="1" max="3000">
                 <div class="input-group-append">
                   <span class="input-group-text">kg</span>
                 </div>
               </div>
 
               <div class="calc-alert">
-                <div class="circle green"></div>
+                <div class="circle red"></div>
                 <p>1 ks max 800 kg. Zásilka max 3000 kg.</p>
               </div>
 
@@ -139,17 +139,17 @@
                 <div class="form-row">
                   <div class="col-4">
                     <label for="lengthInput">Délka*</label>
-                    <input type="text" class="form-control" id="lengthInput">
+                    <input class="form-control" id="lengthInput" type="number" min="1" max="300">
                     <img src="resources/img/icons/calculator-delimeter.svg" alt="">
                   </div>
                   <div class="col-4">
                     <label for="widthInput">Šířka*</label>
-                    <input type="text" class="form-control" id="widthInput">
+                    <input class="form-control" id="widthInput" type="number" min="1" max="200">
                     <img src="resources/img/icons/calculator-delimeter.svg" alt="">
                   </div>
                   <div class="col-4">
                     <label for="heightInput">Výška*</label>
-                    <input type="text" class="form-control" id="heightInput">
+                    <input class="form-control" id="heightInput" type="number" min="1" max="200">
                   </div>
                 </div>
                 <div class="input-group-append">
@@ -162,7 +162,7 @@
               </div>
 
               <div class="input-group">
-                <label for="volumeInput">Objem*</label>
+                <label for="volumeInput">Objem</label>
                 <input type="text" class="form-control" id="volumeInput" disabled>
                 <div class="input-group-append">
                   <span class="input-group-text disabled">m<sup>3</sup></span>
@@ -273,6 +273,8 @@
     </div>
   </div>
 </div>
+<script src="resources/js/polyfill.js"></script>
+
 <script src="resources/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="resources/node_modules/jquery-bez/lib/jquery.bez.min.js"></script>
 <script src="resources/node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -281,9 +283,11 @@
 <script src="resources/js/navbar.js"></script>
 <script src="resources/js/search.js"></script>
 <script src="resources/js/inputs.js"></script>
-<script src="resources/js/calculator.js"></script>
 
 <script src="resources/node_modules/axios/dist/axios.min.js"></script>
+<script src="resources/js/classList.js"></script>
 <script src="resources/js/backend.js"></script>
+
+<script src="resources/js/calculator.js"></script>
 </body>
 </html>

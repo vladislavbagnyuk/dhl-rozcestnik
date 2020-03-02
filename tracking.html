@@ -85,11 +85,6 @@
           <img class="d-none d-md-block" src="resources/img/icons/account-desktop.svg" alt="">
         </button>
 
-        <button id="mobileMenuBtn" class="d-md-none btn-icon hamburger hamburger--squeeze" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
       </div>
     </nav>
   </div>
@@ -108,7 +103,12 @@
       </div>
       <!-- Tracking -->
 
-      <div class="tracking-container">
+      <div class="loading">
+        <h2>VAŠE ZÁSILKA</h2>
+        <img class="fluid-img" src="resources/img/icons/loading.svg" alt="loading">
+      </div>
+
+      <div class="tracking-container" style="display: none;">
         <h2 class="text-center">VAŠE ZÁSILKA</h2>
         <div class="row">
           <div class="col-md-6">
@@ -314,6 +314,8 @@
     </div>
   </div>
 </div>
+<script src="resources/js/polyfill.js"></script>
+
 <script src="resources/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="resources/node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="resources/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -324,6 +326,7 @@
 <script src="resources/js/calculator.js"></script>
 
 <script src="resources/node_modules/axios/dist/axios.min.js"></script>
+<script src="resources/js/classList.js"></script>
 <script src="resources/js/backend.js"></script>
 </body>
 </html>
