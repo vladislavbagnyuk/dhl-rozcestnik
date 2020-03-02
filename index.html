@@ -127,6 +127,10 @@
           </ul>
         </ul>
       </form>
+      <div class="loading d-none">
+        <h3>VAŠE ZÁSILKA</h3>
+        <img class="fluid-img" src="resources/img/icons/loading.svg" alt="loading">
+      </div>
     </div>
   </div>
 </div>
@@ -181,12 +185,12 @@
       <div class="modal-body">
         <form id="login-form">
           <div class="form-group">
-            <label for="loginInput">Přihlašovací jméno*</label>
-            <input type="text" class="form-control" id="loginInput">
+            <label for="loginInput" class="is-invalid">Přihlašovací jméno*</label>
+            <input type="text" class="form-control is-invalid" id="loginInput" value="Neplatné Jméno">
           </div>
           <div class="form-group">
             <label for="passwordInput">Heslo*</label>
-            <input type="password" class="form-control" id="passwordInput">
+            <input type="password" class="form-control green-dot" id="passwordInput">
           </div>
           <a href="#">Zapomněli jste své heslo?</a>
           <!-- <div class="custom-control custom-checkbox">
