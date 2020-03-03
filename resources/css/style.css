@@ -11577,9 +11577,9 @@ header {
     padding-top: 0;
   }
 
-  .navbar-scroll .float-right .btn-icon {
+  /*.navbar-scroll .float-right .btn-icon {
     display: block !important;
-  }
+  }*/
 
   .navbar-scroll .login-btn {
     margin: 0;

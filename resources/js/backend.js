@@ -94,6 +94,12 @@ function setHistoryItem(item, history) {
   elements[4].innerText = history.message || "...";
 }
 
+function showMessage(loading, message) {
+  loading[0].children[0].innerHTML =
+    message || "Při načítání dat nastala chyba, zkuste to prosím znovu!";
+  !message && (loading[0].children[1].style.display = "none");
+}
+
 function tracking() {
   const trackings = document.getElementsByClassName("tracking-container"),
     loading = document.getElementsByClassName("loading");
@@ -142,19 +148,21 @@ function tracking() {
               }
             }
           } else {
-            console.log(message || "tracking error");
+            showMessage(trackings, message);
           }
 
           trackings[0].style.display = "";
           loading[0].style.display = "none";
         })
-        .catch(function(e) {
-          console.log("tracking error => " + e.message);
+        .catch(function() {
+          showMessage(loading);
         });
     } else {
       trackings[0].style.display = "";
       loading[0].style.display = "none";
-      console.log("zadejte číslo zásilky");
+
+      const parent = document.getElementById("consignment-info");
+      parent.children[0].innerText = "Zadejte kód zásilky!";
     }
   }
 }
@@ -186,6 +194,11 @@ function setValidity(item, valid) {
   }
 }
 
+function setResult(parent, result, result2) {
+  parent.children[0].innerText = result || "...";
+  parent.children[1].innerText = result2 || "CZK bez DPH a příplatků";
+}
+
 function calculation(after, afterSuccess) {
   const product = getInputValues("productSelect"),
     pickup = getInputValues("zipPickupInput"),
@@ -208,7 +221,7 @@ function calculation(after, afterSuccess) {
   setValidity(height, hasHeight);
 
   const parent = document.getElementsByClassName("result-text")[0];
-  parent.children[0].innerText = "...";
+  setResult(parent);
 
   if (
     product.value &&
@@ -235,15 +248,16 @@ function calculation(after, afterSuccess) {
         const data = r.data.data,
           message = r.data.message;
         if (checkHttpStatus(r) && checkResponseGet(r)) {
-          parent.children[0].innerText = data.price;
+          setResult(data.price);
           afterSuccess && afterSuccess();
         } else {
-          console.log(message || "calculation error");
+          setResult(parent, message || "Při kalkulaci nastala chyba!", "...");
         }
         after && after();
       })
-      .catch(function(e) {
-        console.log("calculation error => " + e.message);
+      .catch(function() {
+        setResult(parent, "Při kalkulaci nastala chyba!", "...");
+        after && after();
       });
   } else {
     after && after();
@@ -257,6 +271,8 @@ function login() {
   setValidity(username);
   setValidity(password);
 
+  const error = document.getElementById("login-error");
+  error.innerHTML = "";
   if (username.value) {
     if (password.value) {
       httpPost("auth", { username: username.value, password: password.value })
@@ -268,11 +284,11 @@ function login() {
             $("#loginModal").modal("hide");
             updateAfterLogin();
           } else {
-            console.log(message || "login error");
+            error.innerHTML = message || "Při přihlašování nastala chyba!";
           }
         })
-        .catch(function(e) {
-          console.log("login error => " + e.message);
+        .catch(function() {
+          error.innerHTML = "Při přihlašování nastala chyba!";
         });
     }
   }
@@ -384,8 +400,8 @@ function updateAfterLogin() {
   update = function(fields, add) {
     for (let i = 0; i < fields.length; i++) {
       add
-        ? fields[i].classList.add("d-none")
-        : fields[i].classList.remove("d-none");
+        ? fields[i].classList.add("d-none", "d-md-none")
+        : fields[i].classList.remove("d-none", "d-md-none");
     }
   };
 
@@ -475,6 +491,18 @@ document.addEventListener("DOMContentLoaded", function() {
     e.preventDefault();
     login();
   };
+  document.getElementById("forgot-password").onclick = function() {
+    document
+      .getElementById("forgot-password-message")
+      .classList.toggle("d-none");
+  };
+  const validation = function(e) {
+    e.target.value
+      ? e.target.classList.add("green-dot")
+      : e.target.classList.remove("green-dot");
+  };
+  document.getElementById("loginInput").onchange = validation;
+  document.getElementById("passwordInput").onchange = validation;
   updateAfterLogin();
   /* end of login */
 
