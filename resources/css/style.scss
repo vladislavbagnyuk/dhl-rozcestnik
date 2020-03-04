@@ -123,6 +123,7 @@ h1, h2, h4 {
 h1 {
   color: map-get($theme-colors, primary);
   font-size: 35px;
+  text-transform: uppercase;
 }
 h2 {
   font-size: 29px;

@@ -11116,6 +11116,7 @@ h1, h2, h4 {
 h1 {
   color: #D40511;
   font-size: 35px;
+  text-transform: uppercase;
 }
 
 h2 {
