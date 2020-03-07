@@ -268,7 +268,7 @@ header {
 .container-fluid {
   max-width: 1395px;
 }
-.navbar, .header-img-container, footer {
+.navbar, .header-img-container, .novinky-heading-container, footer {
   width: 100%;
   max-width: 1395px;
   margin: 0 auto;
@@ -1249,5 +1249,35 @@ footer .social-links a:hover path {
   .copyright p {
     margin: 0 auto;
     max-width: none;
+  }
+}
+.novinky-img-container {
+  height: 282px;
+}
+.novinky-img-container img {
+  top: 40%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+}
+@include media-breakpoint-up(md) {
+  .novinky-heading-container {
+    height: 584px;
+    padding: 110px 42px;
+    background:  linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%), url('../img/novinky-tablet.jpg');
+    background-size: cover;
+  }
+  .novinky-heading-container h1 {
+    color: white;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .novinky-heading-container {
+    height: 584px;
+    background:  linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%), url('../img/novinky-desktop.jpg');
+    background-position: center;
+    background-size: cover;
   }
 }
