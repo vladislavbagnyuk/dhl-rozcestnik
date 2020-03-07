@@ -155,6 +155,9 @@ h3 {
   }
 }
 // Buttons and inputs
+.btn {
+  font-weight: bold;
+}
 .btn.focus, .btn:focus,
 .custom-control-input:focus,
 .custom-control-input.focus,
@@ -558,7 +561,6 @@ header {
 .modal-content .btn {
   width: 100%;
   border-radius: 4px;
-  font-weight: bold;
   margin: 32px 0;
 }
 .modal-contentLogin modal p, .modal-content a {
@@ -880,7 +882,6 @@ header {
 .tracking-progress .btn {
   width: 100%;
   margin-top: 40px;
-  font-weight: bold;
   padding: 14px;
   float: right;
 }
@@ -916,7 +917,6 @@ header {
   text-align: center;
 }
 .calculator-container .btn {
-  font-weight: bold;
   width: 100%;
   height: 48px;
 }
@@ -1262,15 +1262,38 @@ footer .social-links a:hover path {
   height: 100%;
   width: auto;
 }
+.novinky-heading-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 54px;
+}
+.novinky-heading-container h1 {
+  color: black;
+  margin-top: 18px;
+}
+.novinky-heading-container .btn {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  height: auto;
+}
 @include media-breakpoint-up(md) {
   .novinky-heading-container {
     height: 584px;
     padding: 110px 42px;
     background:  linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%), url('../img/novinky-tablet.jpg');
     background-size: cover;
+    margin-bottom: 60px;
+  }
+  .novinky-heading-container h1, .novinky-heading-container p {
+    color: white;
   }
   .novinky-heading-container h1 {
-    color: white;
+    margin-top: 0;
+  }
+  .novinky-heading-container .btn {
+    width: 178px;
+    margin-top: 35px;
   }
 }
 @include media-breakpoint-up(lg) {
@@ -1280,4 +1303,38 @@ footer .social-links a:hover path {
     background-position: center;
     background-size: cover;
   }
+}
+// Cards
+.novinky-row .card, .novinky-row .card-img-top {
+  border-radius: 0;
+}
+.novinky-row .card {
+  border: none;
+  height: 100%;
+}
+.novinky-row .card-body {
+  padding-top: 24px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.novinky-row .card-title, .novinky-row .card-text {
+  color: black;
+}
+.novinky-row .card-title {
+  margin-bottom: 20px;
+}
+.novinky-row .card-text {
+  //margin-bottom: 38px;
+}
+.novinky-row .card a {
+  font-weight: bold;
+}
+.novinky-row .card a:hover {
+  text-decoration: none;
+}
+.novinky-row .card-footer {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-bottom: 58px;
 }
