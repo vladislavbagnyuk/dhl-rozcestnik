@@ -12495,7 +12495,9 @@ footer .social-links a:hover path {
     background-blend-mode: multiply;
   }
 
-  .novinky-heading-container h1, .novinky-heading-container p {
+  .novinky-heading-container h1,
+.novinky-heading-container h3,
+.novinky-heading-container p {
     color: white;
   }
 
@@ -12603,6 +12605,46 @@ footer .social-links a:hover path {
 
   .load-more {
     width: 178px;
+  }
+}
+@media (min-width: 768px) {
+  .kontakt-container {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .kontakt-block-1 {
+    background: linear-gradient(-135deg, rgba(0, 0, 0, 0) 0%, #919191 100%), url("../img/kontakt-1-desktop.jpg");
+    background-position: center;
+  }
+
+  .kontakt-block-1 .btn {
+    width: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-right: 42px;
+  }
+
+  .kontakt-block-2 {
+    background: url("../img/kontakt-2-desktop.jpg");
+    background-position: center;
+    height: 434px;
+  }
+
+  .kontakt-block-2 p {
+    max-width: 493px;
+    margin: 0 auto;
+  }
+
+  .kontakt-block-3 {
+    background: url("../img/kontakt-3-desktop.jpg");
+    background-position: center;
+    height: 434px;
+  }
+
+  .kontakt-block-3 p {
+    max-width: 702px;
+    margin: 0 auto;
   }
 }
 
