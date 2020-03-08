@@ -12479,8 +12479,8 @@ footer .social-links a:hover path {
 
 .novinky-heading-container .btn {
   width: 100%;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-right: 18.5px;
+  padding-left: 18.5px;
   height: auto;
 }
 
@@ -12514,6 +12514,10 @@ footer .social-links a:hover path {
     background-size: cover;
   }
 }
+.novinky-search {
+  margin-bottom: 54px !important;
+}
+
 .novinky-row .card, .novinky-row .card-img-top {
   border-radius: 0;
 }
@@ -12550,6 +12554,12 @@ footer .social-links a:hover path {
   margin-bottom: 58px;
 }
 
+.load-more {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
 @media (min-width: 768px) {
   .novinky-row .card .btn-outline-primary {
     width: auto;
@@ -12557,6 +12567,31 @@ footer .social-links a:hover path {
     padding: 0;
     border: none;
     border-radius: 0;
+  }
+
+  .load-more {
+    width: 150px;
+    margin-top: 26px;
+  }
+
+  .novinky-row {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .novinky-row .col-md-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .novinky-row .col-lg-4 {
+    padding-left: 21.5px;
+    padding-right: 21.5px;
+  }
+
+  .load-more {
+    width: 178px;
   }
 }
 
