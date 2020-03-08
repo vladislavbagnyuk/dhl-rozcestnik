@@ -1289,6 +1289,7 @@ footer .social-links a:hover path {
     background:  linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%), url('../img/novinky-tablet.jpg');
     background-size: cover;
     margin-bottom: 60px;
+    background-blend-mode: multiply;
   }
   .novinky-heading-container h1, .novinky-heading-container p {
     color: white;
@@ -1360,6 +1361,10 @@ footer .social-links a:hover path {
     padding: 0;
     border: none;
     border-radius: 0;
+  }
+  .novinky-row .card .btn-outline-primary:hover {
+    background: none;
+    color: $hover-color;
   }
   .load-more {
     width: 150px;
