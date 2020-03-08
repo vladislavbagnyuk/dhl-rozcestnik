@@ -1337,9 +1337,6 @@ footer .social-links a:hover path {
 .novinky-row .card-title {
   margin-bottom: 20px;
 }
-.novinky-row .card-text {
-  //margin-bottom: 38px;
-}
 .novinky-row .card .btn-outline-primary {
   width: 100%;
   padding-top: 11px;
@@ -1392,10 +1389,30 @@ footer .social-links a:hover path {
 }
 
  // Kontakt
+ .kontakt-block-2 h3, .kontakt-block-3 h3 {
+   margin-top: 16px;
+ }
+ .kontakt-block-2, .kontakt-block-3 {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ .kontakt-mail-btn {
+   margin-top: 16px !important;
+ }
  @include media-breakpoint-up(md) {
    .kontakt-container {
      padding-left: 42px;
      padding-right: 42px;
+   }
+   .kontakt-mail-btn {
+     margin-top: 35px !important;
+   }
+   .kontakt-block-2 h3, .kontakt-block-3 h3 {
+     margin-top: 0;
+     margin-bottom: 13px;
+   }
+   .kontakt-block-2 .btn, .kontakt-block-3 .btn {
+     margin-top: 47px;
    }
    .kontakt-block-1 {
      background:  linear-gradient(-135deg, rgba(0, 0, 0, 0) 0%, #919191 100%), url('../img/kontakt-1-desktop.jpg');
@@ -1407,10 +1424,15 @@ footer .social-links a:hover path {
      padding-right: 24px;
      margin-right: 42px;
    }
-   .kontakt-block-2 {
-     background:  url('../img/kontakt-2-desktop.jpg');
+   .kontakt-block-2, .kontakt-block-3 {
      background-position: center;
      height: 434px;
+     text-align: center;
+   }
+   .kontakt-block-2 {
+     background:  url('../img/kontakt-2-desktop.jpg');
+     margin-bottom: 50px;
+     padding-top: 125px;
    }
    .kontakt-block-2 p {
      max-width: 493px;
@@ -1418,8 +1440,7 @@ footer .social-links a:hover path {
    }
    .kontakt-block-3 {
      background:  url('../img/kontakt-3-desktop.jpg');
-     background-position: center;
-     height: 434px;
+     margin-bottom: 0;
    }
    .kontakt-block-3 p {
      max-width: 702px;
