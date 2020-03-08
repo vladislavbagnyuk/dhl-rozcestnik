@@ -1267,8 +1267,8 @@ footer .social-links a:hover path {
   width: auto;
 }
 .novinky-heading-container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 18.5px;
+  padding-left: 18.5px;
   margin-bottom: 54px;
 }
 .novinky-heading-container h1 {
@@ -1277,9 +1277,10 @@ footer .social-links a:hover path {
 }
 .novinky-heading-container .btn {
   width: 100%;
-  padding-right: 18.5px;
-  padding-left: 18.5px;
   height: auto;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: 10px;
 }
 @include media-breakpoint-up(md) {
   .novinky-heading-container {
@@ -1294,6 +1295,9 @@ footer .social-links a:hover path {
   }
   .novinky-heading-container h1 {
     margin-top: 0;
+  }
+  .novinky-heading-container p {
+    font-size: 18px;
   }
   .novinky-heading-container .btn {
     width: 178px;
