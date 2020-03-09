@@ -11298,7 +11298,7 @@ header {
   max-width: 1395px;
 }
 
-.navbar, .header-img-container, .novinky-heading-container, footer {
+.navbar, .header-img-container, .novinky-heading-container, footer, .sluzby-header-img-container {
   width: 100%;
   max-width: 1395px;
   margin: 0 auto;
@@ -12677,6 +12677,41 @@ footer .social-links a:hover path {
     max-width: 702px;
     margin: 0 auto;
   }
+}
+.header-img-container {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sluzby-header-img-container .header-img {
+  top: 0;
+  transform: translate(-50%, 0);
+  height: 100%;
+  width: auto;
+  min-width: 100%;
+}
+
+.sluzby-container-1 h1 {
+  margin-bottom: 0;
+}
+
+.sluzby-container-1 h3 {
+  margin-top: 96px;
+}
+
+.sluzby-container-1 p {
+  max-width: 618px;
+  margin: 0 auto;
+}
+
+.sluzby-container-1 .line {
+  background-color: #808080;
+  height: 7px;
+  border: none;
+  border-radius: 10px;
+  max-width: 775px;
+  margin: 32px auto 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
