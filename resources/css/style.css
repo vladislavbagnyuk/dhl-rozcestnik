@@ -12580,6 +12580,7 @@ footer .social-links a:hover path {
   .novinky-row .card .btn-outline-primary:hover {
     background: none;
     color: #EB131E;
+    text-decoration: underline;
   }
 
   .load-more {
@@ -12626,8 +12627,13 @@ footer .social-links a:hover path {
     padding-right: 42px;
   }
 
+  .kontakt-block-1 .btn {
+    width: 230px;
+    display: block;
+  }
+
   .kontakt-mail-btn {
-    margin-top: 35px !important;
+    margin-top: 16px !important;
   }
 
   .kontakt-block-2 h3, .kontakt-block-3 h3 {
@@ -12644,15 +12650,8 @@ footer .social-links a:hover path {
     background-position: center;
   }
 
-  .kontakt-block-1 .btn {
-    width: auto;
-    padding-left: 24px;
-    padding-right: 24px;
-    margin-right: 42px;
-  }
-
   .kontakt-block-2, .kontakt-block-3 {
-    background-position: center;
+    background-position: center !important;
     height: 434px;
     text-align: center;
   }
@@ -12676,6 +12675,19 @@ footer .social-links a:hover path {
   .kontakt-block-3 p {
     max-width: 702px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .kontakt-block-1 .btn {
+    width: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-right: 42px;
+    display: inline-block;
+  }
+
+  .kontakt-mail-btn {
+    margin-top: 35px !important;
   }
 }
 .header-img-container {
