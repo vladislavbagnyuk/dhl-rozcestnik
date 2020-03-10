@@ -396,6 +396,26 @@ function close() {
 }
 /* end of cross-domain-storage */
 
+/**
+ *  validuje session
+ */
+function validateSession() {
+  const user = localStorage.getItem("user");
+  if (user) {
+    const token = JSON.parse(user).token;
+    const jwt = jwt_decode(token);
+    const currentTime = Date.now().valueOf() / 1000; //UTC time!
+    if (jwt.exp < currentTime) {
+      localStorage.removeItem("user");
+      return false;
+    } else {
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
+
 function updateAfterLogin() {
   update = function(fields, add) {
     for (let i = 0; i < fields.length; i++) {
@@ -407,7 +427,7 @@ function updateAfterLogin() {
 
   const logins = document.getElementsByClassName("login-btn"),
     accounts = document.getElementsByClassName("account-btn");
-  if (localStorage.getItem("user")) {
+  if (validateSession()) {
     update(logins, true);
     update(accounts);
   } else {
