@@ -1,5 +1,6 @@
 $theme-colors: (
 "primary": #D40511,
+"secondary": #a0a0a0,
 "gray": #F2F2F2
 );
 $hover-color: #EB131E;
@@ -1489,3 +1490,42 @@ footer .social-links a:hover path {
   max-width: 775px;
   margin: 32px auto 0 auto;
 }
+ // Novinky detail
+ .detail-img {
+   width: 100%;
+ }
+ .detail-text h1 {
+  color: black;
+  text-transform: none;
+ }
+ .detail-text {
+   margin-top: 18px;
+ }
+ .tags .btn-outline-secondary {
+   font-weight: normal;
+   border-radius: 2px;
+   font-size: 14px;
+   height: 28px;
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-top: 0;
+   padding-bottom: 0;
+ }
+ .tags .btn-outline-secondary:hover {
+   color: white;
+ }
+ @include media-breakpoint-up(md) {
+   .detail-text {
+     max-width: 618px;
+     margin-left: auto;
+     margin-right: auto;
+   }
+ }
+ @include media-breakpoint-up(lg) {
+   .detail-img {
+     width: 839px;
+   }
+   .detail-text {
+     margin-top: 24px;
+   }
+ }
