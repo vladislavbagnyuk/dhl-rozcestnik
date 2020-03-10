@@ -12857,5 +12857,13 @@ footer .social-links a:hover path {
     margin-top: 24px;
   }
 }
+@media (min-width: 1024px) {
+  .similar-posts {
+    max-width: 838px;
+    margin-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

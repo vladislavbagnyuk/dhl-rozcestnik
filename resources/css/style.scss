@@ -1599,3 +1599,12 @@ footer .social-links a:hover path {
     margin-top: 24px;
   }
 }
+ // Podobné příspěvky
+ @include media-breakpoint-up(lg) {
+   .similar-posts {
+     max-width: 838px;
+     margin-top: 42px;
+     margin-left: auto;
+     margin-right: auto;
+   }
+ }
