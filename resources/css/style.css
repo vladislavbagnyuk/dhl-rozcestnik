@@ -12730,13 +12730,68 @@ footer .social-links a:hover path {
   width: 100%;
 }
 
+.detail-text {
+  margin-top: 18px;
+}
+
 .detail-text h1 {
   color: black;
   text-transform: none;
 }
 
-.detail-text {
-  margin-top: 18px;
+.detail-text h3 {
+  display: block;
+  width: 100%;
+}
+
+.detail-text p {
+  color: black;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.detail-text a {
+  text-decoration: underline;
+}
+
+.detail-text ul {
+  list-style-image: url("../img/icons/bullet.svg");
+  padding-left: 11px;
+}
+
+.detail-text ol {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.detail-text ol > li {
+  counter-increment: customlistcounter;
+}
+
+.detail-text ol > li:before {
+  content: counter(customlistcounter) " ";
+  float: left;
+  width: 12px;
+  color: #D40511;
+  padding-top: 4px;
+}
+
+.detail-text ol li p {
+  padding-left: 12px;
+}
+
+.detail-text ol:first-child {
+  counter-reset: customlistcounter;
+}
+
+.detail-text ol {
+  *list-style-type: decimal;
+  /* targets IE6 and IE7 only */
+}
+
+.tags {
+  margin-top: 28px;
+  margin-bottom: 27px;
 }
 
 .tags .btn-outline-secondary {
@@ -12744,14 +12799,46 @@ footer .social-links a:hover path {
   border-radius: 2px;
   font-size: 14px;
   height: 28px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 9px;
+  padding-right: 9px;
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .tags .btn-outline-secondary:hover {
   color: white;
+}
+
+.author {
+  width: 100%;
+  position: relative;
+  margin-top: 58px;
+  margin-bottom: 72px;
+}
+
+.author img, .author p {
+  display: inline-block;
+}
+
+.author img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+}
+
+.author p {
+  width: auto;
+  color: #666666;
+  font-size: 13px;
+  padding-left: 63px;
+  margin-bottom: 0;
+}
+
+.author span {
+  color: black;
 }
 
 @media (min-width: 768px) {
