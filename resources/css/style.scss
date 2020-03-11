@@ -1593,13 +1593,8 @@ footer .social-links a:hover path {
     margin-left: auto;
     margin-right: auto;
   }
-}
-@include media-breakpoint-up(lg) {
-  .detail-img {
-    width: 839px;
-  }
-  .detail-text {
-    margin-top: 24px;
+  .similar-posts-container {
+    margin-top: 42px !important;
   }
 }
  // Podobné příspěvky
@@ -1614,6 +1609,7 @@ footer .social-links a:hover path {
    }
    .similar-posts-container {
      max-width: 838px;
+     margin-top: 0;
      height: 741px;
      margin-left: auto;
      margin-right: auto;

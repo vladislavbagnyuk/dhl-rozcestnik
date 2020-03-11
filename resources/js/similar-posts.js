@@ -19,6 +19,9 @@ function similarPosts() {
         }, 400, $.bez([0.22, 0.61, 0.35, 1]) );
       }
     });
+  } else {
+    $(".similar-posts").css("width", "auto");
+    $(".similar-posts").css("left", 0);
   }
 }
 $(document).ready(function() {
