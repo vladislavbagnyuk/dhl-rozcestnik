@@ -1511,8 +1511,13 @@ footer .social-links a:hover path {
   text-decoration: underline;
 }
 .detail-text ul {
-  list-style-image: url('../img/icons/bullet.svg');
+  //list-style-image: url('../img/icons/bullet.svg');
+  list-style:none;
   padding-left: 11px;
+}
+.detail-text ul li {
+  background:url('../img/icons/bullet.svg') no-repeat left top 12px;
+  padding-left: 13px; /* the width of your image + some space */
 }
 .detail-text ol {
   list-style-type: none;
@@ -1526,7 +1531,7 @@ footer .social-links a:hover path {
   float: left;
   width: 12px;
   color: map-get($theme-colors, primary);
-  padding-top: 4px;
+
 }
 .detail-text ol li p {
   padding-left: 12px;
@@ -1585,6 +1590,9 @@ footer .social-links a:hover path {
   display: none;
 }
 @include media-breakpoint-up(md) {
+  .detail-img {
+    margin-top: 60px;
+  }
   .detail-text {
     max-width: 618px;
     margin-left: auto;

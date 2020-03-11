@@ -12751,8 +12751,14 @@ footer .social-links a:hover path {
 }
 
 .detail-text ul {
-  list-style-image: url("../img/icons/bullet.svg");
+  list-style: none;
   padding-left: 11px;
+}
+
+.detail-text ul li {
+  background: url("../img/icons/bullet.svg") no-repeat left top 12px;
+  padding-left: 13px;
+  /* the width of your image + some space */
 }
 
 .detail-text ol {
@@ -12769,7 +12775,6 @@ footer .social-links a:hover path {
   float: left;
   width: 12px;
   color: #D40511;
-  padding-top: 4px;
 }
 
 .detail-text ol li p {
@@ -12842,6 +12847,10 @@ footer .social-links a:hover path {
 }
 
 @media (min-width: 768px) {
+  .detail-img {
+    margin-top: 60px;
+  }
+
   .detail-text {
     max-width: 618px;
     margin-left: auto;
