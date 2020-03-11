@@ -1593,11 +1593,11 @@ footer .social-links a:hover path {
     margin-left: auto;
     margin-right: auto;
   }
-  .similar-posts-container {
-    margin-top: 42px !important;
-  }
 }
  // Podobné příspěvky
+ .similar-posts-container {
+   margin-top: 42px;
+ }
  @include media-breakpoint-up(lg) {
    .arrowsContainer {
      width: 100%;

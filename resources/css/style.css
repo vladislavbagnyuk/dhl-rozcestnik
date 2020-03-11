@@ -12851,11 +12851,11 @@ footer .social-links a:hover path {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .similar-posts-container {
-    margin-top: 42px !important;
-  }
 }
+.similar-posts-container {
+  margin-top: 42px;
+}
+
 @media (min-width: 1024px) {
   .arrowsContainer {
     width: 100%;
