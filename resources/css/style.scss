@@ -1584,6 +1584,9 @@ footer .social-links a:hover path {
 .author span {
   color: black;
 }
+.similar-arrow {
+  display: none;
+}
 @include media-breakpoint-up(md) {
   .detail-text {
     max-width: 618px;
@@ -1601,10 +1604,50 @@ footer .social-links a:hover path {
 }
  // Podobné příspěvky
  @include media-breakpoint-up(lg) {
-   .similar-posts {
+   .arrowsContainer {
+     width: 100%;
      max-width: 838px;
      margin-top: 42px;
      margin-left: auto;
      margin-right: auto;
+     position: relative;
+   }
+   .similar-posts-container {
+     max-width: 838px;
+     height: 741px;
+     margin-left: auto;
+     margin-right: auto;
+     overflow: hidden;
+     position: relative;
+   }
+   .similar-posts {
+     padding: 0;
+     position: absolute;
+     top: 0;
+     left: 0;
+     //width: 100%;
+   }
+   .similar-posts .col-lg-2, .similar-posts .col-lg-6 {
+     padding-left: 21px;
+     padding-right: 21px;
+   }
+   .similar-posts .card {
+     width: 100% !important;
+     max-width: none !important;
+   }
+   .similar-posts .card-img-top {
+     width: 100%;
+   }
+   .similar-arrow {
+     display: block;
+     position: absolute;
+     top: 57px;
+     cursor: pointer;
+   }
+   #similarLeft {
+     left: -89px;
+   }
+   #similarRight {
+      right: -89px;
    }
  }

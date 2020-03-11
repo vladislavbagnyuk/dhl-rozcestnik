@@ -12841,6 +12841,10 @@ footer .social-links a:hover path {
   color: black;
 }
 
+.similar-arrow {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .detail-text {
     max-width: 618px;
@@ -12858,11 +12862,58 @@ footer .social-links a:hover path {
   }
 }
 @media (min-width: 1024px) {
-  .similar-posts {
+  .arrowsContainer {
+    width: 100%;
     max-width: 838px;
     margin-top: 42px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+  }
+
+  .similar-posts-container {
+    max-width: 838px;
+    height: 741px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .similar-posts {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .similar-posts .col-lg-2, .similar-posts .col-lg-6 {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  .similar-posts .card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .similar-posts .card-img-top {
+    width: 100%;
+  }
+
+  .similar-arrow {
+    display: block;
+    position: absolute;
+    top: 57px;
+    cursor: pointer;
+  }
+
+  #similarLeft {
+    left: -89px;
+  }
+
+  #similarRight {
+    right: -89px;
   }
 }
 
