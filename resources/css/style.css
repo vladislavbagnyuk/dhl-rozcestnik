@@ -12726,8 +12726,8 @@ footer .social-links a:hover path {
   margin: 32px auto 0 auto;
 }
 
-.detail-img {
-  width: 100%;
+.detail-text {
+  margin-top: 18px;
 }
 
 .detail-text h1 {
@@ -12735,8 +12735,65 @@ footer .social-links a:hover path {
   text-transform: none;
 }
 
-.detail-text {
-  margin-top: 18px;
+.detail-text h3 {
+  display: block;
+  width: 100%;
+}
+
+.detail-text p {
+  color: black;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.detail-text a {
+  text-decoration: underline;
+}
+
+.detail-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.detail-text ul li {
+  background: url("../img/icons/bullet.svg") no-repeat left top 12px;
+  padding-left: 13px;
+  /* the width of your image + some space */
+}
+
+.detail-text ol {
+  padding-left: 0;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.detail-text ol > li {
+  counter-increment: customlistcounter;
+}
+
+.detail-text ol > li:before {
+  content: counter(customlistcounter) " ";
+  float: left;
+  width: 12px;
+  color: #D40511;
+}
+
+.detail-text ol li p {
+  padding-left: 12px;
+}
+
+.detail-text ol:first-child {
+  counter-reset: customlistcounter;
+}
+
+.detail-text ol {
+  *list-style-type: decimal;
+  /* targets IE6 and IE7 only */
+}
+
+.tags {
+  margin-top: 28px;
+  margin-bottom: 27px;
 }
 
 .tags .btn-outline-secondary {
@@ -12744,8 +12801,8 @@ footer .social-links a:hover path {
   border-radius: 2px;
   font-size: 14px;
   height: 28px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 9px;
+  padding-right: 9px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -12754,7 +12811,48 @@ footer .social-links a:hover path {
   color: white;
 }
 
+.author {
+  width: 100%;
+  position: relative;
+  margin-top: 57px;
+  margin-bottom: 72px;
+}
+
+.author img, .author p {
+  display: inline-block;
+}
+
+.author img {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+}
+
+.author p {
+  width: auto;
+  color: #666666;
+  font-size: 13px;
+  padding-left: 63px;
+  margin-bottom: 0;
+  line-height: 16px;
+}
+
+.author span {
+  color: black;
+}
+
+.similar-arrow {
+  display: none;
+}
+
 @media (min-width: 768px) {
+  .detail-img {
+    margin-top: 60px;
+  }
+
   .detail-text {
     max-width: 618px;
     margin-left: auto;
@@ -12762,12 +12860,68 @@ footer .social-links a:hover path {
   }
 }
 @media (min-width: 1024px) {
-  .detail-img {
-    width: 839px;
+  .author {
+    margin-top: 74px;
+  }
+}
+.similar-posts-container {
+  margin-top: 42px;
+}
+
+@media (min-width: 1024px) {
+  .arrowsContainer {
+    width: 100%;
+    max-width: 838px;
+    margin-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
   }
 
-  .detail-text {
-    margin-top: 24px;
+  .similar-posts-container {
+    max-width: 838px;
+    margin-top: 0;
+    height: 741px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .similar-posts {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .similar-posts .col-lg-2, .similar-posts .col-lg-6 {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  .similar-posts .card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .similar-posts .card-img-top {
+    width: 100%;
+  }
+
+  .similar-arrow {
+    display: block;
+    position: absolute;
+    top: 57px;
+    cursor: pointer;
+  }
+
+  #similarLeft {
+    left: -89px;
+  }
+
+  #similarRight {
+    right: -89px;
   }
 }
 
