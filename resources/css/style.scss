@@ -1511,15 +1511,15 @@ footer .social-links a:hover path {
   text-decoration: underline;
 }
 .detail-text ul {
-  //list-style-image: url('../img/icons/bullet.svg');
   list-style:none;
-  padding-left: 11px;
+  padding-left: 0;
 }
 .detail-text ul li {
   background:url('../img/icons/bullet.svg') no-repeat left top 12px;
   padding-left: 13px; /* the width of your image + some space */
 }
 .detail-text ol {
+  padding-left: 0;
   list-style-type: none;
   margin-left: 0;
 }
@@ -1531,7 +1531,6 @@ footer .social-links a:hover path {
   float: left;
   width: 12px;
   color: map-get($theme-colors, primary);
-
 }
 .detail-text ol li p {
   padding-left: 12px;

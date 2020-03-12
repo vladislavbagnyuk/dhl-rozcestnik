@@ -12752,7 +12752,7 @@ footer .social-links a:hover path {
 
 .detail-text ul {
   list-style: none;
-  padding-left: 11px;
+  padding-left: 0;
 }
 
 .detail-text ul li {
@@ -12762,6 +12762,7 @@ footer .social-links a:hover path {
 }
 
 .detail-text ol {
+  padding-left: 0;
   list-style-type: none;
   margin-left: 0;
 }
