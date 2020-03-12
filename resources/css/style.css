@@ -12728,6 +12728,9 @@ footer .social-links a:hover path {
 
 .sluzby-icons {
   margin-top: 27px;
+  max-width: 334px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sluzby-icons p {
@@ -12738,6 +12741,11 @@ footer .social-links a:hover path {
   margin-bottom: 25px;
 }
 
+.sluzby-icons .col-2 {
+  padding-left: 19px !important;
+  padding-right: 19px !important;
+}
+
 @media (min-width: 768px) {
   .sluzby-container-1 h1 {
     margin-bottom: 13px;
@@ -12745,6 +12753,7 @@ footer .social-links a:hover path {
 
   .sluzby-icons {
     margin-top: 42px;
+    max-width: none;
   }
 
   .sluzby-icons .col-md-2 {
