@@ -12705,7 +12705,7 @@ footer .social-links a:hover path {
 }
 
 .sluzby-container-1 h1 {
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 .sluzby-container-1 h3 {
@@ -12726,6 +12726,32 @@ footer .social-links a:hover path {
   margin: 32px auto 0 auto;
 }
 
+.sluzby-icons {
+  margin-top: 27px;
+}
+
+.sluzby-icons p {
+  color: #D40511;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .sluzby-container-1 h1 {
+    margin-bottom: 13px;
+  }
+
+  .sluzby-icons {
+    margin-top: 42px;
+  }
+
+  .sluzby-icons .col-md-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
 .detail-text {
   margin-top: 18px;
 }
