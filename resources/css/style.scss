@@ -1473,7 +1473,7 @@ footer .social-links a:hover path {
   min-width: 100%;
 }
 .sluzby-container-1 h1 {
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 .sluzby-container-1 h3 {
   margin-top: 96px;
@@ -1489,6 +1489,28 @@ footer .social-links a:hover path {
   border-radius: 10px;
   max-width: 775px;
   margin: 32px auto 0 auto;
+}
+.sluzby-icons {
+  margin-top: 27px;
+}
+.sluzby-icons p {
+  color: map-get($theme-colors, primary);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+@include media-breakpoint-up(md) {
+  .sluzby-container-1 h1 {
+    margin-bottom: 13px;
+  }
+  .sluzby-icons {
+    margin-top: 42px;
+  }
+  .sluzby-icons .col-md-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
 // Novinky detail
 .detail-text {
@@ -1604,56 +1626,56 @@ footer .social-links a:hover path {
     margin-top: 74px;
   }
 }
- // Podobné příspěvky
- .similar-posts-container {
-   margin-top: 42px;
- }
- @include media-breakpoint-up(lg) {
-   .arrowsContainer {
-     width: 100%;
-     max-width: 838px;
-     margin-top: 42px;
-     margin-left: auto;
-     margin-right: auto;
-     position: relative;
-   }
-   .similar-posts-container {
-     max-width: 838px;
-     margin-top: 0;
-     height: 741px;
-     margin-left: auto;
-     margin-right: auto;
-     overflow: hidden;
-     position: relative;
-   }
-   .similar-posts {
-     padding: 0;
-     position: absolute;
-     top: 0;
-     left: 0;
-     //width: 100%;
-   }
-   .similar-posts .col-lg-2, .similar-posts .col-lg-6 {
-     padding-left: 21px;
-     padding-right: 21px;
-   }
-   .similar-posts .card {
-     width: 100% !important;
-     max-width: none !important;
-   }
-   .similar-posts .card-img-top {
-     width: 100%;
-   }
-   .similar-arrow {
-     display: block;
-     position: absolute;
-     top: 57px;
-     cursor: pointer;
-   }
-   #similarLeft {
-     left: -89px;
-   }
-   #similarRight {
-      right: -89px;
-   }
- }
+// Podobné příspěvky
+.similar-posts-container {
+  margin-top: 42px;
+}
+@include media-breakpoint-up(lg) {
+  .arrowsContainer {
+    width: 100%;
+    max-width: 838px;
+    margin-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .similar-posts-container {
+    max-width: 838px;
+    margin-top: 0;
+    height: 741px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .similar-posts {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //width: 100%;
+  }
+  .similar-posts .col-lg-2, .similar-posts .col-lg-6 {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+  .similar-posts .card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  .similar-posts .card-img-top {
+    width: 100%;
+  }
+  .similar-arrow {
+    display: block;
+    position: absolute;
+    top: 57px;
+    cursor: pointer;
+  }
+  #similarLeft {
+    left: -89px;
+  }
+  #similarRight {
+    right: -89px;
+  }
+}
