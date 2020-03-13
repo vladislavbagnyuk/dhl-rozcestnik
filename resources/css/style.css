@@ -12501,6 +12501,10 @@ footer .social-links a:hover path {
     color: white;
   }
 
+  .novinky-heading-container h3 {
+    font-family: "Delivery-Condensed";
+  }
+
   .novinky-heading-container h1 {
     margin-top: 0;
   }
@@ -12690,20 +12694,33 @@ footer .social-links a:hover path {
     margin-top: 35px !important;
   }
 }
-.header-img-container {
-  height: 240px;
-  position: relative;
+.sluzby-header-img-container {
+  height: auto;
+  position: static;
   overflow: hidden;
 }
 
 .sluzby-header-img-container .header-img {
-  top: 0;
-  transform: translate(-50%, 0);
-  height: 100%;
-  width: auto;
-  min-width: 100%;
+  position: static;
+  transform: none;
 }
 
+@media (min-width: 768px) {
+  .sluzby-header-img-container {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sluzby-header-img-container .header-img {
+    top: 0;
+    position: absolute;
+    transform: translate(-50%, 0);
+    height: 100%;
+    width: auto;
+    min-width: 100%;
+  }
+}
 .sluzby-container-1 h1 {
   margin-bottom: 16px;
 }
@@ -12746,6 +12763,10 @@ footer .social-links a:hover path {
   padding-right: 19px !important;
 }
 
+.sluzby-block {
+  padding: 16px 0 0 0;
+}
+
 @media (min-width: 768px) {
   .sluzby-container-1 h1 {
     margin-bottom: 13px;
@@ -12770,14 +12791,23 @@ footer .social-links a:hover path {
     height: 434px;
     margin-top: 50px;
     text-align: center;
+    padding-top: 119px;
+    max-width: 1278px;
+  }
+
+  .sluzby-block p {
+    max-width: 618px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sluzby-block .btn {
     width: auto;
+    margin-top: 31px;
   }
 
-  .sluzby-block .kontakt-mail-btn {
-    margin-left: 38px;
+  .sluzby-block .kontakt-phone-btn {
+    margin-right: 38px;
   }
 }
 .detail-text {
