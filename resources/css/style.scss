@@ -1571,6 +1571,58 @@ footer .social-links a:hover path {
     margin-right: 38px;
   }
 }
+// Table
+.sluzby-table-row {
+  color: black;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 34px;
+}
+.sluzby-table-row .col-12 {
+  padding: 30px 37px;
+  border-radius: 3px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.sluzby-table-row h4 {
+  font-size: 20px;
+  font-family: 'Delivery';
+}
+.sluzby-table-row p {
+  max-width: none;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+.sluzby-table-row .smaller {
+  font-size: 14px;
+  border-bottom: 4px solid black;
+  padding-bottom: 46px;
+}
+.sluzby-table-row .table-close {
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+.sluzby-table-row .table-close  img {
+  width: 15.56px;
+  height: 15.56px;
+}
+.sluzby-table-row .double-text {
+  border-bottom: 1px solid black;
+}
+.sluzby-table-row .double-text .left {
+  width: 74%;
+  display: inline-block;
+}
+.sluzby-table-row .double-text .right {
+  width: 24%;
+  display: inline-block;
+}
+@include media-breakpoint-up(md) {
+  .sluzby-table-row {
+    margin-top: 20px;
+  }
+}
 // Novinky detail
 .detail-text {
   margin-top: 18px;
@@ -1712,7 +1764,6 @@ footer .social-links a:hover path {
     position: absolute;
     top: 0;
     left: 0;
-    //width: 100%;
   }
   .similar-posts .col-lg-2, .similar-posts .col-lg-6 {
     padding-left: 21px;
