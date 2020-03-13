@@ -12760,6 +12760,25 @@ footer .social-links a:hover path {
     flex: 0 0 20%;
     max-width: 20%;
   }
+
+  .sluzby-header {
+    margin-top: 53px !important;
+  }
+
+  .sluzby-block {
+    background: url("../img/sluzby-2-desktop.jpg");
+    height: 434px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .sluzby-block .btn {
+    width: auto;
+  }
+
+  .sluzby-block .kontakt-mail-btn {
+    margin-left: 38px;
+  }
 }
 .detail-text {
   margin-top: 18px;
