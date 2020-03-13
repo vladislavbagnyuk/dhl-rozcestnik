@@ -1,7 +1,8 @@
 $theme-colors: (
 "primary": #D40511,
 "secondary": #a0a0a0,
-"gray": #F2F2F2
+"gray": #F2F2F2,
+"dark": #000000
 );
 $hover-color: #EB131E;
 $link-hover-color: $hover-color;
@@ -1518,12 +1519,21 @@ footer .social-links a:hover path {
   margin-top: 30px;
   margin-bottom: 25px;
 }
-.sluzby-icons .col-2 {
-  padding-left: 19px !important;
-  padding-right: 19px !important;
+.sluzby-icons .col-4 {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
 }
 .sluzby-block {
   padding: 16px 0 0 0;
+}
+.view-all-mobile {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.view-all-mobile img {
+  margin-right: 21px;
+  margin-bottom: 3px;
 }
 @include media-breakpoint-up(md) {
   .sluzby-container-1 h1 {
