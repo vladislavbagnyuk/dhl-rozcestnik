@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Show whole card
   $(".sluzbyMobileToggler").click(function(){
     $hide = $(this).parent().children(".sluzby-hide");
     if ($hide.height() != 0) {
@@ -14,5 +15,12 @@ $(document).ready(function() {
       $(".last-border").css("border-bottom", "1px solid black");
       $(this).html('Zobrazit méně<img src="resources/img/icons/arrow-up-red.svg" alt="">');
     }
+  });
+
+  // Close card
+  $(".table-close").click(function(){
+    $(this).parent().parent().animate({
+      height: 0
+    }, 400, $.bez([0.55, 0.05, 0.68, 1]) );
   });
 });

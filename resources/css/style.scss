@@ -1582,9 +1582,14 @@ footer .social-links a:hover path {
   margin-top: 34px;
 }
 .sluzby-table-row .col-12 {
-  padding: 30px 37px;
-  border-radius: 3px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+}
+.sluzby-table-row .col-12 .sluzby-col-container {
+  padding: 30px 37px;
   margin-bottom: 36px;
 }
 .sluzby-table-row h4 {
