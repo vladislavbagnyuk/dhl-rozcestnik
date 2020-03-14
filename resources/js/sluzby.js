@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#sluzbyMobileToggler").click(function(){
+  $(".sluzbyMobileToggler").click(function(){
     $hide = $(this).parent().children(".sluzby-hide");
     if ($hide.height() != 0) {
       $hide.animate({
