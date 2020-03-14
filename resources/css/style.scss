@@ -1589,7 +1589,7 @@ footer .social-links a:hover path {
   border-radius: 3px;
 }
 .sluzby-table-row .col-12 .sluzby-col-container {
-  padding: 30px 37px;
+  padding: 0 37px 30px 37px;
   margin-bottom: 36px;
 }
 .sluzby-table-row h4 {
@@ -1602,9 +1602,6 @@ footer .social-links a:hover path {
 }
 .sluzby-table-row .smaller {
   font-size: 14px;
-  border-bottom: 4px solid black;
-  padding-bottom: 46px;
-  margin-bottom: 8px;
 }
 .sluzby-table-row .table-close {
   padding: 0;
@@ -1630,7 +1627,7 @@ footer .social-links a:hover path {
   position: relative;
 }
 .sluzby-table-row .no-border {
-  border: none;
+  border: none !important;
 }
 .sluzby-table-row .available-icon {
   position: absolute;
@@ -1662,6 +1659,12 @@ footer .social-links a:hover path {
 .sluzby-table-row .sluzby-hide {
   overflow: hidden;
 }
+.sluzby-table-row .column-header {
+  height: 127px;
+  border-bottom: 4px solid black;
+  padding-top: 30px;
+  margin-bottom: 8px;
+}
 @include media-breakpoint-up(md) {
   .sluzby-table-row {
     margin-top: 20px;
@@ -1686,6 +1689,26 @@ footer .social-links a:hover path {
   }
   .sluzby-table-row .description-col {
     max-width: 215px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .sluzby-table-row .description-col p {
+    font-weight: bold;
+  }
+  .sluzby-table-row .view-all-desktop {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #CCCCCC;
+  }
+  .sluzby-table-row .view-all-desktop img {
+    margin-right: 18px;
+  }
+  .sluzby-table-row .description-col p {
+    border-bottom: 1px solid black;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    margin-bottom: 0;
   }
 }
 // Novinky detail
