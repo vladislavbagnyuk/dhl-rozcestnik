@@ -2,7 +2,7 @@
  * přednastavená instance axios
  */
 const instance = axios.create({
-  baseURL: "https://localhost:5000/",
+  baseURL: /* "https://webapp.cz.dhl.com/wa/api/", */ "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/", //https://localhost:5000/",
   timeout: 15000
 });
 
