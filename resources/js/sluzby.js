@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  // Enable popovers
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
+
   // Show whole card
   $(".sluzbyMobileToggler").click(function(){
     $hide = $(this).parent().children(".sluzby-hide");
@@ -19,8 +24,14 @@ $(document).ready(function() {
 
   // Close card
   $(".table-close").click(function(){
-    $(this).parent().parent().animate({
+    $(this).parent().parent().parent().animate({
       height: 0
-    }, 400, $.bez([0.55, 0.05, 0.68, 1]) );
+    }, {
+      queue: false,
+      duration: 400,
+      easing: $.bez([0.55, 0.05, 0.68, 1]),
+      complete: function() {
+          $(this).hide();
+      }});
   });
 });
