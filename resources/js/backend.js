@@ -1,3 +1,5 @@
+const waUrl = /* "https://webapp.cz.dhl.com/wa/", */ "http://wa-test.srv.cz.dhl.com/" /* "http://localhost:3000" */;
+
 /**
  * přednastavená instance axios
  */
@@ -561,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   storageHost([
     {
-      origin: "http://localhost:3000",
+      origin: waUrl,
       allowedMethods: ["get", "set", "remove"]
     }
   ]);
