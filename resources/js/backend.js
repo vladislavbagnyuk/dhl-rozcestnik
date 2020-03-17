@@ -2,7 +2,8 @@
  * přednastavená instance axios
  */
 const instance = axios.create({
-  baseURL: /* "https://webapp.cz.dhl.com/wa/api/", */ "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/", //https://localhost:5000/",
+  baseURL:
+    /* "https://webapp.cz.dhl.com/wa/api/", */ "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/", /* "https://localhost:5000/", */
   timeout: 15000
 });
 
@@ -248,7 +249,7 @@ function calculation(after, afterSuccess) {
         const data = r.data.data,
           message = r.data.message;
         if (checkHttpStatus(r) && checkResponseGet(r)) {
-          setResult(data.price);
+          setResult(parent, data.price);
           afterSuccess && afterSuccess();
         } else {
           setResult(parent, message || "Při kalkulaci nastala chyba!", "...");
