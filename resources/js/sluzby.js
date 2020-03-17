@@ -34,4 +34,32 @@ $(document).ready(function() {
           $(this).hide();
       }});
   });
+
+  // Next columns
+  $("#btn-sluzby-right").click(function(){
+    $scroll = $(".row-container").scrollLeft();
+    $(".row-container").animate({
+      scrollLeft: $scroll+375
+    }, {
+      queue: false,
+      duration: 400,
+      easing: $.bez([0.55, 0.05, 0.68, 1]),
+      complete: function() {
+          //$(this).hide();
+      }});
+  });
+
+  // Previous columns
+  $("#btn-sluzby-left").click(function(){
+    $scroll = $(".row-container").scrollLeft();
+    $(".row-container").animate({
+      scrollLeft: $scroll-375
+    }, {
+      queue: false,
+      duration: 400,
+      easing: $.bez([0.55, 0.05, 0.68, 1]),
+      complete: function() {
+          //$(this).hide();
+      }});
+  });
 });
