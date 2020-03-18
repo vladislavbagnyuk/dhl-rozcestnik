@@ -12995,12 +12995,24 @@ footer .social-links a:hover path {
     max-width: 965px;
     overflow-x: scroll;
     position: absolute;
+    padding-bottom: 14px;
+  }
+
+  .sluzby-container-2 .row-container::-webkit-scrollbar,
+.doubleScroll-scroll-wrapper::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  .sluzby-container-2 .row-container::-webkit-scrollbar-thumb,
+.doubleScroll-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 10px;
   }
 
   #btn-sluzby-left {
     position: absolute;
     left: 0;
-    top: 528px;
+    top: 509px;
     z-index: 200;
     width: auto;
     padding: 12px 0;
@@ -13012,7 +13024,7 @@ footer .social-links a:hover path {
   #btn-sluzby-right {
     position: absolute;
     right: 0;
-    top: 528px;
+    top: 509px;
     z-index: 10;
     width: auto;
     padding: 12px 0;
@@ -13022,9 +13034,10 @@ footer .social-links a:hover path {
 
   .sluzby-container-2 .gradient-left {
     position: absolute;
+    top: 40px;
     left: 240px;
     width: 60px;
-    height: 1294px;
+    height: 1288px;
     z-index: 100;
     background: white;
     background: -moz-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -13035,9 +13048,10 @@ footer .social-links a:hover path {
 
   .sluzby-container-2 .gradient-right {
     position: absolute;
+    top: 40px;
     right: 15px;
     width: 60px;
-    height: 1294px;
+    height: 1288px;
     z-index: 10;
     background: white;
     background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
@@ -13051,9 +13065,10 @@ footer .social-links a:hover path {
     box-shadow: none;
     border-radius: 0;
     position: absolute;
+    top: 40px;
     background-color: white;
     z-index: 10;
-    height: 1294px;
+    height: 1288px;
     padding-right: 25px;
   }
 
