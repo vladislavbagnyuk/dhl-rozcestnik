@@ -24,17 +24,23 @@ $(document).ready(function() {
 
   // Close card
   $(".table-close").click(function(){
-    $(this).parent().parent().parent().animate({
-      height: 0
-    }, {
-      queue: false,
-      duration: 400,
-      easing: $.bez([0.55, 0.05, 0.68, 1]),
-      complete: function() {
-          $(this).hide();
-      }});
+    if ($(window).width() <= 768) {
+      $(this).parent().parent().parent().animate({
+        height: 0
+      }, {
+        queue: false,
+        duration: 400,
+        easing: $.bez([0.55, 0.05, 0.68, 1]),
+        complete: function() {
+            $(this).hide();
+        }});
+    } else {
+      $(this).parent().parent().parent().hide();
+    }
+
   });
 
+  // Scroll bar on top and bottom
   $(".row-container").doubleScroll();
 
   // Next columns
