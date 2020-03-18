@@ -12979,6 +12979,7 @@ footer .social-links a:hover path {
   .sluzby-container-2 {
     position: relative;
     height: 1360px;
+    overflow-x: hidden;
   }
 
   .sluzby-table-row {
@@ -12992,7 +12993,8 @@ footer .social-links a:hover path {
 
   .sluzby-container-2 .row-container {
     padding: 0;
-    max-width: 965px;
+    width: 100%;
+    max-width: 808px;
     overflow-x: scroll;
     position: absolute;
     padding-bottom: 14px;
@@ -13154,7 +13156,7 @@ footer .social-links a:hover path {
 }
 @media (min-width: 1024px) {
   .sluzby-container-2 {
-    padding-left: 43px;
+    padding-left: 25px;
     padding-right: 43px;
   }
 
@@ -13166,8 +13168,18 @@ footer .social-links a:hover path {
     left: 258px;
   }
 
+  .right-block {
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    height: 1288px;
+    width: 75px;
+    background-color: white;
+    z-index: 10;
+  }
+
   .sluzby-container-2 .gradient-right {
-    right: 43px;
+    right: 50px;
   }
 
   #btn-sluzby-right {

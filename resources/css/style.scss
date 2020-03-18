@@ -1700,8 +1700,7 @@ footer .social-links a:hover path {
   .sluzby-container-2 {
     position: relative;
     height: 1360px;
-    //padding-left: 0;
-    //padding-right: 0;
+    overflow-x: hidden;
   }
   .sluzby-table-row {
     left: 0;
@@ -1709,17 +1708,15 @@ footer .social-links a:hover path {
     margin-left: 0;
     margin-right: 0;
     padding-left: 240px;
-    //margin-left: -27.5px;
-    //margin-right: -27.5px;
     width: 10000px;
   }
   .sluzby-container-2 .row-container {
     padding: 0;
-    max-width: 965px;
+    width: 100%;
+    max-width: 808px;
     overflow-x: scroll;
     position: absolute;
     padding-bottom: 14px;
-    //  width: 10000px;
   }
   .sluzby-container-2 .row-container::-webkit-scrollbar,
   .doubleScroll-scroll-wrapper::-webkit-scrollbar {
@@ -1856,7 +1853,7 @@ footer .social-links a:hover path {
 }
 @include media-breakpoint-up(lg) {
   .sluzby-container-2 {
-    padding-left: 43px;
+    padding-left: 25px;
     padding-right: 43px;
   }
   .sluzby-container-2 .row-container {
@@ -1865,12 +1862,22 @@ footer .social-links a:hover path {
   .sluzby-container-2 .gradient-left {
     left: 258px;
   }
+  .right-block {
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    height: 1288px;
+    width: 75px;
+    background-color: white;
+    z-index: 10;
+  }
   .sluzby-container-2 .gradient-right {
-    right: 43px;
+    right: 50px;
   }
   #btn-sluzby-right {
     right: -25px;
   }
+
 }
 // Novinky detail
 .detail-text {
