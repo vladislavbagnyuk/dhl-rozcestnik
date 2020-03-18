@@ -12978,7 +12978,7 @@ footer .social-links a:hover path {
 @media (min-width: 768px) {
   .sluzby-container-2 {
     position: relative;
-    height: 1360px;
+    height: 1382px;
     overflow-x: hidden;
   }
 
@@ -13039,7 +13039,7 @@ footer .social-links a:hover path {
     top: 40px;
     left: 240px;
     width: 60px;
-    height: 1288px;
+    height: 1325px;
     z-index: 100;
     background: white;
     background: -moz-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -13053,7 +13053,7 @@ footer .social-links a:hover path {
     top: 40px;
     right: 15px;
     width: 60px;
-    height: 1288px;
+    height: 1325px;
     z-index: 10;
     background: white;
     background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
@@ -13070,7 +13070,7 @@ footer .social-links a:hover path {
     top: 40px;
     background-color: white;
     z-index: 10;
-    height: 1288px;
+    height: 1325px;
     padding-right: 25px;
   }
 
@@ -13112,7 +13112,7 @@ footer .social-links a:hover path {
   }
 
   .sluzby-container-2 .height-3 {
-    in-height: 106px;
+    min-height: 106px;
   }
 
   .sluzby-container-2 .double-text .right img {
