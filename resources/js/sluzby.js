@@ -35,6 +35,7 @@ $(document).ready(function() {
       }});
   });
 
+  // Scroll bars on top and down
   $(".row-container").doubleScroll();
 
   // Next columns
@@ -65,6 +66,7 @@ $(document).ready(function() {
     }
   });
 
+  // Show/hide left arrow
   $(".row-container").scroll(function(){
     if ($(".row-container").scrollLeft() <= 0) {
       $("#btn-sluzby-left").hide();
