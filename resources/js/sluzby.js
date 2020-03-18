@@ -36,8 +36,15 @@ $(document).ready(function() {
         }});
     } else {
       $(this).parent().parent().parent().hide();
+      $("#view-all-desktop").removeAttr("disabled");
     }
 
+  });
+
+  // Show all cards
+  $("#view-all-desktop").click(function(){
+      $(".sluzby-table-row .col-12").show();
+      $(this).prop("disabled", "true");
   });
 
   // Scroll bar on top and bottom

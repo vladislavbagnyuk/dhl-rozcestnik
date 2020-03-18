@@ -1833,7 +1833,12 @@ footer .social-links a:hover path {
     border: none;
     background: none;
     padding: 0;
-    color: #CCCCCC;
+    color: black;
+    opacity: 1;
+    color: black;
+  }
+  .sluzby-container-2 .view-all-desktop:disabled {
+    opacity: 0.25;
   }
   .sluzby-container-2 .view-all-desktop img {
     margin-right: 18px;
