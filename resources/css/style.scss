@@ -508,7 +508,7 @@ header {
     top: -54px;
     left: 0;
     right: 0;
-    z-index: 20;
+    z-index: 300;
     overflow: hidden;
     transition: .3s;
     transition-timing-function: cubic-bezier(0.22, 0.61, 0.35, 1);
@@ -1700,8 +1700,8 @@ footer .social-links a:hover path {
   .sluzby-container-2 {
     position: relative;
     height: 1360px;
-    padding-left: 0;
-    padding-right: 0;
+    //padding-left: 0;
+    //padding-right: 0;
   }
   .sluzby-table-row {
     left: 0;
@@ -1715,7 +1715,7 @@ footer .social-links a:hover path {
   }
   .sluzby-container-2 .row-container {
     padding: 0;
-    max-width: 1395px;
+    max-width: 965px;
     overflow-x: scroll;
     position: absolute;
     //  width: 10000px;
@@ -1724,8 +1724,12 @@ footer .social-links a:hover path {
     position: absolute;
     left: 0;
     top: 528px;
-    z-index: 10;
+    z-index: 200;
     width: auto;
+    padding: 12px 0;
+    border-radius: 3px;
+    width: 50px;
+    display: none;
   }
   #btn-sluzby-right {
     position: absolute;
@@ -1733,13 +1737,16 @@ footer .social-links a:hover path {
     top: 528px;
     z-index: 10;
     width: auto;
+    padding: 12px 0;
+    border-radius: 3px;
+    width: 50px;
   }
   .sluzby-container-2 .gradient-left {
     position: absolute;
-    left: 215px;
+    left: 240px;
     width: 60px;
     height: 1294px;
-    z-index: 10;
+    z-index: 100;
     background: rgb(255,255,255);
     background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
@@ -1748,7 +1755,7 @@ footer .social-links a:hover path {
   }
   .sluzby-container-2 .gradient-right {
       position: absolute;
-      right: 0;
+      right: 15px;
       width: 60px;
       height: 1294px;
       z-index: 10;
@@ -1759,13 +1766,14 @@ footer .social-links a:hover path {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
     }
   .sluzby-container-2 .description-col {
-    max-width: 215px;
+    max-width: 240px;
     box-shadow: none;
     border-radius: 0;
     position: absolute;
     background-color: white;
     z-index: 10;
     height: 1294px;
+    padding-right: 25px;
   }
   .sluzby-container-2 .col-12 {
     max-width: 375px;
@@ -1830,6 +1838,24 @@ footer .social-links a:hover path {
   }
   .sluzby-container-2 .table-info-icon {
     margin-top: 0;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .sluzby-container-2 {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  .sluzby-container-2 .row-container {
+    max-width: 1309px;
+  }
+  .sluzby-container-2 .gradient-left {
+    left: 258px;
+  }
+  .sluzby-container-2 .gradient-right {
+    right: 43px;
+  }
+  #btn-sluzby-right {
+    right: -25px;
   }
 }
 // Novinky detail

@@ -35,31 +35,41 @@ $(document).ready(function() {
       }});
   });
 
+  $(".row-container").doubleScroll();
+
   // Next columns
   $("#btn-sluzby-right").click(function(){
-    $scroll = $(".row-container").scrollLeft();
+    $scroll = $(".row-container").scrollLeft() + 375;
     $(".row-container").animate({
-      scrollLeft: $scroll+375
+      scrollLeft: $scroll
     }, {
       queue: false,
       duration: 400,
       easing: $.bez([0.55, 0.05, 0.68, 1]),
-      complete: function() {
-          //$(this).hide();
-      }});
+      });
+      $("#btn-sluzby-left").show();
   });
 
   // Previous columns
   $("#btn-sluzby-left").click(function(){
-    $scroll = $(".row-container").scrollLeft();
+    $scroll = $(".row-container").scrollLeft() - 375;
     $(".row-container").animate({
-      scrollLeft: $scroll-375
+      scrollLeft: $scroll
     }, {
       queue: false,
       duration: 400,
       easing: $.bez([0.55, 0.05, 0.68, 1]),
-      complete: function() {
-          //$(this).hide();
-      }});
+    });
+    if ($scroll <= 0) {
+      $("#btn-sluzby-left").hide();
+    }
+  });
+
+  $(".row-container").scroll(function(){
+    if ($(".row-container").scrollLeft() <= 0) {
+      $("#btn-sluzby-left").hide();
+    } else {
+      $("#btn-sluzby-left").show();
+    }
   });
 });
