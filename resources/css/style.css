@@ -12987,6 +12987,15 @@ footer .social-links a:hover path {
   padding: 4px 8px;
 }
 
+@media (max-width: 1023.98px) {
+  .sluzby-container-2 p {
+    padding-bottom: 0;
+  }
+
+  .sluzby-container-2 .height-3 {
+    height: 88px;
+  }
+}
 @media (min-width: 768px) {
   .sluzby-container-2 {
     position: relative;
