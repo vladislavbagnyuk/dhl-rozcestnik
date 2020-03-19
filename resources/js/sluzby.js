@@ -24,14 +24,65 @@ $(document).ready(function() {
 
   // Close card
   $(".table-close").click(function(){
-    $(this).parent().parent().parent().animate({
-      height: 0
+    if ($(window).width() <= 768) {
+      $(this).parent().parent().parent().animate({
+        height: 0
+      }, {
+        queue: false,
+        duration: 400,
+        easing: $.bez([0.55, 0.05, 0.68, 1]),
+        complete: function() {
+            $(this).hide();
+        }});
+    } else {
+      $(this).parent().parent().parent().hide();
+      $("#view-all-desktop").removeAttr("disabled");
+    }
+
+  });
+
+  // Show all cards
+  $("#view-all-desktop").click(function(){
+      $(".sluzby-table-row .col-12").show();
+      $(this).prop("disabled", "true");
+  });
+
+  // Scroll bar on top and bottom
+  $(".row-container").doubleScroll();
+
+  // Next columns
+  $("#btn-sluzby-right").click(function(){
+    $scroll = $(".row-container").scrollLeft() + 375;
+    $(".row-container").animate({
+      scrollLeft: $scroll
     }, {
       queue: false,
       duration: 400,
       easing: $.bez([0.55, 0.05, 0.68, 1]),
-      complete: function() {
-          $(this).hide();
-      }});
+      });
+      $("#btn-sluzby-left").show();
+  });
+
+  // Previous columns
+  $("#btn-sluzby-left").click(function(){
+    $scroll = $(".row-container").scrollLeft() - 375;
+    $(".row-container").animate({
+      scrollLeft: $scroll
+    }, {
+      queue: false,
+      duration: 400,
+      easing: $.bez([0.55, 0.05, 0.68, 1]),
+    });
+    if ($scroll <= 0) {
+      $("#btn-sluzby-left").hide();
+    }
+  });
+
+  $(".row-container").scroll(function(){
+    if ($(".row-container").scrollLeft() <= 0) {
+      $("#btn-sluzby-left").hide();
+    } else {
+      $("#btn-sluzby-left").show();
+    }
   });
 });
