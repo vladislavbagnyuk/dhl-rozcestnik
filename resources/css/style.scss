@@ -1656,6 +1656,11 @@ footer .social-links a:hover path {
   margin-top: 9px;
   margin-bottom: 18px;
 }
+.sluzby-container-2 .btn-outline-primary:active,
+.sluzby-container-2 .btn-outline-primary:hover {
+  background-color: white !important;
+  color: map-get($theme-colors, primary) !important;
+}
 .sluzby-container-2 .btn-outline-primary img {
   margin-left: 9px;
 }
@@ -1712,7 +1717,7 @@ footer .social-links a:hover path {
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 240px;
+    padding-left: 252.5px;
     width: 10000px;
   }
   .sluzby-container-2 .row-container {
