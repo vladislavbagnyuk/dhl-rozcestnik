@@ -1731,7 +1731,7 @@ footer .social-links a:hover path {
   .sluzby-container-2 .row-container {
     padding: 0;
     width: 100%;
-    max-width: 808px;
+    max-width: 993px;
     overflow-x: scroll;
     position: absolute;
     padding-bottom: 14px;
@@ -1877,6 +1877,15 @@ footer .social-links a:hover path {
   .sluzby-container-2 .table-info-icon {
     margin-top: 0;
   }
+  .right-block {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    height: 1288px;
+    width: 15px;
+    background-color: white;
+    z-index: 10;
+  }
 }
 @include media-breakpoint-up(lg) {
   .sluzby-container-2 {
@@ -1894,7 +1903,7 @@ footer .social-links a:hover path {
     top: 40px;
     right: -25px;
     height: 1288px;
-    width: 75px;
+    width: 76px;
     background-color: white;
     z-index: 10;
   }
