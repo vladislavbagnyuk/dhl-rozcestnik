@@ -1706,7 +1706,7 @@ footer .social-links a:hover path {
 .popover[x-placement="bottom"] .popover-body, .popover[x-placement="top"] .popover-body {
   padding: 4px 8px;
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   .sluzby-container-2 p {
     padding-bottom: 0;
   }
