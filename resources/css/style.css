@@ -13058,7 +13058,7 @@ footer .social-links a:hover path {
   .sluzby-container-2 .gradient-left {
     position: absolute;
     top: 30px;
-    left: 240px;
+    left: 253px;
     width: 60px;
     height: 1335px;
     z-index: 100;
@@ -13089,10 +13089,12 @@ footer .social-links a:hover path {
     border-radius: 0;
     position: absolute;
     top: 30px;
+    left: 14px;
+    padding-left: 1px;
     padding-top: 10px;
     background-color: white;
     z-index: 10;
-    height: 1341px;
+    height: 1339px;
     padding-right: 25px;
   }
 
@@ -13211,21 +13213,21 @@ footer .social-links a:hover path {
   }
 
   .sluzby-container-2 .gradient-left {
-    left: 258px;
+    left: 254px;
   }
 
   .right-block {
     position: absolute;
     top: 40px;
     right: -25px;
-    height: 1335px;
+    height: 1329px;
     width: 76px;
     background-color: white;
     z-index: 11;
   }
 
   .sluzby-container-2 .gradient-right {
-    right: 50px;
+    right: 61px;
     z-index: 12;
   }
 
