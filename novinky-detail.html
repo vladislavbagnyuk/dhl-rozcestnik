@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
+  <link rel="icon" href="resources/img/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Přeprava paletových zásilek | DHL | Česká republika</title>
   <link rel="stylesheet" href="resources/css/style.css">
@@ -10,7 +11,7 @@
 <body>
   <div class="site-content">
     <header>
-      <div id="banner" class="banner">
+      <div id="banner" class="banner d-none">
         <div class="banner-content">
           <button id="bannerCloseBtn" class="close" type="button" name="button">
             <img src="resources/img/icons/close.svg" alt="">
@@ -132,14 +133,17 @@
         DHL Freight
       </p>
     </div>
-    <h3 class="text-center">Podobné příspěvky</h3>
+    <!--SKRYTO-->
+    <h3 class="text-center d-none">Podobné příspěvky</h3>
 
   </div>
-  <div class="arrowsContainer">
+  <!--SKRYTO-->
+  <div class="arrowsContainer d-none">
     <img id="similarLeft" class="similar-arrow" src="resources/img/icons/arrow-left.svg" alt="">
     <img id="similarRight" class="similar-arrow" src="resources/img/icons/arrow-right.svg" alt="">
   </div>
-  <div class="similar-posts-container">
+  <!--SKRYTO-->
+  <div class="similar-posts-container d-none">
     <div class="row novinky-row similar-posts">
       <div class="col-md-6 col-lg-2 d-none d-lg-block">
         <div class="card">
@@ -216,12 +220,13 @@
         </div>
       </div>
 
-
-
-      <div class="col-12 text-center">
-        <a href="#" class="btn btn-outline-primary load-more">Zpět</a>
-      </div>
+      <!--tlacitko zde-->
+      
     </div>
+  </div>
+
+  <div class="col-12 text-center">
+    <a href="#" onclick="history.back()" class="btn btn-outline-primary load-more">Zpět</a>
   </div>
 
 </div>

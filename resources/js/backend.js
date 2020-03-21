@@ -1,11 +1,12 @@
-const waUrl = /* "https://webapp.cz.dhl.com/wa", */ "http://wa-test.srv.cz.dhl.com" /* "http://localhost:3000" */;
+const waUrl =
+  /* "https://webapp.cz.dhl.com/wa", */ "http://wa-test.srv.cz.dhl.com"; /* "http://localhost:3000" */
 
 /**
  * přednastavená instance axios
  */
 const instance = axios.create({
   baseURL:
-    /* "https://webapp.cz.dhl.com/wa/api/", */ "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/", /* "https://localhost:5000/", */
+    /* "https://webapp.cz.dhl.com/wa/api/", */ "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/" /* "https://localhost:5000/", */,
   timeout: 15000
 });
 
@@ -440,10 +441,10 @@ function updateAfterLogin() {
 }
 
 function cookiesAlert() {
-  if (localStorage.getItem("confirmCookieBanner")) {
+  if (!localStorage.getItem("confirmCookieBanner")) {
     const banner = document.getElementById("banner");
     if (banner) {
-      banner.style.display = "none";
+      banner.classList.remove("d-none");
     }
   }
 }
@@ -541,6 +542,7 @@ document.addEventListener("DOMContentLoaded", function() {
   /* tracking */
   const searchForm = document.getElementById("search-form");
   searchForm &&
+    document.getElementById("consinment") &&
     (searchForm.onsubmit = function(e) {
       const consignment = getInputValues("consignment");
       if (consignment.input) {
