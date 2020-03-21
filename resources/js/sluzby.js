@@ -33,6 +33,7 @@ $(document).ready(function() {
         easing: $.bez([0.55, 0.05, 0.68, 1]),
         complete: function() {
             $(this).hide();
+            $("#view-all-mobile").show();
         }});
     } else {
       $(this).parent().parent().parent().hide();
@@ -41,7 +42,12 @@ $(document).ready(function() {
 
   });
 
-  // Show all cards
+  // Show all cards mobile
+  $("#view-all-mobile").click(function(){
+    $(this).hide()
+  });
+
+  // Show all cards desktop
   $("#view-all-desktop").click(function(){
       $(".sluzby-table-row .col-12").show();
       $(this).prop("disabled", "true");

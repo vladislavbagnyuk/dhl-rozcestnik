@@ -12771,6 +12771,11 @@ footer .social-links a:hover path {
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
+  display: none;
+}
+
+.view-all-mobile:disabled {
+  opacity: 0.25;
 }
 
 .view-all-mobile img {
@@ -12919,12 +12924,19 @@ footer .social-links a:hover path {
   margin-bottom: 18px;
 }
 
+.sluzby-container-2 .btn-outline-primary:active,
+.sluzby-container-2 .btn-outline-primary:hover {
+  background-color: white !important;
+  color: #D40511 !important;
+}
+
 .sluzby-container-2 .btn-outline-primary img {
   margin-left: 9px;
 }
 
 .sluzby-container-2 .sluzby-hide {
   overflow: hidden;
+  height: 0;
 }
 
 .sluzby-container-2 .column-header {
@@ -12975,6 +12987,15 @@ footer .social-links a:hover path {
   padding: 4px 8px;
 }
 
+@media (max-width: 767.98px) {
+  .sluzby-container-2 p {
+    padding-bottom: 0;
+  }
+
+  .sluzby-container-2 .height-3 {
+    height: 88px;
+  }
+}
 @media (min-width: 768px) {
   .sluzby-container-2 {
     position: relative;
@@ -12987,14 +13008,14 @@ footer .social-links a:hover path {
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 240px;
-    width: 10000px;
+    padding-left: 252.5px;
+    width: 2730px;
   }
 
   .sluzby-container-2 .row-container {
     padding: 0;
     width: 100%;
-    max-width: 808px;
+    max-width: 993px;
     overflow-x: scroll;
     position: absolute;
     padding-bottom: 14px;
@@ -13036,10 +13057,10 @@ footer .social-links a:hover path {
 
   .sluzby-container-2 .gradient-left {
     position: absolute;
-    top: 40px;
-    left: 240px;
+    top: 30px;
+    left: 253px;
     width: 60px;
-    height: 1325px;
+    height: 1335px;
     z-index: 100;
     background: white;
     background: -moz-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -13050,10 +13071,10 @@ footer .social-links a:hover path {
 
   .sluzby-container-2 .gradient-right {
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 15px;
     width: 60px;
-    height: 1325px;
+    height: 1335px;
     z-index: 10;
     background: white;
     background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
@@ -13067,10 +13088,13 @@ footer .social-links a:hover path {
     box-shadow: none;
     border-radius: 0;
     position: absolute;
-    top: 40px;
+    top: 30px;
+    left: 14px;
+    padding-left: 1px;
+    padding-top: 10px;
     background-color: white;
     z-index: 10;
-    height: 1325px;
+    height: 1339px;
     padding-right: 25px;
   }
 
@@ -13080,6 +13104,10 @@ footer .social-links a:hover path {
     margin-right: 12.5px;
     margin-bottom: 0;
     display: inline-block;
+  }
+
+  .sluzby-container-2 .sluzby-hide {
+    height: auto;
   }
 
   .sluzby-container-2 .double-text {
@@ -13159,6 +13187,16 @@ footer .social-links a:hover path {
   .sluzby-container-2 .table-info-icon {
     margin-top: 0;
   }
+
+  .right-block {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    height: 1335px;
+    width: 16px;
+    background-color: white;
+    z-index: 10;
+  }
 }
 @media (min-width: 1024px) {
   .sluzby-container-2 {
@@ -13170,22 +13208,27 @@ footer .social-links a:hover path {
     max-width: 1309px;
   }
 
+  .sluzby-table-row {
+    width: 2680px;
+  }
+
   .sluzby-container-2 .gradient-left {
-    left: 258px;
+    left: 254px;
   }
 
   .right-block {
     position: absolute;
     top: 40px;
     right: -25px;
-    height: 1288px;
-    width: 75px;
+    height: 1329px;
+    width: 87px;
     background-color: white;
-    z-index: 10;
+    z-index: 11;
   }
 
   .sluzby-container-2 .gradient-right {
-    right: 50px;
+    right: 61px;
+    z-index: 12;
   }
 
   #btn-sluzby-right {
