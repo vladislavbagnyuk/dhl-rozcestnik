@@ -133,10 +133,10 @@ function tracking() {
               latest = document.getElementById("track-latest");
             if (data.history && data.history.length > 0) {
               const last = data.history[data.history.length - 1];
-              document.getElementById("last-place").innerText =
-                (last && last.place) || "--";
-              document.getElementById("last-date").innerText =
-                (last && last.dateTime) || "--";
+              document.getElementById("last-message").innerText =
+                (last && (last.detailMessage || last.message)) || "--";
+              document.getElementById("last-state").innerText =
+                (last && (last.dateTime + ", " + last.place)) || "--";
               last && setHistoryItem(latest, last);
               if (data.history.length > 1) {
                 track.removeAttribute("id");
