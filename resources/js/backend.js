@@ -1,13 +1,13 @@
 const waUrl =
-  /* "https://webapp.cz.dhl.com/wa", */ "http://wa-test.srv.cz.dhl.com"; /* "http://localhost:3000" */
+  "https://webapp.cz.dhl.com/wa"; /* "http://wa-test.srv.cz.dhl.com" */ /* "http://localhost:3000" */
 
 /**
  * přednastavená instance axios
  */
 const instance = axios.create({
   baseURL:
-    /* "https://webapp.cz.dhl.com/wa/api/", */ "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/" /* "https://localhost:5000/", */,
-  timeout: 15000
+    "https://webapp.cz.dhl.com/wa/api/" /* "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/" */ /* "https://localhost:5000/", */,
+  timeout: 15000,
 });
 
 /**
@@ -16,7 +16,7 @@ const instance = axios.create({
 function getHeaders() {
   return {
     Accept: "application/json",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   };
 }
 
@@ -47,7 +47,7 @@ function sendRequest(method, endpoint, data) {
     method: method,
     url: endpoint,
     data: JSON.stringify(data),
-    headers: getHeaders()
+    headers: getHeaders(),
   });
 }
 
@@ -76,10 +76,10 @@ function createQueryString(parameters) {
   return parameters
     ? "?" +
         Object.keys(parameters)
-          .filter(function(key) {
+          .filter(function (key) {
             return parameters[key] !== undefined && parameters[key] !== null;
           })
-          .map(function(key) {
+          .map(function (key) {
             return key + "=" + parameters[key];
           })
           .join("&")
@@ -111,7 +111,7 @@ function tracking() {
     const consignment = getParameterByName("consignment");
     if (consignment) {
       httpGet("tracking?consignment=" + consignment)
-        .then(function(r) {
+        .then(function (r) {
           const data = r.data.data,
             message = r.data.message;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
@@ -136,7 +136,7 @@ function tracking() {
               document.getElementById("last-message").innerText =
                 (last && (last.detailMessage || last.message)) || "--";
               document.getElementById("last-state").innerText =
-                (last && (last.dateTime + ", " + last.place)) || "--";
+                (last && last.dateTime + ", " + last.place) || "--";
               last && setHistoryItem(latest, last);
               if (data.history.length > 1) {
                 track.removeAttribute("id");
@@ -158,7 +158,7 @@ function tracking() {
           trackings[0].style.display = "";
           loading[0].style.display = "none";
         })
-        .catch(function() {
+        .catch(function () {
           showMessage(loading);
         });
     } else {
@@ -176,7 +176,7 @@ function getInputValues(inputName) {
   return {
     input: input,
     label: input.labels && input.labels[0],
-    value: input.value
+    value: input.value,
   };
 }
 
@@ -245,10 +245,10 @@ function calculation(after, afterSuccess) {
           weight: weight.value,
           length: length.value,
           width: width.value,
-          height: height.value
+          height: height.value,
         })
     )
-      .then(function(r) {
+      .then(function (r) {
         const data = r.data.data,
           message = r.data.message;
         if (checkHttpStatus(r) && checkResponseGet(r)) {
@@ -259,7 +259,7 @@ function calculation(after, afterSuccess) {
         }
         after && after();
       })
-      .catch(function() {
+      .catch(function () {
         setResult(parent, "Při kalkulaci nastala chyba!", "...");
         after && after();
       });
@@ -280,7 +280,7 @@ function login() {
   if (username.value) {
     if (password.value) {
       httpPost("auth", { username: username.value, password: password.value })
-        .then(function(r) {
+        .then(function (r) {
           const data = r.data.data,
             message = r.data.message;
           if (checkHttpStatus(r) && checkResponseGet(r)) {
@@ -291,7 +291,7 @@ function login() {
             error.innerHTML = message || "Při přihlašování nastala chyba!";
           }
         })
-        .catch(function() {
+        .catch(function () {
           error.innerHTML = "Při přihlašování nastala chyba!";
         });
     }
@@ -312,7 +312,7 @@ function get(event, data) {
   event.source.postMessage(
     {
       id: data.id,
-      data: window.localStorage.getItem(data.key)
+      data: window.localStorage.getItem(data.key),
     },
     event.origin
   );
@@ -322,7 +322,7 @@ function set(event, data) {
 
   event.source.postMessage(
     {
-      id: data.id
+      id: data.id,
     },
     event.origin
   );
@@ -332,7 +332,7 @@ function remove(event, data) {
 
   event.source.postMessage(
     {
-      id: data.id
+      id: data.id,
     },
     event.origin
   );
@@ -340,7 +340,7 @@ function remove(event, data) {
 function connect(event) {
   event.source.postMessage(
     {
-      id: "sessionAccessId-connected"
+      id: "sessionAccessId-connected",
     },
     event.origin
   );
@@ -349,7 +349,7 @@ function connect(event) {
 function storageHost(allowedDomains) {
   function handleMessage(event) {
     const data = event.data;
-    const domain = allowedDomains.find(function(allowedDomain) {
+    const domain = allowedDomains.find(function (allowedDomain) {
       return event.origin === allowedDomain.origin;
     });
 
@@ -363,7 +363,7 @@ function storageHost(allowedDomains) {
         {
           id: id,
           connectError: true,
-          error: event.origin + " is not an allowed domain"
+          error: event.origin + " is not an allowed domain",
         },
         event.origin
       );
@@ -375,7 +375,7 @@ function storageHost(allowedDomains) {
       event.source.postMessage(
         {
           id: id,
-          error: method + " is not an allowed method from " + event.origin
+          error: method + " is not an allowed method from " + event.origin,
         },
         event.origin
       );
@@ -421,7 +421,7 @@ function validateSession() {
 }
 
 function updateAfterLogin() {
-  update = function(fields, add) {
+  update = function (fields, add) {
     for (let i = 0; i < fields.length; i++) {
       add
         ? fields[i].classList.add("d-none", "d-md-none")
@@ -454,7 +454,7 @@ function setDimensions() {
     widthInput = document.getElementById("widthInput"),
     heightInput = document.getElementById("heightInput");
   if (lengthInput && widthInput && heightInput) {
-    const onValueChange = function() {
+    const onValueChange = function () {
       const lengthValue = document.getElementById("lengthInput").value,
         widthValue = document.getElementById("widthInput").value,
         heightValue = document.getElementById("heightInput").value;
@@ -495,7 +495,7 @@ function setDimensions() {
 function setWeight() {
   const weightInput = document.getElementById("massInput");
   if (weightInput) {
-    weightInput.onchange = function() {
+    weightInput.onchange = function () {
       const weightValue = document.getElementById("massInput").value;
       const alert = document.getElementsByClassName("circle")[0];
       if (weightValue > 0 && weightValue <= 3000) {
@@ -509,18 +509,18 @@ function setWeight() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   /* login */
-  document.getElementById("login-form").onsubmit = function(e) {
+  document.getElementById("login-form").onsubmit = function (e) {
     e.preventDefault();
     login();
   };
-  document.getElementById("forgot-password").onclick = function() {
+  document.getElementById("forgot-password").onclick = function () {
     document
       .getElementById("forgot-password-message")
       .classList.toggle("d-none");
   };
-  const validation = function(e) {
+  const validation = function (e) {
     e.target.value
       ? e.target.classList.add("green-dot")
       : e.target.classList.remove("green-dot");
@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function() {
   cookiesAlert();
   const bannerButton = document.getElementById("bannerOkBtn");
   bannerButton &&
-    (bannerButton.onclick = function() {
+    (bannerButton.onclick = function () {
       localStorage.setItem("confirmCookieBanner", "true");
     });
   /* end of cookies */
@@ -542,8 +542,8 @@ document.addEventListener("DOMContentLoaded", function() {
   /* tracking */
   const searchForm = document.getElementById("search-form");
   searchForm &&
-    document.getElementById("consinment") &&
-    (searchForm.onsubmit = function(e) {
+    document.getElementById("consignment") &&
+    (searchForm.onsubmit = function (e) {
       const consignment = getInputValues("consignment");
       if (consignment.input) {
         if (consignment.value) {
@@ -566,7 +566,7 @@ document.addEventListener("DOMContentLoaded", function() {
   storageHost([
     {
       origin: waUrl,
-      allowedMethods: ["get", "set", "remove"]
-    }
+      allowedMethods: ["get", "set", "remove"],
+    },
   ]);
 });
