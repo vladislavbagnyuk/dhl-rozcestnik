@@ -262,6 +262,10 @@ button,
   -webkit-appearance: button;
 }
 
+.no-bottom {
+  margin-bottom: 0;
+}
+
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),

@@ -277,6 +277,9 @@ header {
 .container-fluid {
   max-width: 1395px;
 }
+.no-bottom {
+  margin-bottom: 0;
+}
 .navbar, .header-img-container, .novinky-heading-container, footer, .sluzby-header-img-container {
   width: 100%;
   max-width: 1395px;
@@ -1066,11 +1069,11 @@ header {
   }
 }
 @include media-breakpoint-up(lg) {
-  .calculator-container .input-group select, , .calculator-container .input-group-text {
+  .calculator-container .input-group select, .calculator-container .input-group-text {
     width: 83px;
   }
 }
-.calculator-container input:disabled, {
+.calculator-container input:disabled {
   border-width: 0 1px 0 0 !important;
 }
 .calculator-container .input-group-text.disabled {
