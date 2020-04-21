@@ -6,7 +6,7 @@ const waUrl =
  */
 const instance = axios.create({
   baseURL:
-    "https://webapp.cz.dhl.com/wa/api/" /* "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/" */ /* "https://localhost:5000/", */,
+    "https://webapp.cz.dhl.com/wa/api/" /* "https://app.srv.cz.dhl.com/test/fre/xsped/waapi/" */ /* "https://localhost:5000/" */,
   timeout: 15000,
 });
 
@@ -198,9 +198,22 @@ function setValidity(item, valid) {
   }
 }
 
-function setResult(parent, result, result2) {
-  parent.children[0].innerText = result || "...";
-  parent.children[1].innerText = result2 || "CZK bez DPH a příplatků";
+function setResult(parent, data, result2) {
+  console.log(data);
+  parent.children[0].innerText =
+    (data &&
+      data.calculationItems &&
+      data.calculationItems.length > 0 &&
+      data.calculationItems
+        .sort(function (a, b) {
+          return a.code > b.code ? 1 : b.code > a.code ? -1 : 0;
+        })
+        .map(function (i) {
+          return Math.round(i.price);
+        })
+        .join("+")) ||
+    "...";
+  parent.children[1].innerText = result2 || "CZK bez DPH";
 }
 
 function calculation(after, afterSuccess) {
@@ -252,7 +265,7 @@ function calculation(after, afterSuccess) {
         const data = r.data.data,
           message = r.data.message;
         if (checkHttpStatus(r) && checkResponseGet(r)) {
-          setResult(parent, data.price);
+          setResult(parent, data);
           afterSuccess && afterSuccess();
         } else {
           setResult(parent, message || "Při kalkulaci nastala chyba!", "...");
@@ -562,6 +575,11 @@ document.addEventListener("DOMContentLoaded", function () {
   setDimensions();
   setWeight();
   /* end of calculation */
+
+  const buttons = document.getElementsByClassName("account-btn");
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].setAttribute("href", waUrl);
+  }
 
   storageHost([
     {
