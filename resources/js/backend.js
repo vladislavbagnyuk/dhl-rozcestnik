@@ -211,7 +211,7 @@ function setResult(parent, data, result2) {
         .map(function (i) {
           return Math.round(i.price);
         })
-        .join("+")) ||
+        .join(" + ")) ||
     "...";
   parent.children[1].innerText = result2 || "CZK bez DPH";
 }
