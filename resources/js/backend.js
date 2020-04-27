@@ -1,5 +1,5 @@
 const waUrl =
-  "https://webapp.cz.dhl.com/wa"; /* "http://wa-test.srv.cz.dhl.com" */ /* "http://localhost:3000" */
+  "https://webapp.cz.dhl.com/wa/"; /* "http://wa-test.srv.cz.dhl.com" */ /* "http://localhost:3000" */
 
 /**
  * přednastavená instance axios
